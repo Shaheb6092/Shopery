@@ -16,16 +16,53 @@ body {
     align-content: center;
 }
 
+.header_top_right {
+    text-align: end;
+    justify-items: end;
+}
+
+.select_option {
+    width: 80px;
+    height: 40px;
+    background-color: #333333;
+    color: #333333;
+    border: none;
+}
+
 .select {
     border: none;
     background-color: #EDF2EE;
     background-size: 90px 14px;
 }
 
+.form_select {
+    /* padding-left: 60px; */
+    background-color: #EDF2EE;
+    color: #333333;
+    border: 1px solid #444;
+    border: none;
+    /* background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 20px;
+}
+
 .header_nav li a {
     color: #000000;
     font-weight: 500;
     font-size: 14px;
+}
+
+.nav_icon {
+    color: #000000;
+    width: 28px;
+    height: 28px;
+}
+
+.nav_icon_profile {
+    color: #000000;
+    width: 32px;
+    height: 32px;
 }
 
 .header_nav {
@@ -61,27 +98,6 @@ body {
     margin-top: 0px;
     font-size: 72px;
     font-weight: 600;
-    animation-name: myAnimation;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-}
-
-@keyframes myAnimation {
-    0% {
-        color: red;
-    }
-    25% {
-        color: orange;
-    }
-    50% {
-        color: yellow;
-    }
-    75% {
-        color: green;
-    }
-    100% {
-        color: blue;
-    }
 }
 
 .banner_content p {
@@ -193,15 +209,7 @@ body {
 
 .pro_item:hover .pro_item_icon {
     visibility: visible;
-    rotate: 360deg;
-    transition: 2s;
 }
-
-
-/* .pro_item:hover img {
-    scale: 1.1;
-    transition: 2s;
-} */
 
 .pro_item_content {
     /* background-color: rebeccapurple; */
@@ -351,7 +359,7 @@ body {
 }
 
 .category-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-3px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-color: #2C742F;
 }
@@ -361,9 +369,6 @@ body {
 }
 
 .category-icon {
-    /* align-items: center;
-    align-content: center;
-    justify-content: center; */
     justify-items: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -399,7 +404,8 @@ body {
     z-index: 10;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background-color: #ccc;
     border: none;
     border-radius: 50%;
     color: white;
@@ -758,8 +764,6 @@ body {
 
 .product_item:hover .product_item_icon {
     visibility: visible;
-    rotate: 360deg;
-    transition: 2s;
 }
 
 .product_item img {
@@ -1012,6 +1016,25 @@ body {
     background-color: #F2F5F3;
 }
 
+.testimonial-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial-container {
+    transition: transform 0.8s ease-in-out;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 !important;
+    gap: 24px;
+}
+
+.testimonial-container .col-xl-4 {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: calc(33.333% - 16px);
+    padding: 0 !important;
+}
+
 .heading {
     padding-top: 70px;
     margin-bottom: 36px;
@@ -1044,24 +1067,31 @@ body {
     align-content: center;
 }
 
+.arrow {
+    border: none;
+    padding: 0px 0px;
+    background: none;
+    transition: 0.3s;
+}
 
-/* .testimonial_heading_arrow:hover .fa-arrow-left {
-    color: #ffffff;
-    background-color: #00B207;
-} */
-
-.testimonial_heading_arrow:hover .fa-arrow-right {
+.arrow_left:hover {
     color: #ffffff;
     background-color: #00B207;
 }
 
-.testimonial_card {
+.arrow_right:hover {
+    color: #ffffff;
+    background-color: #00B207;
+}
+
+.testimonial-card {
     width: 424px;
     height: 254px;
     padding: 20px;
     background-color: #FFFFFF;
     border: solid 0.21px #E6E6E6;
     border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial_card p {
@@ -1154,7 +1184,6 @@ body {
     background-color: white;
     padding: 0px 8px;
     border-radius: 12px;
-    /*       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
     text-align: center;
 }
 

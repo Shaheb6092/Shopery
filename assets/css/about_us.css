@@ -1,0 +1,121 @@
+.header_top {
+    background-color: #333333;
+}
+
+.col-xl-9 {
+    align-content: center;
+}
+
+.header_top_left {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+select {
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: #ffffff;
+    background-size: 90px 14px;
+}
+
+#select {
+    color: #ffffff!important;
+}
+
+.form_select {
+    /* padding-left: 60px; */
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 20px 20px;
+}
+
+.select_option {
+    width: 80px;
+    height: 40px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+}
+
+.header_top_right {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.header_menu {
+    max-width: 1920px;
+    height: 90px;
+    align-content: center;
+    background-color: #ffffff;
+}
+
+.input-group.text-center.search_box {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.input-group input[type="search_box"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#search_btn {
+    padding: 14px 40px;
+    background-color: #20B526;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: none;
+    text-decoration: none;
+}
+
+.navbar_icon {
+    padding: 14px;
+    width: 60px;
+}
+
+.cart_area {
+    padding: 14px 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.cart_area p,
+.cart_area span {
+    font-size: 14px;
+    align-content: center;
+}
+
+.cart_area p {
+    margin: 0px 0px;
+}
+
+.header_navbar {
+    padding: 20px 0px;
+    justify-content: center;
+    border: 1px solid #f5f0f0;
+}
+
+.header_nav li a {
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.header_nav li a:hover {
+    color: #20B526;
+}
