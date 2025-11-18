@@ -71,6 +71,7 @@ body {
 
 .header_nav_right ul {
     margin-right: -28px;
+    font-size: 20px;
 }
 
 .header_menu {
@@ -140,6 +141,7 @@ body {
     display: inline-block;
     padding: 14px 16px;
     margin-bottom: 16px;
+    font-size: 24px;
 }
 
 .service_item:hover {

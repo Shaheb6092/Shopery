@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('.categories-slider').slick({
-        // Desktop: 6 cards visible
-        slidesToShow: 6,
+        // Desktop: 4 cards visible
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
