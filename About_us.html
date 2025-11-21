@@ -19,17 +19,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
-    <!-- Slick CSS -->
+    <!-- Slick Slider -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-    <!--font awesome icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    <!-- Font Awesome 6 - Full (Solid + Regular + Brands) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <!--Bootstrap icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/Icon/plant 1.svg">
+    <link rel="manifest" href="./assets/img/Icon/plant 1.svg">
 
     <!--style css connect-->
     <link rel="stylesheet" href="./assets/css/about_us.css">
@@ -43,7 +47,7 @@
                 <div class="row">
                     <div class="col-xl-9">
                         <div class="header_top_left align-content-center">
-                            <img src="assets/img/Icon/Map Pin.svg" alt="map_icon">
+                            <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
                             <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
                         </div>
                     </div>
@@ -81,7 +85,9 @@
                         </div>
                     </div>
                     <div class="col-xl-7 d-flex justify-content-center align-items-center">
-                        <div class="input-group text-center search_box"><input type="search_box" placeholder="Search" required /><a href="#" id="search_btn">Search</a></div>
+                        <div class="input-group text-center search_box" id="input-group">
+                            <input type="search_box" placeholder="Search" required />
+                            <a href="#" id="search_btn">Search</a></div>
                     </div>
                     <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
                         <div class="nav_icon">
@@ -109,8 +115,8 @@
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Shop 2</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
@@ -121,11 +127,11 @@
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Blog</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Blog_List</a></li>
+                                        <li><a class="dropdown-item" href="#">Single_Blog</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                                <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
                             </ul>
                         </div>
@@ -307,7 +313,7 @@
                 </div>
                 <div class="col-xl-7">
                     <div class="delivery_man">
-                        <img src="./assets/img/Workers/Image (23).png" alt="Delivery Man"></div>
+                        <img src="./assets/img/Workers/Image (23).png" style="height: 615px;" alt="Delivery Man"></div>
                 </div>
             </div>
         </div>
@@ -324,105 +330,126 @@
                 </div>
             </div>
             <div class="row">
-                <div class="categories-slider d-flex">
-                    <div class="team-card">
-                        <div class="social_media">
-                            <div class="social-container">
-                                <div class="icon facebook">
-                                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #e7eaee;"></i></a>
-                                </div>
-                                <div class="icon twitter">
-                                    <a href="#"><i class="fa-brands fa-twitter" style="color: #dfe2e7;"></i></a>
-                                </div>
-                                <div class="icon pinterest">
-                                    <a href="#"><i class="fa-brands fa-pinterest-p" style="color: #dbdfe6;"></i></a>
-                                </div>
-                                <div class="icon instagram">
-                                    <a href="#"><i class="fa-brands fa-instagram" style="color: #e3e5e8;"></i></a>
-                                </div>
+                <div class="container team-slider">
+                    <div class="team-carousel">
+
+                        <!-- Card 1 -->
+                        <div class="team-card">
+                            <img src="./assets/img/Workers/Image (27).png" alt="Jenny Wilson">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="team-card_content">
+                                <h3 class="team-name">Jenny Wilson</h3>
+                                <p class="team-position">CEO & Founder</p>
                             </div>
                         </div>
-                        <div class="workers_img">
-                            <img src="./assets/img/Workers/Image (27).png" alt="">
-                        </div>
-                        <div class="card_content">
-                            <h5>Jenny Wilson</h5>
-                            <p>Ceo & Founder</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="social_media">
-                            <div class="social-container">
-                                <div class="icon facebook">
-                                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #e7eaee;"></i></a>
-                                </div>
-                                <div class="icon twitter">
-                                    <a href="#"><i class="fa-brands fa-twitter" style="color: #dfe2e7;"></i></a>
-                                </div>
-                                <div class="icon pinterest">
-                                    <a href="#"><i class="fa-brands fa-pinterest-p" style="color: #dbdfe6;"></i></a>
-                                </div>
-                                <div class="icon instagram">
-                                    <a href="#"><i class="fa-brands fa-instagram" style="color: #e3e5e8;"></i></a>
-                                </div>
+
+                        <!-- Card 2 -->
+                        <div class="team-card">
+                            <img src="./assets/img/Workers/Image (26).png" alt=" Jane Cooper ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Jane Cooper</h3>
+                                <p class="team-position ">Worker</p>
                             </div>
                         </div>
-                        <div class="workers_img">
-                            <img src="./assets/img/Workers/Image (26).png" alt="">
-                        </div>
-                        <div class="card_content">
-                            <h5>Jane Cooper</h5>
-                            <p>Worker</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="social_media">
-                            <div class="social-container">
-                                <div class="icon facebook">
-                                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #e7eaee;"></i></a>
-                                </div>
-                                <div class="icon twitter">
-                                    <a href="#"><i class="fa-brands fa-twitter" style="color: #dfe2e7;"></i></a>
-                                </div>
-                                <div class="icon pinterest">
-                                    <a href="#"><i class="fa-brands fa-pinterest-p" style="color: #dbdfe6;"></i></a>
-                                </div>
-                                <div class="icon instagram">
-                                    <a href="#"><i class="fa-brands fa-instagram" style="color: #e3e5e8;"></i></a>
-                                </div>
+
+                        <!-- Card 3 -->
+                        <div class="team-card">
+                            <img src="./assets/img/Workers/Image (25).png" alt="Jane Cooper ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Cody Fisher</h3>
+                                <p class="team-position ">Security Guard</p>
                             </div>
                         </div>
-                        <div class="workers_img">
-                            <img src="./assets/img/Workers/Image (25).png" alt="">
-                        </div>
-                        <div class="card_content">
-                            <h5>Cody Fisher</h5>
-                            <p>Security Guard</p>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="social_media">
-                            <div class="social-container">
-                                <div class="icon facebook">
-                                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #e7eaee;"></i></a>
-                                </div>
-                                <div class="icon twitter">
-                                    <a href="#"><i class="fa-brands fa-twitter" style="color: #dfe2e7;"></i></a>
-                                </div>
-                                <div class="icon pinterest">
-                                    <a href="#"><i class="fa-brands fa-pinterest-p" style="color: #dbdfe6;"></i></a>
-                                </div>
-                                <div class="icon instagram">
-                                    <a href="#"><i class="fa-brands fa-instagram" style="color: #e3e5e8;"></i></a>
-                                </div>
+
+                        <!-- Card 4 -->
+                        <div class="team-card ">
+                            <img src="./assets/img/Workers/Image (24).png" alt="Robert Fox ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Robert Fox</h3>
+                                <p class="team-position ">Senior Farmer Manager</p>
                             </div>
                         </div>
-                        <div class="workers_img">
-                            <img src="./assets/img/Workers/Image (24).png" alt="">
+                        <!-- Card 5 -->
+                        <div class="team-card ">
+                            <img src="./assets/img/Workers/Image (27).png" alt="Jenny Wilson ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Jenny Wilson</h3>
+                                <p class="team-position ">CEO & Founder</p>
+                            </div>
                         </div>
-                        <div class="card_content">
-                            <h5>Robert Fox</h5>
-                            <p>Senior Farmer manager</p>
+
+                        <!-- Card 6 -->
+                        <div class="team-card ">
+                            <img src="./assets/img/Workers/Image (26).png" alt="Jane Cooper ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Jane Cooper</h3>
+                                <p class="team-position ">Worker</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="team-card ">
+                            <img src="./assets/img/Workers/Image (25).png" alt="Jane Cooper ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Cody Fisher</h3>
+                                <p class="team-position ">Security Guard</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="team-card ">
+                            <img src="./assets/img/Workers/Image (24).png" alt="Robert Fox ">
+                            <div class="social-overlay ">
+                                <a href="# "><i class="fab fa-facebook-f "></i></a>
+                                <a href="# "><i class="fab fa-twitter "></i></a>
+                                <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                                <a href="# "><i class="fab fa-instagram "></i></a>
+                            </div>
+                            <div class="team-card_content ">
+                                <h3 class="team-name ">Robert Fox</h3>
+                                <p class="team-position ">Senior Farmer Manager</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -432,47 +459,47 @@
 
 
     <!--Testimonial section-->
-    <section class="testimonials">
-        <div class="container">
-            <div class="row heading">
-                <div class="col-xl-9">
-                    <div class="testimonial_heading">
+    <section class="testimonials ">
+        <div class="container ">
+            <div class="row heading ">
+                <div class="col-xl-9 ">
+                    <div class="testimonial_heading ">
                         <h2>Client Testimonail</h2>
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="testimonial_heading_arrow">
-                        <button class="arrow left prev-testimonial"><i class="fa-solid fa-arrow-left arrow_left"></i></button>
-                        <button class="arrow right next-testimonial"><i class="fa-solid fa-arrow-right arrow_right"></i></button>
+                <div class="col-xl-3 ">
+                    <div class="testimonial_heading_arrow ">
+                        <button class="arrow left prev-testimonial "><i class="fa-solid fa-arrow-left arrow_left "></i></button>
+                        <button class="arrow right next-testimonial "><i class="fa-solid fa-arrow-right arrow_right "></i></button>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-wrapper">
-                <div class="row testimonial-container" id="carousel">
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+            <div class="container testimonial-wrapper ">
+                <div class="row testimonial-container " id="carousel ">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (18).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (18).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Robert Fox</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
 
@@ -480,29 +507,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (19).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (19).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Dianne Russell</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
 
@@ -510,87 +537,87 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (20).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (20).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Eleanor Pena</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (18).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (18).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Robert Fox</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (19).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (19).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Dianne Russell</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
 
@@ -598,29 +625,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <div class="testimonial-card">
-                            <img src="./assets/img/Icon/Vector.svg" class="pb-3" alt="Vector">
+                    <div class="col-xl-4 ">
+                        <div class="testimonial-card ">
+                            <img src="./assets/img/Icon/Vector.svg " class="pb-3 " alt="Vector ">
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
 
-                            <div class="row">
-                                <div class="col-xl-7 mt-3">
-                                    <div class="reviewer d-flex">
-                                        <img src="./assets/img/customers/Image (20).png" alt="">
-                                        <div class="info m-2">
+                            <div class="row ">
+                                <div class="col-xl-7 mt-3 ">
+                                    <div class="reviewer d-flex ">
+                                        <img src="./assets/img/customers/Image (20).png " alt=" ">
+                                        <div class="info m-2 ">
                                             <h6>Eleanor Pena</h6>
                                             <p>Customer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 rating">
-                                    <div class="ratings">
-                                        <ul class="nav">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
+                                <div class="col-xl-5 rating ">
+                                    <div class="ratings ">
+                                        <ul class="nav ">
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
+                                            <li><i class="fa-solid fa-star "></i></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -635,35 +662,35 @@
 
     <!--brand contact section-->
     <section class="brand_contact">
-        <div class="company_logo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-2">
-                        <img src="./assets/img/Logo/Vector (2).svg" alt="company_logo">
+        <div class="company_logo ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-2 ">
+                        <img src="./assets/img/Logo/Vector (2).svg " alt="company_logo ">
                     </div>
-                    <div class="col-xl-2">
-                        <div class="text-center">
-                            <img src="./assets/img/Logo/mango-1.svg" alt="company_logo">
+                    <div class="col-xl-2 ">
+                        <div class="text-center ">
+                            <img src="./assets/img/Logo/mango-1.svg " alt="company_logo ">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div class="text-center">
-                            <img src="./assets/img/Logo/Group (6).svg" alt="company_logo">
+                    <div class="col-xl-2 ">
+                        <div class="text-center ">
+                            <img src="./assets/img/Logo/Group (6).svg " alt="company_logo ">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div class="text-center">
-                            <img src="./assets/img/Logo/food.svg" alt="company_logo">
+                    <div class="col-xl-2 ">
+                        <div class="text-center ">
+                            <img src="./assets/img/Logo/food.svg " alt="company_logo ">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div class="text-center">
-                            <img src="./assets/img/Logo/bookoff-corporation-logo.svg" alt="company_logo">
+                    <div class="col-xl-2 ">
+                        <div class="text-center ">
+                            <img src="./assets/img/Logo/bookoff-corporation-logo.svg " alt="company_logo ">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div class="text-end text-success">
-                            <img src="./assets/img/Logo/Group (5).svg" alt="company_logo">
+                    <div class="col-xl-2 ">
+                        <div class="text-end text-success ">
+                            <img src="./assets/img/Logo/Group (5).svg " alt="company_logo ">
                         </div>
                     </div>
                 </div>
@@ -678,8 +705,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5">
-                        <h3>Subcribe our Newsletter</h3>
-                        <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        <div class="newsletter_content">
+                            <h3>Subcribe our Newsletter</h3>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
                     </div>
                     <div class="col-xl-7 d-flex">
                         <div class="col-xl-8">
@@ -694,7 +723,7 @@
                             <div class="social-media">
                                 <div class="social-container">
                                     <div class="icon facebook">
-                                        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #919bab;"></i></a>
+                                        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #919bab; "></i></a>
                                     </div>
                                     <div class="icon twitter">
                                         <a href="#"><i class="fa-brands fa-twitter" style="color: #919bab;"></i></a>
@@ -712,78 +741,79 @@
                 </div>
             </div>
         </section>
+
         <section class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3">
-                        <div class="company">
-                            <img src="./assets/img/Logo/Logo2.svg" class="mb-3" alt="">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-3 ">
+                        <div class="company ">
+                            <img src="./assets/img/Logo/Logo2.svg " class="mb-3 " alt=" ">
                             <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
-                            <div class="address-column">
-                                <h6 class="d-flex">(219) 555-0114 &nbsp;
-                                    <p>or</p>&nbsp; Proxy@gmail.com
-                                </h6>
+                            <div class="address-column ">
+                                <h6 class="address1 m-0 ">(219) 555-0114</h6>
+                                <p>or</p>
+                                <h6 class="address2 m-0 "> Proxy@gmail.com</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="footer-column">
+                    <div class="col ">
+                        <div class="footer-column ">
                             <h3>My Account</h3>
                             <ul>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Order History</a></li>
-                                <li><a href="#">Shopping Cart</a></li>
-                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="# ">My Account</a></li>
+                                <li><a href="# ">Order History</a></li>
+                                <li><a href="# ">Shopping Cart</a></li>
+                                <li><a href="# ">Wishlist</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="footer-column">
+                    <div class="col ">
+                        <div class="footer-column ">
                             <h3>Helps</h3>
                             <ul>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="# ">Contact</a></li>
+                                <li><a href="# ">FAQs</a></li>
+                                <li><a href="# ">Terms & Condition</a></li>
+                                <li><a href="# ">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="footer-column">
+                    <div class="col ">
+                        <div class="footer-column ">
                             <h3>Proxy</h3>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Track Order</a></li>
+                                <li><a href="# ">About</a></li>
+                                <li><a href="# ">Shop</a></li>
+                                <li><a href="# ">Product</a></li>
+                                <li><a href="# ">Track Order</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="footer-column">
+                    <div class="col ">
+                        <div class="footer-column ">
                             <h3>Category</h3>
                             <ul>
-                                <li><a href="#">Fruit & Vegetables</a></li>
-                                <li><a href="#">Meat & Fish</a></li>
-                                <li><a href="#">Bread & Bakery</a></li>
-                                <li><a href="#">Beauty & Health</a></li>
+                                <li><a href="# ">Fruit & Vegetables</a></li>
+                                <li><a href="# ">Meat & Fish</a></li>
+                                <li><a href="# ">Bread & Bakery</a></li>
+                                <li><a href="# ">Beauty & Health</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-3">
-                        <div class="footer-column">
+                    <!-- <div class="col-xl-3 ">
+                        <div class="footer-column ">
                             <h3>Download Mobile App</h3>
-                            <div class="app-links d-flex">
-                                <div class="app_store d-flex me-2 alig">
-                                    <a href="#"><img src="./assets/img/Icon/Apple---Negative 1.svg" class="p-2" alt="Apple Store"></a>
-                                    <div class="frame">
+                            <div class="app-links d-flex ">
+                                <div class="app_store d-flex me-2 alig ">
+                                    <a href="# "><img src="./assets/img/Icon/Apple---Negative 1.svg " class="p-2 " alt="Apple Store "></a>
+                                    <div class="frame ">
                                         <p>Download on the</p>
                                         <h4>App Store</h4>
                                     </div>
                                 </div>
-                                <div class="google_play d-flex p-2">
-                                    <a href="#"><img src="./assets/img/Icon/Icon=google-play 1.svg" class="pe-2" alt="Google Play"></a>
-                                    <div class="frame">
+                                <div class="google_play d-flex p-2 ">
+                                    <a href="# "><img src="./assets/img/Icon/Icon=google-play 1.svg " class="pe-2 " alt="Google Play "></a>
+                                    <div class="frame ">
                                         <p>Download on the</p>
                                         <h4>Google Play</h4>
                                     </div>
@@ -792,21 +822,21 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="copyright_area">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-9">
-                                    <div class="copyright">
+                    <div class="copyright_area ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-xl-9 ">
+                                    <div class="copyright ">
                                         <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3">
-                                    <div class="frame">
-                                        <a href="#"><img src="./assets/img/Logo/Method=ApplePay.png" class="me-2" alt="ApplePay"></a>
-                                        <a href="#"><img src="./assets/img/Logo/Method=Visa.png" class="me-2" alt="Visa"></a>
-                                        <a href="#"><img src="./assets/img/Logo/Method=Discover.png" class="me-2" alt="Discover"></a>
-                                        <a href="#"><img src="./assets/img/Logo/Method=Mastercard.png" class="me-2" alt="Mastercard"></a>
-                                        <a href="#"><img src="./assets/img/Logo/Cart.png" alt="Cart"></a>
+                                <div class="col-xl-3 ">
+                                    <div class="frame ">
+                                        <a href="# "><img src="./assets/img/Logo/Method=ApplePay.png " class="me-2 " alt="ApplePay "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Visa.png " class="me-2 " alt="Visa "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Discover.png " class="me-2 " alt="Discover "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Mastercard.png " class="me-2 " alt="Mastercard "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Cart.png " alt="Cart "></a>
                                     </div>
                                 </div>
                             </div>
@@ -820,16 +850,17 @@
 
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Slick JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!--bootstrap js connect-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
 
     <!--slider js connect-->
-    <script src="./assets/js/slider.js" type="text/javascript"></script>
-    <script>
+    <script src="./assets/js/slider.js " type="text/javascript"></script>
+
+    <script src="./assets/js/breadcrumb.js">
         document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -840,13 +871,8 @@
         });
     </script>
 
+    <!--coustom js connect-->
     <script src="./assets/js/main.js"></script>
 </body>
-
-</html>
-
-</html>
-
-</html>
 
 </html>

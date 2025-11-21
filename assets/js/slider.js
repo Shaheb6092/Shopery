@@ -1,38 +1,30 @@
 $(document).ready(function() {
-    $('.categories-slider').slick({
-        // Desktop: 4 cards visible
+    $('.team-carousel').slick({
+        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
         arrows: true,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 2500,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        speed: 600,
+        cssEase: 'ease-in-out',
         responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1
+                breakpoint: 1400,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 992,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px'
+                }
             }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true
-            }
-        }],
-        // default arrow buttons (unstyled)
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
+        ],
     });
 });

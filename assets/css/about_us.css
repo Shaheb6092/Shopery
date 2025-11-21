@@ -74,6 +74,13 @@ select {
     outline: none;
 }
 
+#input-group {
+    border-radius: 14px;
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+}
+
 #search_btn {
     padding: 14px 40px;
     background-color: #20B526;
@@ -217,7 +224,7 @@ select {
 .delivery_area {
     max-width: 1920px;
     height: 616px;
-    margin: 80px 0;
+    margin: 80px 0px 0px 0px;
 }
 
 .info {
@@ -290,6 +297,7 @@ select {
 
 .team-card:hover .social_media {
     visibility: visible;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card_content {
@@ -340,100 +348,172 @@ select {
 
 /* Custom Slick Arrows */
 
+.team-slider {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.team-card {
+    width: 312px !important;
+    height: 368px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 12px;
+    position: relative;
+}
+
+.team-card img {
+    width: 312px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Social Icons Overlay on Image */
+
+.social-overlay {
+    position: absolute;
+    top: 110px;
+    left: 70px;
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    text-decoration: none;
+    background-color: #f4f5f51a;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .social-overlay {
+    opacity: 1;
+}
+
+.social-overlay a {
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+}
+
+.social-overlay a:hover {
+    background: #1da1f2;
+    background-color: #00c853;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Content Area - Left Aligned */
+
+.team-card_content {
+    padding: 20px 24px 24px;
+    /* background: linear-gradient(to bottom, #e5f6f5 0%, #d0efed 100%); */
+    background-color: #ffffff;
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 4px 0;
+    text-align: left;
+}
+
+.team-position {
+    font-size: 14px;
+    color: #00695c;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+}
+
+
+/* Slick Custom Arrows */
+
 .slick-prev,
 .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
     width: 50px;
     height: 50px;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    background-color: #ccc;
-    border: none;
     border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-prev:before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
+    font-size: 24px;
+    color: #007bff;
+    color: black;
 }
 
 .slick-prev {
-    left: -80px;
+    left: -75px;
+}
+
+.slick-prev:before {
+    content: '\f060'!important;
+    /* fa-chevron-left */
 }
 
 .slick-next {
-    right: -80px;
+    right: -75px;
 }
 
-.slick-prev:hover,
-.slick-next:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background-color: #667eea;
+.slick-next:before {
+    content: "\f061" !important;
+    /* Solid right arrow */
 }
 
-
-/* Dots Styling */
-
-.slick-dots {
-    bottom: -50px;
-}
-
-.slick-dots li button:before {
-    color: #667eea;
-    font-size: 12px;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #764ba2;
+.slick-next::before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-size: 24px !important;
+    color: #007bff;
+    color: black;
 }
 
 
-/* Responsive Design */
+/* Responsive */
 
 @media (max-width: 1200px) {
     .slick-prev {
-        left: -30px;
+        left: -20px;
     }
     .slick-next {
-        right: -30px;
-    }
-    .category-card {
-        margin: 0 5px;
-        height: 280px;
+        right: -20px;
     }
 }
 
 @media (max-width: 768px) {
-    .section-header {
-        justify-content: center;
-        text-align: center;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
     .slick-prev,
     .slick-next {
         display: none !important;
     }
-    .category-icon {
-        font-size: 3rem;
-    }
-    .category-card {
-        height: 250px;
-        padding: 20px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .categories-section {
-        padding: 0 10px;
-    }
-    .category-card {
-        margin: 0 2px;
-        height: 220px;
+    .team-card {
+        margin: 0 8px;
     }
 }
 
@@ -571,6 +651,18 @@ select {
     text-align: left;
 }
 
+.newsletter_content h3 {
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.newsletter_content p {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .subscribe-box {
     width: 500px;
     height: 30px;
@@ -621,6 +713,17 @@ select {
     height: 400px;
     background-image: url(../img/Banner/Footer.jpg);
     background-size: 100% 100%;
+}
+
+.address1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 34px;
+    height: 2px;
+    background-color: #00ff00;
+    /* Green line */
 }
 
 .company {
@@ -696,11 +799,10 @@ select {
     font-size: 18px;
 }
 
-.footer-container {
+.address-column {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -801,4 +903,40 @@ select {
 .copyright p {
     color: #808080;
     font-size: 14px;
+}
+
+.workers_team .slider-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.workers_team .arrow {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.workers_team .arrow.left.prev-arrow {
+    margin-left: -60px;
+}
+
+.workers_team .arrow.right.next-arrow {
+    margin-right: -60px;
+}
+
+.workers_team .arrow:hover {
+    background: #20B526;
+    color: #fff;
 }
