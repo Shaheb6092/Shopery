@@ -149,6 +149,7 @@ select {
 
 .breadcrumb .active {
     color: green;
+    padding-left: 0px;
 }
 
 
@@ -533,16 +534,24 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #919bab;
     font-size: 24px;
     transition: transform 0.3s ease;
     cursor: pointer;
+}
+
+.icon i {
+    color: #919bab;
 }
 
 .icon:hover {
     transform: scale(1.1);
     background-color: #00c853;
     border-radius: 50%;
+}
+
+.icon:hover i {
+    color: white;
 }
 
 .twitter,
