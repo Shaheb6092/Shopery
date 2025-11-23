@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopery - Organic eCommerce Shop Website</title>
+
+    <!--bootstrap css connect-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+    <!--normalize css connect-->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 - Full (Solid + Regular + Brands) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!--Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--favicon connect-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/Icon/plant 1.svg">
+    <link rel="manifest" href="./assets/img/Icon/plant 1.svg">
+
+
+    <!--style css connect-->
+    <link rel="stylesheet" href="./assets/css/Shopping_cart.css">
+</head>
+
+<body>
+    <!--header section-->
+    <header>
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9">
+                        <div class="header_top_left align-content-center">
+                            <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
+                            <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 text-align-end">
+                        <div class="header_top_right">
+                            <form class="d-flex">
+                                <select class="select form-control form-select form_select select_option">
+                                    <option>Eng</option>
+                                    <option>Ban</option>
+                                    <option>Hin</option>
+                                </select>
+                                <select class="select form-control form-select form_select select_option">
+                                    <option>USD</option>
+                                    <option>INR</option>
+                                    <option>AED</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 align-content-center">
+                        <div class="header_top_right text-light text-center">
+                            <p class="m-0"><a href="#" style="color: #ffffff; text-decoration:none;">Sign in</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_menu">
+            <div class="container p-2">
+                <div class="row">
+                    <div class="col-xl-2 align-content-center">
+                        <div class="header_logo">
+                            <a class="navbar-brand" href="#"><img src="./assets/img/Logo/Logo.svg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 d-flex justify-content-center align-items-center">
+                        <div class="input-group text-center search_box" id="input-group">
+                            <input type="search_box" placeholder="Search" required />
+                            <a href="#" id="search_btn">Search</a></div>
+                    </div>
+                    <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
+                        <div class="nav_icon">
+                            <a href="#"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
+                            <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart"></a>
+                        </div>
+                        <div class="cart_area justify-content-center text-end">
+                            <p>Shopping Cart</p><span>$57.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 navbar navbar-expand-lg">
+                        <div class="nav header_nav collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>
+                                <!--<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>-->
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Blog_List</a></li>
+                                        <li><a class="dropdown-item" href="#">Single_Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="header_nav_right">
+                            <ul class="nav justify-content-end">
+                                <li class="nav-item ">
+                                    <a class="nav-link text-dark" href="#">
+                                        <i class="bi bi-telephone-outbound-fill p-1"></i> <span class="text-dark">(219) 555-0114</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumb banner section-->
+
+        <section class="banner">
+            <div class="container h-100">
+                <div class="d-flex align-items-center h-100">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent mb-0">
+                            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i></a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <section class="shopping_area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Title -->
+                <div class="shopping_cart_title text-center mb-5">
+                    <h2>My Shopping Cart</h2>
+                </div>
+
+                <!-- Left: Cart Items -->
+                <div class="col-xl-8">
+                    <div class="shopping_cart">
+                        <div class="container">
+                            <div class="row m-3">
+                                <div class="col-xl-5 text-left">Products</div>
+                                <div class="col-2 text-center">Price</div>
+                                <div class="col-2 text-center">Quantity</div>
+                                <div class="col-3 text-center">Subtotal</div>
+                            </div>
+                        </div>
+                        <!-- Product 1 -->
+                        <div class="product-row d-flex align-items-center">
+                            <div class="me-4">
+                                <img src="./assets/img/products/pro3.png" alt="Green Capsicum" class="product-img">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-semibold">Green Capsicum</h5>
+                            </div>
+                            <div class="text-center mx-3 fw-bold text-success">$14.00</div>
+                            <div class="mx-4">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="5" readonly>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="text-center mx-3 fw-bold">$70.00</div>
+                            <div class="ms-3">
+                                <button class="btn remove-item">×</button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-row d-flex align-items-center">
+                            <div class="me-4">
+                                <img src="./assets/img/products/Image (28).png" alt="Red Capsicum" class="product-img">
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-semibold">Red Capsicum</h5>
+                            </div>
+                            <div class="text-center mx-3 fw-bold text-success">$14.00</div>
+                            <div class="mx-4">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="text" class="quantity-input" value="1" readonly>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="text-center mx-3 fw-bold">$14.00</div>
+                            <div class="ms-3">
+                                <button class="btn remove-item">×</button>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Actions -->
+                        <div class="container d-flex flex-column flex-md-row justify-content-between m-4 gap-3">
+                            <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2 return_shp_bt">← Return to shop</a>
+                            <button class="btn btn-outline-primary rounded-pill px-5 py-2 updt_shp_btn">Update Cart</button>
+                        </div>
+
+                        <!-- Coupon -->
+                        <!-- <div class="mt-5">
+                            <div class="d-flex coupon-box">
+                                <input type="text" class="form-control coupon-input flex-grow-1" placeholder="Enter code">
+                                <button class="coupon-btn">Apply Coupon</button>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+                    <div class="container">
+                        <div class="coupon-area">
+
+                            <!-- 100% IDENTICAL TO YOUR ORIGINAL DESIGN -->
+                            <div class="coupon-wrapper">
+                                <div class="coupon-label">Coupon Code</div>
+
+                                <div class="coupon-pill">
+                                    <input type="text" class="coupon-input" placeholder="Enter code">
+                                    <button class="coupon-btn">Apply Coupon</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Cart Total -->
+                <div class="col-xl-4">
+                    <div class="cart-total-card">
+                        <h4 class="text-left mb-4 fw-bold text-dark">Cart Total</h4>
+
+                        <div class="total-row d-flex justify-content-between">
+                            <span>Subtotal:</span>
+                            <strong>$84.00</strong>
+                        </div>
+                        <div class="total-row d-flex justify-content-between text-success">
+                            <span>Shipping:</span>
+                            <strong>Free</strong>
+                        </div>
+                        <hr class="my-3">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="h5 mb-0">Total:</span>
+                            <span class="final-total">$84.00</span>
+                        </div>
+
+                        <button class="checkout-btn">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--Breadcrumb js connect-->
+    <script src="./assets/js/breadcrumb.js">
+        document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageName = this.textContent.trim();
+                document.querySelector('.banner').style.display = 'block';
+                document.querySelector('.breadcrumb-item.active').textContent = pageName;
+            });
+        });
+    </script>
+
+
+
+    <!--Footer & newsletter section-->
+    <section class="footer_newsletter">
+        <section class="newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="newsletter_content">
+                            <h3>Subcribe our Newsletter</h3>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 d-flex">
+                        <div class="col-xl-8">
+                            <div class="subscribe-box">
+                                <div class="input-group">
+                                    <input type="email" placeholder="Your email address" required />
+                                    <a href="#" id="subscribe_btn">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="social-media">
+                                <div class="social-container d-flex">
+                                    <div class="icon facebook">
+                                        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #919bab; "></i></a>
+                                    </div>
+                                    <div class="icon twitter">
+                                        <a href="#"><i class="fa-brands fa-twitter" style="color: #919bab;"></i></a>
+                                    </div>
+                                    <div class="icon pinterest">
+                                        <a href="#"><i class="fa-brands fa-pinterest-p" style="color: #919bab;"></i></a>
+                                    </div>
+                                    <div class="icon instagram">
+                                        <a href="#"><i class="fa-brands fa-instagram" style="color: #919bab;"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-3 ">
+                        <div class="company ">
+                            <img src="./assets/img/Logo/Logo2.svg " class="mb-3 " alt=" ">
+                            <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
+                            <div class="address-column ">
+                                <h6 class="address1 m-0 ">(219) 555-0114</h6>
+                                <p>or</p>
+                                <h6 class="address2 m-0 "> Proxy@gmail.com</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="footer-column ">
+                            <h3>My Account</h3>
+                            <ul>
+                                <li><a href="# ">My Account</a></li>
+                                <li><a href="# ">Order History</a></li>
+                                <li><a href="# ">Shopping Cart</a></li>
+                                <li><a href="# ">Wishlist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="footer-column ">
+                            <h3>Helps</h3>
+                            <ul>
+                                <li><a href="# ">Contact</a></li>
+                                <li><a href="# ">FAQs</a></li>
+                                <li><a href="# ">Terms & Condition</a></li>
+                                <li><a href="# ">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="footer-column ">
+                            <h3>Proxy</h3>
+                            <ul>
+                                <li><a href="# ">About</a></li>
+                                <li><a href="# ">Shop</a></li>
+                                <li><a href="# ">Product</a></li>
+                                <li><a href="# ">Track Order</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="footer-column ">
+                            <h3>Category</h3>
+                            <ul>
+                                <li><a href="# ">Fruit & Vegetables</a></li>
+                                <li><a href="# ">Meat & Fish</a></li>
+                                <li><a href="# ">Bread & Bakery</a></li>
+                                <li><a href="# ">Beauty & Health</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-3 ">
+                        <div class="footer-column ">
+                            <h3>Download Mobile App</h3>
+                            <div class="app-links d-flex ">
+                                <div class="app_store d-flex me-2 alig ">
+                                    <a href="# "><img src="./assets/img/Icon/Apple---Negative 1.svg " class="p-2 " alt="Apple Store "></a>
+                                    <div class="frame ">
+                                        <p>Download on the</p>
+                                        <h4>App Store</h4>
+                                    </div>
+                                </div>
+                                <div class="google_play d-flex p-2 ">
+                                    <a href="# "><img src="./assets/img/Icon/Icon=google-play 1.svg " class="pe-2 " alt="Google Play "></a>
+                                    <div class="frame ">
+                                        <p>Download on the</p>
+                                        <h4>Google Play</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="copyright_area ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-xl-9 ">
+                                    <div class="copyright ">
+                                        <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 ">
+                                    <div class="frame ">
+                                        <a href="# "><img src="./assets/img/Logo/Method=ApplePay.png " class="me-2 " alt="ApplePay "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Visa.png " class="me-2 " alt="Visa "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Discover.png " class="me-2 " alt="Discover "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Mastercard.png " class="me-2 " alt="Mastercard "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Cart.png " alt="Cart "></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--bootstrap js connect-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

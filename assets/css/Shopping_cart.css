@@ -160,492 +160,259 @@ select {
     /* Adjust if needed */
 }
 
-.organic_food_store {
-    margin: 60px 0;
-    height: 490px;
-    max-width: 1920px;
-}
-
-.food_store_content {
-    padding: 80px 0;
-}
-
-.food_store_content h2 {
-    font-size: 56px;
-    font-weight: 600;
-}
-
-.food_store_content p {
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 24px;
-    color: #555555;
-}
-
-.food_store_img img {
-    width: 665px;
-    height: 500px;
-}
-
-.trusted_food_store {
-    max-width: 1920px;
-    height: 685px;
-    background-image: url(../img/Banner/BG\ \(8\).jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#trusted_food_store {
-    margin: 80px 0px;
-    /* background-color: #ffffff45; */
-}
-
-.trusted_food_store_img img {
-    width: 600px;
-    height: 685px;
-}
-
-.trusted_food_store_content h2 {
-    font-size: 56px;
-    font-weight: 600;
-    color: #002603;
-}
-
-.trusted_food_store_content p {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 24px;
-    color: #808080;
-}
-
-.feature_list {
-    margin-top: 40px;
-}
-
-.delivery_area {
-    max-width: 1920px;
-    height: 616px;
-    margin: 80px 0px 0px 0px;
-}
-
-.info {
-    margin: 40px 0;
-}
-
-.info h2 {
-    font-size: 48px;
-    font-weight: 600;
-    color: #1A1A1A;
-}
-
-.info p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #666666;
-    margin-top: 24px;
-}
-
-.feautures_content {
-    padding-left: 10px;
-}
-
-.feautures_content p {
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0;
-}
-
-.shopnow_btn a {
-    color: #ffffff;
-    background-color: #00B207;
-    padding: 16px 40px;
-    text-decoration: none;
+.shopping_area {
+    background: #ffffff;
     border-radius: 24px;
-}
-
-.workers_team {
-    max-width: 1920px;
-    height: 700px;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    background-color: #e6e6e633;
-}
-
-.workers_area_title {
-    margin: 40px 0px;
-}
-
-.workers_area_title h2 {
-    font-size: 48px;
-    font-weight: 600;
-    color: #1A1A1A;
-}
-
-.workers_area_title p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #666666;
-}
-
-.team-card {
-    width: 312px;
-    height: 370px;
-    border: 1px solid #E6E6E6;
-    border-radius: 7px;
-    text-align: left;
-}
-
-.team-card:hover .social_media {
-    visibility: visible;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.card_content {
-    padding: 20px;
-}
-
-.social_media {
-    margin: 0;
-    padding: 116px 35px;
-    background-color: #f4f5f51a;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    visibility: hidden;
-}
-
-.social-container {
-    display: flex;
-    gap: 14px;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    background-color: #00c853;
-    border-radius: 50%;
-}
-
-.twitter,
-.pinterest,
-.instagram {
-    background-color: transparent;
-}
-
-
-/* Custom Slick Arrows */
-
-.team-slider {
-    max-width: 1920px;
-    margin: 0 auto;
-}
-
-.team-card {
-    width: 312px !important;
-    height: 368px;
-    background: white;
-    border-radius: 16px;
     overflow: hidden;
-    margin: 0 12px;
-    position: relative;
-}
-
-.team-card img {
-    width: 312px;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-}
-
-.team-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Social Icons Overlay on Image */
-
-.social-overlay {
-    position: absolute;
-    top: 110px;
-    left: 70px;
-    display: flex;
-    gap: 12px;
-    opacity: 0;
-    text-decoration: none;
-    background-color: #f4f5f51a;
-    transition: opacity 0.3s ease;
-}
-
-.team-card:hover .social-overlay {
-    opacity: 1;
-}
-
-.social-overlay a {
-    text-decoration: none;
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s;
-}
-
-.social-overlay a:hover {
-    background: #1da1f2;
-    background-color: #00c853;
-    color: white;
-    transform: translateY(-3px);
-}
-
-
-/* Content Area - Left Aligned */
-
-.team-card_content {
-    padding: 20px 24px 24px;
-    /* background: linear-gradient(to bottom, #e5f6f5 0%, #d0efed 100%); */
-    background-color: #ffffff;
-    height: 88px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.team-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #222;
-    margin: 0 0 4px 0;
-    text-align: left;
-}
-
-.team-position {
-    font-size: 14px;
-    color: #00695c;
-    font-weight: 500;
-    margin: 0;
-    text-align: left;
-}
-
-
-/* Slick Custom Arrows */
-
-.slick-prev,
-.slick-next {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white !important;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-.slick-prev:before {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900;
-    font-size: 24px;
-    color: #007bff;
-    color: black;
-}
-
-.slick-prev {
-    left: -75px;
-}
-
-.slick-prev:before {
-    content: '\f060'!important;
-    /* fa-chevron-left */
-}
-
-.slick-next {
-    right: -75px;
-}
-
-.slick-next:before {
-    content: "\f061" !important;
-    /* Solid right arrow */
-}
-
-.slick-next::before {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    font-size: 24px !important;
-    color: #007bff;
-    color: black;
-}
-
-
-/* Responsive */
-
-@media (max-width: 1200px) {
-    .slick-prev {
-        left: -20px;
-    }
-    .slick-next {
-        right: -20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .slick-prev,
-    .slick-next {
-        display: none !important;
-    }
-    .team-card {
-        margin: 0 8px;
-    }
-}
-
-.testimonials {
     max-width: 1920px;
-    height: 500px;
+    height: 640px;
+    margin: 40px 0px 40px 0px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+}
+
+.cart_total {
+    width: 425px;
+    height: 296px;
+}
+
+.shopping_cart_title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.shopping_cart {
+    width: 872px;
+    height: 372px;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+.product-row {
+    width: 832px;
+    height: 100px;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 5px;
+    transition: all 0.3s;
+    border: 1px solid rgb(211, 208, 208);
+}
+
+.product-row:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #fff;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+.quantity-controls {
+    background: white;
+    border: 2px solid #E6E6E6;
+    border-radius: 30px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #E6E6E6;
+    color: #1a6f6a;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.remove-item {
+    font-size: 1.8rem;
+    color: #999;
+}
+
+.remove-item:hover {
+    color: #e74c3c;
+}
+
+.return_shp_bt {
+    margin-left: 20px;
+    color: #1a1a1a;
     background-color: #F2F2F2;
 }
 
-.testimonial-wrapper {
-    overflow: hidden;
-    width: 100%;
+.updt_shp_btn {
+    color: #1a1a1a;
+    background-color: #F2F2F2;
+    margin-right: 20px;
+    border: 1px solid #9f9797;
 }
 
-.testimonial-container {
-    transition: transform 0.8s ease-in-out;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 0 !important;
-    gap: 24px;
-}
 
-.testimonial-container .col-xl-4 {
-    flex: 0 0 calc(33.333% - 16px);
-    min-width: calc(33.333% - 16px);
-    padding: 0 !important;
-}
+/* Right Sidebar - Cart Total */
 
-.heading {
-    padding-top: 70px;
-    margin-bottom: 36px;
-}
-
-.testimonial_heading p {
-    font-family: Segoe Script;
-    font-size: 16px;
-    color: #00B207;
-}
-
-.testimonial_heading h2 {
-    font-weight: 600;
-    font-size: 40px;
-    color: #1A1A1A;
-}
-
-.testimonial_heading_arrow {
-    text-align: end;
-    align-items: center;
-    align-content: center;
-    padding-top: 25px;
-}
-
-.testimonial_heading_arrow i {
-    width: 40px;
-    height: 40px;
-    background-color: #E6E6E6;
-    border-radius: 25px;
-    align-content: center;
-}
-
-.arrow {
-    border: none;
-    padding: 0px 0px;
-    background: none;
-    transition: 0.3s;
-}
-
-.arrow_left:hover {
-    color: #ffffff;
-    background-color: #00B207;
-}
-
-.arrow_right:hover {
-    color: #ffffff;
-    background-color: #00B207;
-}
-
-.testimonial-card {
+.cart-total-card {
+    padding: 16px 12px;
+    border-radius: 10px;
+    border: 2px solid #e6e6e6;
+    height: 350px;
     width: 424px;
-    height: 254px;
-    padding: 20px;
-    background-color: #FFFFFF;
-    border: solid 0.21px #E6E6E6;
-    border-radius: 5px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial_card p {
-    font-size: 14px;
+.total-row {
+    padding: 12px 0;
+    border-bottom: 1px dashed #a8e6cf;
 }
 
-.reviewer img {
-    width: 56px;
-    height: 56px;
+.total-row:last-of-type {
+    border-bottom: none;
 }
 
-.info h6 {
-    margin: 0px 0px;
+.final-total {
+    font-size: 1.5rem;
+    color: #1a6f6a;
+    font-weight: 800;
 }
 
-.info p {
-    margin: 0px 0px;
-}
-
-.rating {
-    align-content: center;
-    color: orange;
-}
-
-.brand_contact {
-    max-width: 1920px;
-    height: 200px;
-    align-items: center;
-}
-
-.company_logo {
+.checkout-btn {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
     width: 100%;
-    max-width: 1920px;
-    height: 200px;
-    align-content: center;
-    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
+    transition: all 0.3s;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.5);
+}
+
+.coupon-box {
+    width: 872px;
+    height: 92px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.coupon-input {
+    /*       border: none; */
+    padding: 8px 12px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.coupon-btn {
+    background: #34495e;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 0 50px 50px 0;
+    font-weight: 600;
+}
+
+
+/* EXACT Coupon Area - Same to Same */
+
+.coupon-area {
+    width: 875px;
+    margin: 0 auto;
+    /* background: #f8fffe; */
+    border-radius: 20px;
+    padding-top: 24px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+}
+
+
+/* EXACT SAME-TO-SAME COUPON DESIGN */
+
+.coupon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #E6E6E6;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.coupon-label {
+    font-weight: 600;
+    padding: 0px 20px;
+    font-size: 1.1rem;
+    min-width: 110px;
+}
+
+
+/* Perfectly symmetrical pill shape – both sides fully rounded */
+
+.coupon-pill {
+    display: flex;
+    width: 100%;
+    max-width: 624px;
+    height: 56px;
+    border: 2px solid #e6e6e6;
+    border-radius: 50px;
+    /* Same left & right radius */
+    /* overflow: hidden; */
+    background: white;
+}
+
+.coupon-input {
+    flex: 1;
+    border: none;
+    padding: 0 24px;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+}
+
+.coupon-input::placeholder {
+    color: #999;
+}
+
+.coupon-btn {
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 0 34px;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.coupon-btn:hover {
+    background: #1a5656;
 }
 
 .footer_newsletter {
     max-width: 1920px;
-    height: 600px;
+    height: 450px;
 }
 
 .newsletter {
     max-width: 1920px;
-    height: 200px;
+    height: 140px;
     justify-content: center;
     align-items: center;
     align-content: center;
