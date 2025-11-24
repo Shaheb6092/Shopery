@@ -29,7 +29,6 @@ select {
 }
 
 .form_select {
-    /* padding-left: 60px; */
     background-color: #333333;
     color: #ffffff;
     border: 1px solid #444;
@@ -487,9 +486,20 @@ select {
 .address1::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 34px;
+    left: 210px;
+    top: 1423px;
+    width: 98px;
+    height: 2px;
+    background-color: #00ff00;
+    /* Green line */
+}
+
+.address2::after {
+    content: "";
+    position: absolute;
+    left: 379px;
+    top: 1425px;
+    width: 124px;
     height: 2px;
     background-color: #00ff00;
     /* Green line */
@@ -614,30 +624,12 @@ select {
     color: #fff;
 }
 
-
-/* .app-links a img {
-    width: 140px;
-    margin-right: 10px;
-    margin-top: 10px;
-} */
-
 .footer-column h3 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #FFFFFF;
     position: relative;
     padding-bottom: 5px;
-}
-
-.footer-column h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 34px;
-    height: 2px;
-    background-color: #00ff00;
-    /* Green line */
 }
 
 .app_store {
