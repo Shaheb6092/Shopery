@@ -1,4 +1,3 @@
-
 // 1. Quantity +/− (already working)
 document.querySelectorAll('.quantity-controls').forEach(control => {
     const minus = control.querySelector('.minus');

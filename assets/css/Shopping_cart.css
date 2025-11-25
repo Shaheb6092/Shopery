@@ -146,6 +146,10 @@ select {
     text-decoration: none;
 }
 
+.breadcrumb-item:hover {
+    color: #00B207;
+}
+
 .breadcrumb .active {
     color: green;
     padding-left: 0px;
@@ -295,7 +299,8 @@ select {
     padding: 16px;
     font-size: 1.3rem;
     font-weight: 600;
-    width: 100%;
+    width: 90%;
+    margin: 0px 20px;
     color: white;
     box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
     transition: all 0.3s;
@@ -304,6 +309,11 @@ select {
 .checkout-btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(46, 204, 113, 0.5);
+}
+
+.checkout-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 .coupon-box {
@@ -499,6 +509,28 @@ select {
     position: absolute;
     left: 379px;
     top: 1425px;
+    width: 124px;
+    height: 2px;
+    background-color: #00ff00;
+    /* Green line */
+}
+
+.phone::after {
+    content: "";
+    position: absolute;
+    left: 210px;
+    top: 1500px;
+    width: 98px;
+    height: 2px;
+    background-color: #00ff00;
+    /* Green line */
+}
+
+.gmail::after {
+    content: "";
+    position: absolute;
+    left: 379px;
+    top: 1500px;
     width: 124px;
     height: 2px;
     background-color: #00ff00;
@@ -708,4 +740,81 @@ select {
 .workers_team .arrow:hover {
     background: #20B526;
     color: #fff;
+}
+
+.billing_address {
+    margin-bottom: 60px;
+}
+
+.billing_information {
+    width: 872px;
+    height: 706px;
+}
+
+.billing_information h2 {
+    margin: 30px 0px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+input {
+    overflow: visible;
+    width: 280px;
+    border: 1px solid #e6e6e6;
+}
+
+input[type="text"] {
+    padding: 5px 14px;
+}
+
+#street_address {
+    width: 875px;
+}
+
+input#address {
+    width: 430px;
+}
+
+.aditional_note {
+    width: 872px;
+    height: 100px;
+    border: 1px solid #e6e6e6;
+}
+
+input.additional_text {
+    padding: 10px 14px 65px 14px;
+    width: 868px;
+    height: 95px;
+    border: none;
+}
+
+.order_summary {
+    width: 424px;
+    height: 580px;
+    margin-top: 50px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.ordered_item {
+    justify-items: center;
+}
+
+.item {
+    width: 376px;
+    height: 60px;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+}
+
+.item_name_price p {
+    padding: 18px 0px 0px 0px;
+}
+
+.form-check-input:checked {
+    background-color: #20B526;
+    border-color: #20B526;
 }
