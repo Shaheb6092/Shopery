@@ -92,7 +92,6 @@
                             <a href="#"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
                             <button class="cart-button" onclick="toggleCart()">
                                 <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
-                                <!-- <a href=""><img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart"></a> -->
                             </button>
                             <div class="cart-sidebar" id="cartSidebar">
                                 <!--cart product section-->
@@ -107,7 +106,7 @@
                                                     <img src="./assets/img/products/Image (11).png" alt="product">
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-6">
                                                 <div class="product_detail">
                                                     <h6>Fresh Indian Orange</h6>
                                                     <p>1kg × <b>12.00</b></p>
@@ -115,7 +114,7 @@
                                             </div>
                                             <div class="col-2">
                                                 <div class="ms-3">
-                                                    <button class="btn remove-item">×</button>
+                                                    <button class="btn remove-item m-0">×</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -126,7 +125,7 @@
                                                     <img src="./assets/img/products/pro1.png" alt="product">
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-6">
                                                 <div class="product_detail">
                                                     <h6>Green Apple</h6>
                                                     <p>1kg ×<b>14.00</b></p>
@@ -134,7 +133,7 @@
                                             </div>
                                             <div class="col-2">
                                                 <div class="ms-3">
-                                                    <button class="btn remove-item">×</button>
+                                                    <button class="btn remove-item m-0">×</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,7 +152,8 @@
                             </div>
                         </div>
                         <div class="cart_area justify-content-center text-end">
-                            <p>Shopping Cart</p><span>$57.00</span></div>
+                            <p>Shopping Cart</p><span class="final-total text-secondary" id="cart-total">$84.00</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -453,11 +453,11 @@
         </section>
 
         <section class="footer">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-xl-3 ">
-                        <div class="company ">
-                            <img src="./assets/img/Logo/Logo2.svg " class="mb-3 " alt=" ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="company">
+                            <img src="./assets/img/Logo/Logo2.svg" class="mb-3 " alt=" ">
                             <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
                             <div class="address-column">
                                 <h6 class="phone m-0 ">(219) 555-0114</h6>
@@ -537,16 +537,35 @@
     </section>
 
 
+
+    <!--Breadcrumb js connect-->
+    <script src="./assets/js/breadcrumb.js"></script>
+
+    <!--quantity control connection-->
+    <script src="./assets/js/quantity-control.js"></script>
+
+    <!--bootstrap js connect-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <script>
         function toggleCart() {
             const cart = document.getElementById('cartSidebar');
             cart.classList.toggle('open');
         }
+        // 2. REMOVE BUTTON – FULLY FUNCTIONAL
+        document.querySelectorAll('.remove-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const row = this.closest('.items');
+
+                // Smooth fade + slide out animation
+                row.classList.add('removing');
+                setTimeout(() => {
+                    row.remove(); // actually delete from DOM
+                    updateCartTotal(); // recalculate total
+                }, 400);
+            });
+        });
     </script>
-
-    <!--bootstrap js connect-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

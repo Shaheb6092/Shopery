@@ -134,7 +134,7 @@ button#toggleCart {
 
 .cart_product {
     width: 395px;
-    height: 800px;
+    height: 916px;
     /* margin: 40px 40px; */
     background-color: #ffffff;
     /* border: 1px solid #e6e6e6; */
@@ -163,13 +163,6 @@ button#toggleCart {
 button.btn.remove-item {
     font-size: 30px;
     margin: 0px 0px 0px 60px;
-}
-
-.product_cart {
-    /* width: 395px;
-    height: 186px;
-    margin: 40px 40px;
-    border: 1px solid #e6e6e6; */
 }
 
 .product_cart h6 {
