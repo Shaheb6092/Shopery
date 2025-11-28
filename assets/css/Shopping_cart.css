@@ -96,6 +96,118 @@ select {
 .navbar_icon {
     padding: 14px;
     width: 60px;
+    border: none;
+}
+
+.cart-button {
+    /* position: relative; */
+    background: none;
+    border: none;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 395px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.cart-header.text-left {
+    text-align: left;
+}
+
+button#toggleCart {
+    border: none;
+    background: none;
+    margin-left: 130px;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart_product {
+    width: 395px;
+    height: 800px;
+    /* margin: 40px 40px; */
+    background-color: #ffffff;
+    /* border: 1px solid #e6e6e6; */
+}
+
+.items {
+    width: 376px;
+    height: 100px;
+}
+
+.product img {
+    height: 100px;
+    width: 120px;
+}
+
+.product_detail {
+    height: 100px;
+    width: auto;
+}
+
+.cart_title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+button.btn.remove-item {
+    font-size: 30px;
+    margin: 0px 0px 0px 60px;
+}
+
+.product_cart {
+    /* width: 395px;
+    height: 186px;
+    margin: 40px 40px;
+    border: 1px solid #e6e6e6; */
+}
+
+.product_cart h6 {
+    text-align: left;
+    ;
+}
+
+span.product_amount {
+    margin-left: 200px;
+}
+
+.btn_area {
+    display: grid;
+    /* margin: 0px auto;
+    align-items: center;
+    height: 100px;
+    width: 100%; */
+}
+
+a.checkout_btn {
+    color: #ffffff;
+    background-color: #20B526;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 14px 150px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+a.cart_btn {
+    color: #20B526;
+    background-color: #56ac594a;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 14px 150px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 14px;
 }
 
 .cart_area {
@@ -790,10 +902,10 @@ input.additional_text {
 
 .order_summary {
     width: 424px;
-    height: 580px;
+    height: 470px;
     margin-top: 50px;
     border: 1px solid #e6e6e6;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .ordered_item {
