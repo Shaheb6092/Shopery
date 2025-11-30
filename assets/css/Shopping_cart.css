@@ -171,7 +171,7 @@ button.btn.remove-item {
 }
 
 span.product_amount {
-    margin-left: 200px;
+    margin-left: 195px;
 }
 
 .btn_area {
@@ -187,7 +187,7 @@ a.checkout_btn {
     background-color: #20B526;
     border-radius: 25px;
     text-decoration: none;
-    padding: 14px 150px;
+    padding: 14px 143px;
     margin-bottom: 14px;
     text-align: center;
 }
@@ -197,7 +197,7 @@ a.cart_btn {
     background-color: #56ac594a;
     border-radius: 25px;
     text-decoration: none;
-    padding: 14px 150px;
+    padding: 14px 143px;
     margin-bottom: 14px;
     text-align: center;
     font-size: 14px;
