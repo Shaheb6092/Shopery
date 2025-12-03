@@ -4,6 +4,7 @@ body {
 
 .header_top {
     background-color: #333333;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .col-xl-9 {
@@ -133,8 +134,8 @@ button#toggleCart {
 }
 
 .cart_product {
-    width: 395px;
-    height: 916px;
+    width: auto;
+    height: 851px;
     /* margin: 40px 40px; */
     background-color: #ffffff;
     /* border: 1px solid #e6e6e6; */

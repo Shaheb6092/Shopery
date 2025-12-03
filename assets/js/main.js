@@ -70,3 +70,17 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
     updateCarousel();
 });
+
+// =================================================================
+//      NAV SELECT REDIRECTION
+// =================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-select').forEach(selectElement => {
+        selectElement.addEventListener('change', function() {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue + '.html';
+            }
+        });
+    });
+});
