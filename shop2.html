@@ -35,64 +35,14 @@
     <!--style css connect-->
     <link rel="stylesheet" href="./assets/css/Shopping_cart.css">
 
-    <style>
-        .navbar {
-            color: #ffffff;
-            background-color: #1A1A1A;
-        }
-        
-        .banner {
-            display: none;
-            /* Hidden until a menu item is clicked */
-            background-position: center;
-            height: 200px;
-            position: relative;
-        }
-        
-        .breadcrumb a {
-            color: green;
-            text-decoration: none;
-        }
-        
-        .breadcrumb .active {
-            color: green;
-        }
-        /* Make form-select look like navbar links and open on hover (desktop) */
-        
-        .nav-select {
-            background: transparent;
-            border: none;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #FFFFFF;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 12px;
-        }
-        
-        .nav-select:focus {
-            box-shadow: none;
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-        /* Hover effect on desktop */
-        
-        @media (min-width: 992px) {
-            .nav-select:hover {
-                background-color: rgba(0, 0, 0, 0.1);
-            }
-        }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body>
     <header>
         <!--top header start-->
-        <div class="header_top bg-transparent">
+        <div class="header_top bg-transparent text-white">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9">
@@ -221,7 +171,7 @@
         </div>
 
         <!--nav menu start-->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container">
                 <div class="col-xl-10 col-10">
                     <!-- Toggler for mobile -->
@@ -233,8 +183,8 @@
                         <ul class="navbar-nav me-auto align-items-center gap-2">
 
                             <!-- Home Select -->
-                            <li class="h-full">
-                                <select class="form-select nav-select text-white" data-page="Home">
+                            <li class="nav-item">
+                                <select class="form-select navs-select text-white" data-page="Home">
                                     <option value="" selected>Home</option>
                                     <option value="index">Option 1</option>
                                     <option value="index">Option 2</option>
@@ -243,16 +193,16 @@
 
                             <!-- Shop Select -->
                             <li class="nav-item">
-                                <select class="form-select nav-select" data-page="Shop">
-                                <option value="" selected>Shop</option>
-                                <option value="shop1">Shop 1</option>
-                                <option value="shop2">Shop 2</option>
-                            </select>
+                                <select class="form-select navs-select" data-page="Shop">
+                                    <option value="" selected>Shop</option>
+                                    <option value="shop1">Shop 1</option>
+                                    <option value="shop2">Shop 2</option>
+                                </select>
                             </li>
 
                             <!-- Pages Select -->
                             <li class="nav-item">
-                                <select class="form-select nav-select" data-page="Pages">
+                                <select class="form-select navs-select" data-page="Pages">
                                     <option value="" selected>Pages</option>
                                     <option value="page1">Page One</option>
                                     <option value="page2">Page Two</option>
@@ -260,8 +210,8 @@
                             </li>
 
                             <!-- Blog Select -->
-                            <li class="nav-item">
-                                <select class="form-select nav-select" data-page="Blog">
+                            <li class="nav-item style-one">
+                                <select class="form-select navs-select" data-page="Blog">
                                     <option value="" selected>Blog</option>
                                     <option value="blog1">Blog-Post</option>
                                     <option value="blog2">Blog-List</option>
@@ -283,10 +233,159 @@
                         <i class="bi bi-telephone me-2"></i> (219) 555-0114
                     </div>
                 </div>
+            </div>
         </nav>
 
 
     </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb bg-transparent m-3 p-0">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door text-secondary"></i></a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">
+                        <i class='fas fa-angle-right text-secondary'></i>
+                        <a href="Shopping_cart.html" class="text-secondary" style="text-decoration: none;">Categories</a>
+                        <i class='fas fa-angle-right p-2'></i><span class="text-success">Vegetables</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="discount_banner mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-12">
+                    <div class="discount_content p-5">
+                        <span class="text-white">HOT DEALS</span>
+                        <div class="d-flex">
+                            <h2 class="text-white me-5">Sale of the Month</h2>
+                            <!-- Circle badge showing percent off -->
+                            <svg class="bd-placeholder-img rounded-circle" width="75" height="75" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Completely round image: 75x75" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Completely round image</title>
+                                <rect width="100%" height="100%" fill="#FF8A00"></rect>
+                                <text x="50%" y="50%" text-anchor="middle" fill="#dee2e6" font-weight="700" font-size="12">
+                                    <tspan class="fs-5" x="50%" dy="-0.1em">56%</tspan>
+                                    <tspan x="50%" dy="1.3em">OFF</tspan>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="d-flex text-success countdown_timer">
+                            <div style="padding: 0px 10px;">
+                                <p>00 &nbsp; &nbsp;:</p>
+                                <span class="text-white fs-6">DAYS</span>
+                            </div>
+                            <div style="padding: 0px 10px;">
+                                <p>02 &nbsp; &nbsp;:</p>
+                                <span class="text-white fs-6">HOURS</span>
+                            </div>
+                            <div style="padding: 0px 10px;">
+                                <p>18 &nbsp; &nbsp;:</p>
+                                <span class="text-white fs-6">MINS</span>
+                            </div>
+                            <div style="padding: 0px 10px;">
+                                <p>46 &nbsp; &nbsp;:</p>
+                                <span class="text-white fs-7">SECS</span>
+                            </div>
+                        </div>
+                        <div class="shopnow_btn mt-5">
+                            <a href="shop1.html">Shop now <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="filter_area">
+        <section class="filter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 d-flex" style="grid-gap: 10px;">
+                        <div class="col-xl-2">
+                            <li class="nav-item">
+                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
+                                <option value="" selected>Select Category</option>
+                                <option value="">Vegetables</option>
+                                <option value="">Fruits</option>
+                            </select>
+                            </li>
+                        </div>
+                        <div class="col-xl-2">
+                            <li class="nav-item text-decoration-none">
+                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
+                                <option value="" selected>Select Price</option>
+                                <option value="">Min $100-$200</option>
+                                <option value="">Min $200-$300</option>
+                                <option value="">Min $300-$400</option>
+                                <option value="">Min $300-$500</option>
+                            </select>
+                            </li>
+                        </div>
+                        <div class="col-xl-2 ">
+                            <li class="nav-item text-decoration-none">
+                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
+                                <option value="" selected>Select Rating</option>
+                                <option value="">5 Star</option>
+                                <option value="">4 Star</option>
+                                <option value="">3</option>
+                            </select>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 d-flex justify-content-end" style="grid-gap: 10px;">
+                        <div class="col-xl-2" style="width: 150px;">
+                            <li class="nav-item text-decoration-none">
+                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
+                                <option value="" selected>Sort by: latest</option>
+                                <option value="">Best Seller</option>
+                                <option value="">Seasonal</option>
+                            </select>
+                            </li>
+                        </div>
+                        <div class="col-xl-2" style="width: 150px;">
+                            <li class="nav-item text-decoration-none">
+                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
+                                <option value="" selected>Show : &nbsp;16</option>
+                                <option value="">Show : &nbsp;20</option>
+                                <option value="">Show : &nbsp;24</option>
+                            </select>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="active-filter border-1 d-flex align-items-center align-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 col-10">
+                        <div class="container">
+                            <div class="filter-options d-flex">
+                                <p class="text-secondary align-items-center align-content-center m-0 p-0">Active Filter</p>
+                                <div class="d-flex align-items-center align-content-center p-2 m-0">
+                                    <p class="p-0 m-0">Wing chair</p>
+                                    <button class="btn remove-item">×</button>
+                                </div>
+                                <div class="d-flex align-items-center align-content-center p-0 m-0">
+                                    <p class="p-0 m-0">Min $300 - Max 500</p>
+                                    <button class="btn remove-item">×</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-2"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+
 
 
     <!--Breadcrumb js connect-->

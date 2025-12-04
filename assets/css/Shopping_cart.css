@@ -247,6 +247,41 @@ a.cart_btn {
     position: relative;
 }
 
+.breadcrumb {
+    max-width: 1920px;
+    height: auto;
+}
+
+.navs-select {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+.nav-select:focus {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* Hover effect on desktop */
+
+@media (min-width: 992px) {
+    .nav-select:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
 .breadcrumb a {
     color: green;
     text-decoration: none;
@@ -923,4 +958,35 @@ input.additional_text {
 .form-check-input:checked {
     background-color: #20B526;
     border-color: #20B526;
+}
+
+
+/* shopp Section */
+
+.discount_banner {
+    max-width: 1920px;
+    height: 358px;
+}
+
+.discount_content {
+    max-width: 1320px;
+    height: 358px;
+    background-image: url(../img/Banner/Breadcrumbs.jpg);
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+
+.shopnow_btn a {
+    color: white;
+    text-decoration: none;
+    background-color: #00B207;
+    padding: 16px 40px;
+    border-radius: 50px;
+}
+
+.filter_area {
+    max-width: 1920px;
+    height: 118px;
+    /* grid-gap: 10px; */
+    list-style: none;
 }
