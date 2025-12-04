@@ -836,6 +836,10 @@ body {
     background-color: #00B207;
 }
 
+.pro_item_content:hover h3 {
+    color: #00B207;
+}
+
 .product_category {
     max-width: 1920px;
     width: 100%;

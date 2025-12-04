@@ -243,8 +243,8 @@
         <div class="container">
             <div class="row">
                 <ol class="breadcrumb bg-transparent m-3 p-0">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door text-secondary"></i></a></li>
-                    <li class="breadcrumb-item active text-secondary" aria-current="page">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door text-secondary fs-5"></i></a></li>
+                    <li class=" text-secondary" aria-current="page">
                         <i class='fas fa-angle-right text-secondary'></i>
                         <a href="Shopping_cart.html" class="text-secondary" style="text-decoration: none;">Categories</a>
                         <i class='fas fa-angle-right p-2'></i><span class="text-success">Vegetables</span>
@@ -286,7 +286,7 @@
                                 <span class="text-white fs-6">MINS</span>
                             </div>
                             <div style="padding: 0px 10px;">
-                                <p>46 &nbsp; &nbsp;:</p>
+                                <p>46</p>
                                 <span class="text-white fs-7">SECS</span>
                             </div>
                         </div>
@@ -300,21 +300,22 @@
     </div>
 
     <section class="filter_area">
-        <section class="filter">
+        <section class="filter mb-2">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-10 d-flex" style="grid-gap: 10px;">
+                    <div class="col-xl-9 d-flex" style="grid-gap: 10px;">
                         <div class="col-xl-2">
                             <li class="nav-item">
                                 <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
                                 <option value="" selected>Select Category</option>
                                 <option value="">Vegetables</option>
                                 <option value="">Fruits</option>
+                                <option value="">Wing chair</option>
                             </select>
                             </li>
                         </div>
                         <div class="col-xl-2">
-                            <li class="nav-item text-decoration-none">
+                            <li class="nav-item">
                                 <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
                                 <option value="" selected>Select Price</option>
                                 <option value="">Min $100-$200</option>
@@ -325,32 +326,34 @@
                             </li>
                         </div>
                         <div class="col-xl-2 ">
-                            <li class="nav-item text-decoration-none">
+                            <li class="nav-item">
                                 <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
                                 <option value="" selected>Select Rating</option>
                                 <option value="">5 Star</option>
                                 <option value="">4 Star</option>
-                                <option value="">3</option>
+                                <option value="">3 Star</option>
                             </select>
                             </li>
                         </div>
                     </div>
-                    <div class="col-xl-2 d-flex justify-content-end" style="grid-gap: 10px;">
-                        <div class="col-xl-2" style="width: 150px;">
-                            <li class="nav-item text-decoration-none">
-                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
-                                <option value="" selected>Sort by: latest</option>
+                    <div class="col-xl-3 d-flex justify-content-end" style="grid-gap: 5px;">
+                        <div class="col-xl-2 d-flex border border-1 border-opacity-10" style="width: 160px;">
+                            <p class="align-content-center justify-content-center p-1 m-0">Sort by:</p>
+                            <li class="nav-item m-0">
+                                <select class="form-select nav-select text-dark p-0 m-0 border-0" data-page="Home">
+                                <option value="" selected> latest</option>
                                 <option value="">Best Seller</option>
                                 <option value="">Seasonal</option>
                             </select>
                             </li>
                         </div>
-                        <div class="col-xl-2" style="width: 150px;">
-                            <li class="nav-item text-decoration-none">
-                                <select class="form-select nav-select text-dark p-2 border-1" data-page="Home">
-                                <option value="" selected>Show : &nbsp;16</option>
-                                <option value="">Show : &nbsp;20</option>
-                                <option value="">Show : &nbsp;24</option>
+                        <div class="col-xl-2 d-flex border border-1 border-opacity-10" style="width: 160px;">
+                            <p class="align-content-center justify-content-center p-1 m-0">Show</p>
+                            <li class="nav-item m-0 p-0">
+                                <select class="form-select nav-select text-dark border-0" data-page="Home">
+                                <option value="" selected> 16</option>
+                                <option value="">20</option>
+                                <option value="">24</option>
                             </select>
                             </li>
                         </div>
@@ -359,30 +362,513 @@
             </div>
         </section>
 
-        <section class="active-filter border-1 d-flex align-items-center align-content-center">
+        <section class="active-filter d-flex align-items-center align-content-center border border-success border-opacity-10">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 col-10">
                         <div class="container">
                             <div class="filter-options d-flex">
                                 <p class="text-secondary align-items-center align-content-center m-0 p-0">Active Filter</p>
-                                <div class="d-flex align-items-center align-content-center p-2 m-0">
-                                    <p class="p-0 m-0">Wing chair</p>
-                                    <button class="btn remove-item">×</button>
-                                </div>
-                                <div class="d-flex align-items-center align-content-center p-0 m-0">
-                                    <p class="p-0 m-0">Min $300 - Max 500</p>
-                                    <button class="btn remove-item">×</button>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-2"></div>
+                    <div class="col-xl-2 col-2 align-items-center align-content-center m-0 p-0">
+                        <div class="container">
+                            <p class="align-content-center align-items-center justify-content-center d-flex p-0 m-0">2,547 &nbsp;<span class="text-secondary">Results found.</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
 
+
+    <section class="products" style="max-width: 1920px;height: auto;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 mb-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (30).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Red Chilli</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (10).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Big Potatoes</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (5).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Chinese Cabbage</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (8).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Bomb Corn</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 mb-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (28).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Red Tomatoes</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (9).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Eggplant</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (13).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Fresh Cauliflower</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/pro1.png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Fresh Apple</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 mb-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (31).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Fresh Mango</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/pro3.png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Green Capsicum</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (7).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Green Chilli</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (32).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Gren Cucumber</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 mb-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (8).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Big Corn</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (6).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Green Lettuce</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (33).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>ladies Finger</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="pro_item">
+                        <div class="pro_item_icon">
+                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <br>
+                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                        </div>
+                        <img src="./assets/img/products/Image (28).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="pro_item_content">
+                                    <h3>Red Capsicum</h3>
+                                    <h4>$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 product_cart_area">
+                                <div class="item_cart">
+                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -397,6 +883,7 @@
     <!--Bootstrap js connect-->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="./assets/js/filter.js"></script>
     <script src="./assets/js/main.js"></script>
 
     <script>

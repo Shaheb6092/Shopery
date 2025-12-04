@@ -88,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // =================================================================
 //      NAV ITEM HOVER EFFECT
 // =================================================================
-$(document).ready(function(){
-  $("#shop-nav-item").hover(
-    function(){
-      $(this).find(".nav-select").css("background-color", "blue");
-    },
-    function(){
-      $(this).find(".nav-select").css("background-color", "");
-    }
-  );
+$(document).ready(function() {
+    $("#shop-nav-item").hover(
+        function() {
+            $(this).find(".nav-select").css("background-color", "blue");
+        },
+        function() {
+            $(this).find(".nav-select").css("background-color", "");
+        }
+    );
 });
