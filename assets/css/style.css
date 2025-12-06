@@ -1417,3 +1417,17 @@ body {
     color: #808080;
     font-size: 14px;
 }
+
+
+/* Styles for selected nav dropdown */
+
+.navs-select.bg-dark {
+    background-color: #212529 !important;
+    color: white !important;
+}
+
+.navs-select:focus,
+.navs-select:active {
+    background-color: #212529;
+    color: white;
+}

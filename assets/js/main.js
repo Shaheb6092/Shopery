@@ -75,14 +75,42 @@ window.addEventListener('resize', () => {
 //      NAV SELECT REDIRECTION
 // =================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-select').forEach(selectElement => {
+    document.querySelectorAll('.navs-select').forEach(selectElement => {
         selectElement.addEventListener('change', function() {
             const selectedValue = this.value;
             if (selectedValue) {
-                window.location.href = selectedValue + '.html';
+                let url = '';
+                if (selectedValue === 'blog2') {
+                    url = 'blog_list.html';
+                } else if (selectedValue === 'blog1') {
+                    url = 'blog_list.html';
+                } else {
+                    url = selectedValue + '.html';
+                }
+                window.location.href = url;
             }
         });
     });
+
+    const path = window.location.pathname.split("/").pop();
+    let activePage = null;
+
+    if (path === 'index.html' || path === '') {
+        activePage = 'Home';
+    } else if (path === 'shop1.html' || path === 'shop2.html') {
+        activePage = 'Shop';
+    } else if (path === 'blog_list.html') {
+        activePage = 'Blog';
+    } else if (['About_us.html', 'contact_us.html', 'checkout.html', 'sign_in.html', 'wishlist.html', 'page1.html', 'page2.html'].includes(path)) {
+        activePage = 'Pages';
+    }
+
+    if(activePage) {
+        const activeSelect = document.querySelector(`.navs-select[data-page="${activePage}"]`);
+        if(activeSelect) {
+            activeSelect.classList.add('bg-dark', 'text-white');
+        }
+    }
 });
 
 // =================================================================

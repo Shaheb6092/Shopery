@@ -971,7 +971,7 @@ input.additional_text {
 .discount_content {
     max-width: 1320px;
     height: 358px;
-    background-image: url(../img/Banner/Breadcrumbs.jpg);
+    background-image: url(../img/Banner/Discount\ Bannar.jpg);
     background-size: 100% 100%;
     border-radius: 5px;
 }
@@ -1092,4 +1092,18 @@ input.additional_text {
 #col-xl-3 {
     padding: 0px;
     align-content: center;
+}
+
+
+/* Styles for selected nav dropdown */
+
+.navs-select.bg-dark {
+    background-color: #212529 !important;
+    color: white !important;
+}
+
+.navs-select:focus,
+.navs-select:active {
+    background-color: #212529;
+    color: white;
 }

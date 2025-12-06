@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-xl-1 align-content-center">
                         <div class="header_top_right text-light text-center">
-                            <p class="m-0"><a href="#" style="color: #1A1A1A; text-decoration:none;">Sign in</a></p>
+                            <p class="m-0 text-dark text-decoration-none"><a class="text-dark text-decoration-none" href="sign_in.html">Sign in</a></p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
                         <div class="nav_icon">
-                            <a href="#"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
+                            <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
                             <!-- Shopping button cart with offcanvas -->
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                                 <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
@@ -215,7 +215,7 @@
                                     <option value="" selected>Blog</option>
                                     <option value="blog1">Blog-Post</option>
                                     <option value="blog2">Blog-List</option>
-                            </select>
+                                </select>
                             </li>
 
                             <!-- Simple links (no select) -->
@@ -229,14 +229,13 @@
                     </div>
                 </div>
                 <div class="col-xl-2 col-2 d-flex justify-content-end align-items-end text-end header_contact_icon">
-                    <div class="d-flex align-items-end">
-                        <i class="bi bi-telephone me-2"></i> (219) 555-0114
+                    <div class="d-flex align-items-end text-white text-decoration-none">
+                        <a class="text-white text-decoration-none" href="https://call.whatsapp.com/video/qm6EymXYYXDH8WLniASdGn"><i class="bi bi-telephone me-2"></i> (219) 555-0114</a>
+                        <!-- href="tel:+12195550114"-->
                     </div>
                 </div>
             </div>
         </nav>
-
-
     </header>
 
 
@@ -1032,10 +1031,6 @@
     <script src="./assets/js/main.js"></script>
 
     <script>
-        function toggleCart() {
-            const cart = document.getElementById('cartSidebar');
-            cart.classList.toggle('open');
-        }
         // 2. REMOVE BUTTON – FULLY FUNCTIONAL
         document.querySelectorAll('.remove-item').forEach(btn => {
             btn.addEventListener('click', function() {
