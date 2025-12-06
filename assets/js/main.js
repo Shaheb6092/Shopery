@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
         activePage = 'Pages';
     }
 
-    if(activePage) {
+    if (activePage) {
         const activeSelect = document.querySelector(`.navs-select[data-page="${activePage}"]`);
-        if(activeSelect) {
+        if (activeSelect) {
             activeSelect.classList.add('bg-dark', 'text-white');
         }
     }
@@ -125,4 +125,24 @@ $(document).ready(function() {
             $(this).find(".nav-select").css("background-color", "");
         }
     );
+});
+
+// =================================================================
+//      CUSTOM SELECT OPTION HOVER EFFECT
+// =================================================================
+
+// get all option elements
+const options = document.querySelectorAll("#mySelect option");
+
+// add hover behavior
+options.forEach(op => {
+    op.addEventListener("mouseover", () => {
+        op.style.backgroundColor = "black";
+        op.style.color = "green";
+    });
+
+    op.addEventListener("mouseout", () => {
+        op.style.backgroundColor = "";
+        op.style.color = "";
+    });
 });
