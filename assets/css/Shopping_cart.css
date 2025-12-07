@@ -1041,6 +1041,7 @@ input.additional_text {
 .product_cart_area {
     padding: 0px;
     align-content: center;
+    /* padding: 14px 26px; */
 }
 
 .pro_item:hover .item_cart {
