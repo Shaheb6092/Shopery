@@ -51,6 +51,7 @@ select {
     justify-content: center;
     align-items: center;
     align-content: center;
+    justify-items: end;
 }
 
 .header_menu {
@@ -585,8 +586,7 @@ a.cart_btn {
 
 .subscribe-box {
     width: 500px;
-    height: 30px;
-    background-color: white;
+    height: 60px;
     padding: 0px 8px;
     border-radius: 12px;
     text-align: center;

@@ -35,8 +35,6 @@
     <!--style css connect-->
     <link rel="stylesheet" href="./assets/css/Shopping_cart.css">
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-
 </head>
 
 <body>
@@ -69,8 +67,7 @@
                     </div>
                     <div class="col-xl-1 align-content-center">
                         <div class="header_top_right text-light text-center">
-                            <p class="m-0 text-dark text-decoration-none"><a class="text-dark text-decoration-none" href="sign_in.html">Sign in</a></p>
-                        </div>
+                            <a href="sign_in.html" class="text-dark text-decoration-none">Sign in</a></div>
                     </div>
                 </div>
             </div>
@@ -86,7 +83,7 @@
                     </div>
                     <div class="col-xl-7 d-flex justify-content-center align-items-center">
                         <div class="input-group text-center search_box" id="input-group">
-                            <input type="search_box" placeholder="Search" required />
+                            <input type="search_box" id="myInput" onkeyup="filterList()" placeholder="Search" required />
                             <a href="#" id="search_btn">Search</a>
                         </div>
                     </div>
@@ -350,7 +347,7 @@
                     <div class="col-xl-3 d-flex justify-content-end" style="grid-gap: 5px;">
                         <div class="col-xl-2 d-flex border border-1 border-opacity-10" style="width: 160px;">
                             <p class="align-content-center justify-content-center p-1 m-0">Sort by:</p>
-                            <li class="nav-item m-0">
+                            <li class="nav-item m-0" style="width: 90px;">
                                 <select class="form-select nav-select text-dark p-0 m-0 border-0" data-page="Home">
                                 <option value="" selected> latest</option>
                                 <option value="">Best Seller</option>
@@ -360,7 +357,7 @@
                         </div>
                         <div class="col-xl-2 d-flex border border-1 border-opacity-10" style="width: 160px;">
                             <p class="align-content-center justify-content-center p-1 m-0">Show</p>
-                            <li class="nav-item m-0 p-0">
+                            <li class="nav-item m-0 p-0" style="width: 112px;">
                                 <select class="form-select nav-select text-dark border-0" data-page="Home">
                                 <option value="" selected> 16</option>
                                 <option value="">20</option>
@@ -399,7 +396,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -429,7 +426,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -459,7 +456,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -489,7 +486,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -519,7 +516,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -549,7 +546,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -579,7 +576,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -609,7 +606,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -639,7 +636,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -669,7 +666,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -699,7 +696,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -729,7 +726,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -759,7 +756,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -789,7 +786,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -819,7 +816,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -849,7 +846,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-                    <div class="pro_item">
+                    <div class="pro_item product-item">
                         <div class="pro_item_icon">
                             <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
@@ -897,9 +894,9 @@
 
     <!--Footer & newsletter section-->
     <section class="footer_newsletter">
-        <section class="newsletter">
+        <section class="newsletter align-content-center bg-light">
             <div class="container">
-                <div class="row">
+                <div class="row align-content-center">
                     <div class="col-xl-5">
                         <div class="newsletter_content">
                             <h3>Subcribe our Newsletter</h3>
@@ -907,17 +904,17 @@
                         </div>
                     </div>
                     <div class="col-xl-7 d-flex">
-                        <div class="col-xl-8">
+                        <div class="col-xl-8 align-content-center">
                             <div class="subscribe-box">
                                 <div class="input-group">
                                     <input type="email" placeholder="Your email address" required />
-                                    <a href="#" id="subscribe_btn">Subscribe</a>
+                                    <a href="" id="subscribe_btn">Subscribe</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4">
+                        <div class="col-xl-4 align-content-center">
                             <div class="social-media">
-                                <div class="social-container d-flex">
+                                <div class="social-container d-flex align-content-center justify-content-center gap-4">
                                     <div class="icon facebook">
                                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                     </div>
@@ -1045,6 +1042,7 @@
 
     <!-- <script src="./assets/js/filter.js"></script> -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/search.js"></script>
 
     <script>
         // 2. REMOVE BUTTON – FULLY FUNCTIONAL
