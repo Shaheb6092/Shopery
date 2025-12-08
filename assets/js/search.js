@@ -41,3 +41,24 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+
+
+// =================================================================
+//      PASSWORD TOGGLE VISIBILITY
+// =================================================================
+document.querySelectorAll(".toggle-password").forEach(icon => {
+    icon.addEventListener("click", function() {
+        const input = document.getElementById(this.getAttribute("data-target"));
+
+        if (input.type === "password") {
+            input.type = "text";
+            this.classList.remove("bi-eye-slash");
+            this.classList.add("bi-eye");
+        } else {
+            input.type = "password";
+            this.classList.remove("bi-eye");
+            this.classList.add("bi-eye-slash");
+        }
+    });
+});
