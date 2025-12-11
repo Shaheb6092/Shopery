@@ -7,7 +7,7 @@ body {
     border-bottom: 1px solid #e6e6e6;
 }
 
-.col-xl-9 {
+#col-xl-9 {
     align-content: center;
 }
 
@@ -1086,4 +1086,19 @@ input.additional_text {
 .sign_in_area {
     max-width: 1920px;
     height: auto;
+}
+
+.accounts-links:hover {
+    border-left: 1px solid #00b207;
+    background-color: #f1ecec;
+}
+
+.page-link {
+    border-radius: 50%;
+    background-size: 50%;
+}
+
+.page-item:hover .page-link {
+    color: #FFFFFF;
+    background-color: #00b207;
 }

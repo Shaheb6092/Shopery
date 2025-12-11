@@ -52,15 +52,15 @@
                         <div class="header_top_right">
                             <form class="d-flex">
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>Eng</option>
-                                    <option>Ban</option>
-                                    <option>Hin</option>
-                                </select>
+                                        <option>Eng</option>
+                                        <option>Ban</option>
+                                        <option>Hin</option>
+                                    </select>
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>USD</option>
-                                    <option>INR</option>
-                                    <option>AED</option>
-                                </select>
+                                        <option>USD</option>
+                                        <option>INR</option>
+                                        <option>AED</option>
+                                    </select>
                             </form>
                         </div>
                     </div>
@@ -84,74 +84,83 @@
                     <div class="col-xl-7 d-flex justify-content-center align-items-center">
                         <div class="input-group text-center search_box" id="input-group">
                             <input type="search_box" placeholder="Search" required />
-                            <a href="#" id="search_btn">Search</a></div>
+                            <a href="#" id="search_btn">Search</a>
+                        </div>
                     </div>
                     <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
                         <div class="nav_icon">
-                            <a href="#"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
-                            <button class="cart-button" onclick="toggleCart()">
-                                <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
-                            </button>
-                            <div class="cart-sidebar" id="cartSidebar">
-                                <!--cart product section-->
-                                <section class="cart_product">
-                                    <div class="cart-header text-left mb-5">
-                                        <h5>Shopping Card (2) <span><button onclick="toggleCart()" id="toggleCart">❌</button></span></h5>
-                                    </div>
-                                    <div class="container">
-                                        <div class="row items">
-                                            <div class="col-4">
-                                                <div class="product">
-                                                    <img src="./assets/img/products/Image (11).png" alt="product">
+                            <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
+                            <!-- Shopping button cart with offcanvas -->
+                            <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                    <span class="navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-primary p-3" style="top: 17px; left: 40px;">+99<span class="p-0 m-0"></span></span>
+                                
+                                </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <!--cart product section-->
+                                    <section class="cart_product">
+
+                                        <div class="container">
+                                            <div class="row items">
+                                                <div class="col-4">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/Image (11).png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Fresh Indian Orange</h6>
+                                                        <p>1kg × <b>12.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="product_detail">
-                                                    <h6>Fresh Indian Orange</h6>
-                                                    <p>1kg × <b>12.00</b></p>
+                                            <hr>
+                                            <div class="row items">
+                                                <div class="col-4 d-flex">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/pro1.png" alt="product">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-2">
-                                                <div class="ms-3">
-                                                    <button class="btn remove-item m-0">×</button>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Green Apple</h6>
+                                                        <p>1kg ×<b>14.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="row items">
-                                            <div class="col-4 d-flex">
-                                                <div class="product">
-                                                    <img src="./assets/img/products/pro1.png" alt="product">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="product_detail">
-                                                    <h6>Green Apple</h6>
-                                                    <p>1kg ×<b>14.00</b></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-2">
-                                                <div class="ms-3">
-                                                    <button class="btn remove-item m-0">×</button>
-                                                </div>
-                                            </div>
+                                    </section>
+
+
+                                    <!--cart button section-->
+                                    <section class="product_cart">
+                                        <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
+                                        <div class="btn_area">
+                                            <a href="checkout.html" class="checkout_btn">Checkout</a><br>
+                                            <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
                                         </div>
-                                    </div>
-                                </section>
+                                    </section>
 
-
-                                <!--cart button section-->
-                                <section class="product_cart">
-                                    <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
-                                    <div class="btn_area">
-                                        <a href="checkout.html" class="checkout_btn">Checkout</a><br>
-                                        <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
-                                    </div>
-                                </section>
+                                </div>
                             </div>
                         </div>
                         <div class="cart_area justify-content-center text-end">
-                            <p>Shopping Cart</p><span class="final-total text-secondary" id="cart-total">$57.00</span>
+                            <p>Shopping Cart</p><span class="final-total text-secondary" id="cart-total">$84.00</span>
                         </div>
                     </div>
                 </div>
@@ -170,6 +179,7 @@
                                         <li><a class="dropdown-item" href="#">Option 2</a></li>
                                     </ul>
                                 </li>
+
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Shop 1</a></li>
@@ -189,14 +199,14 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-2">
                         <div class="header_nav_right">
                             <ul class="nav justify-content-end">
-                                <li class="nav-item">
+                                <li class="nav-item ">
                                     <a class="nav-link text-dark" href="#">
                                         <i class="bi bi-telephone-outbound-fill p-1"></i> <span class="text-dark">(219) 555-0114</span>
                                     </a>
@@ -210,14 +220,17 @@
 
 
         <!-- breadcrumb banner section-->
+
         <section class="banner">
             <div class="container h-100">
                 <div class="d-flex align-items-center h-100">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb bg-transparent mb-0">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door fs-5 p-2 text-secondary"></i></a></li>
-                            <li class="p-1 text-secondary" aria-current="page">
-                                <i class='fas fa-angle-right pe-2'></i><span class="text-success">Shopping cart</span>
+                            <li class="breadcrumb-item pe-2"><a href="index.html"><i class="bi bi-house-door text-secondary fs-5"></i></a></li>
+                            <li class="text-secondary" aria-current="page">
+                                <i class='fas fa-angle-right text-secondary'></i>
+                                <a href="Account.html" class="text-secondary" style="text-decoration: none;">Account</a>
+                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Dashboard</span>
                             </li>
                         </ol>
                     </nav>
@@ -227,123 +240,136 @@
     </header>
 
 
-    <!--Shoping cart area-->
-    <section class="shopping_area">
+    <!--User dashboard seciton-->
+    <section class="user-dashboard" style="max-width: 1920px; height: auto; margin: 30px auto;">
         <div class="container">
             <div class="row">
-
-                <!-- Title -->
-                <div class="shopping_cart_title text-center mb-5">
-                    <h2>My Shopping Cart</h2>
-                </div>
-
-                <!-- Left: Cart Items -->
-                <div class="col-xl-8">
-                    <div class="shopping_cart">
-                        <div class="container">
-                            <div class="row m-3">
-                                <div class="col-xl-5 text-left">Products</div>
-                                <div class="col-2 text-center">Price</div>
-                                <div class="col-2 text-center">Quantity</div>
-                                <div class="col-3 text-center">Subtotal</div>
-                            </div>
+                <div class="col-xl-3 col-3">
+                    <div class="dashboard-navigation border rounded">
+                        <h5 class="m-3">Navigation</h5>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-columns-gap align-content-center"></i>
+                            <a href="User_Dashboard.html" class="text-decoration-none text-secondary align-content-center m-0">Dashboard</a>
                         </div>
-                        <!-- Product 1 -->
-                        <div class="product-row d-flex align-items-center">
-                            <div class="me-4">
-                                <img src="./assets/img/products/pro3.png" alt="Green Capsicum" class="product-img">
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-1 fw-semibold">Green Capsicum</h5>
-                            </div>
-                            <div class="text-center mx-3 fw-bold text-success">$14.00</div>
-                            <div class="mx-4">
-                                <div class="quantity-controls" data-price="$14.00">
-                                    <button class="quantity-btn minus">-</button>
-                                    <input type="text" class="quantity-input" value="5" readonly>
-                                    <button class="quantity-btn plus">+</button>
-                                </div>
-                            </div>
-                            <div class="text-center mx-3 fw-bold subtotal-price">$70.00</div>
-                            <div class="ms-3">
-                                <button class="btn remove-item">×</button>
-                            </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-arrow-repeat fs-5 align-content-center"></i>
+                            <a href="order-histry.html" class="text-decoration-none text-secondary align-content-center m-0">Order History</a>
                         </div>
-
-                        <!-- Product 2 -->
-                        <div class="d-flex align-items-center bg-light p-4 rounded-4 mb-4 product-row">
-                            <div class="me-4">
-                                <img src="./assets/img/products/Image (28).png" alt="Red Capsicum" class="product-img">
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-1 fw-semibold">Red Capsicum</h5>
-                            </div>
-                            <div class="text-center mx-3 fw-bold text-success">$14.00</div>
-                            <div class="mx-4">
-                                <div class="quantity-controls" data-price="$14.00">
-                                    <button class="quantity-btn minus">-</button>
-                                    <input type="text" class="quantity-input" value="1" readonly>
-                                    <button class="quantity-btn plus">+</button>
-                                </div>
-                            </div>
-                            <div class="text-center mx-3 fw-bold subtotal-price">$14.00</div>
-                            <div class="ms-3">
-                                <button class="btn remove-item">×</button>
-                            </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-heart align-content-center"></i>
+                            <a href="wishlist.html" class="text-decoration-none text-secondary align-content-center m-0">Wishlist</a>
                         </div>
-
-                        <!-- Bottom Actions -->
-                        <div class="container d-flex flex-column flex-md-row justify-content-between m-4 gap-3">
-                            <a href="shop2.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 return_shp_bt">← Return to shop</a>
-                            <button class="btn btn-outline-primary rounded-pill px-5 py-2 updt_shp_btn">Update Cart</button>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-handbag align-contert-center"></i>
+                            <a href="Shopping_cart.html" class="text-decoration-none text-secondary align-content-center m-0">Shopping Cart</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-gear align-content-center"></i>
+                            <a href="settings.html" class="text-decoration-none text-secondary align-content-center m-0">Settings</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-0 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-box-arrow-left align-content-center"></i>
+                            <a href="" class="text-decoration-none text-secondary align-content-center m-0">Logout</a>
                         </div>
                     </div>
-
-
+                </div>
+                <div class="col-xl-9 col-9 d-flex">
                     <div class="container">
-                        <div class="coupon-area">
-                            <!-- 100% IDENTICAL TO YOUR ORIGINAL DESIGN -->
-                            <div class="coupon-wrapper">
-                                <div class="coupon-label">Coupon Code</div>
-
-                                <div class="coupon-pill">
-                                    <input type="text" class="coupon-input" placeholder="Enter code">
-                                    <button class="coupon-btn">Apply Coupon</button>
+                        <div class="row">
+                            <div class="col-xl-8 col-8">
+                                <div class="profile border rounded justify-items-center align-content-center">
+                                    <div class="text-center align-content-center p-3">
+                                        <img src="./assets/img/customers/Ellipse 5.png" class="w-120 h-120" alt="profileImg">
+                                        <h6>Dianne Russell</h6>
+                                        <p class="text-secondary">customer</p>
+                                        <a href="" class="text-success text-decoration-none">Edit Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-4">
+                                <div class="billing-address border rounded p-4">
+                                    <p class="text-secondary">Billing Address</p>
+                                    <h6>Dianne Russell</h6>
+                                    <p class="text-secondary mb-0">4140 Parker Rd. Allentown, New Mexico 31134</p>
+                                    <p class="mb-0">dainne.ressell@gmail.com</p>
+                                    <p class="mb-1">(671) 555-0110</p>
+                                    <a href="" class="text-decoration-none text-success">Edit Address</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-12">
+                                <div class="order-history border rounded mt-3">
+                                    <div class="row">
+                                        <div class="col-xl-9 col-9 p-4">
+                                            <h4>Recent Order History</h4>
+                                        </div>
+                                        <div class="col-xl-3 col-3 text-center p-4">
+                                            <a href="order-histry.html" class="text-decoration-none text-success text-end fs-5">View all</a>
+                                        </div>
+                                    </div>
+                                    <div class="table">
+                                        <div class="order-history d-flex bg-light p-3" style="gap: 150px;">
+                                            <h6>ORDER ID</h6>
+                                            <h6>DATE</h6>
+                                            <h6>TOTAL</h6>
+                                            <h6>STATUS</h6>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#738</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">8 Sep, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$135.00 (5 Products)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">Processing
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#737</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">24 May, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$25.00 (1 Product)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">on the way
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#736</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">22 Oct, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$250.00 (4 Products)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">Completed
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#735</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">1 Feb, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$135.00 (5 Products)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">Completed
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#734</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">21 Sep, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$578.00 (13 Products)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">Completed
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                        <div class="order-histry d-flex p-3">
+                                            <p class="text-secondary">#733</p>
+                                            <p class="text-secondary" style="margin-left: 180px;">22 Oct, 2020</p>
+                                            <p class="text-secondary" style="margin-left: 100px;">$345.00 (7 Products)</p>
+                                            <p class="text-secondary" style="margin-left: 40px;">Completed
+                                                <a href="order-details.html" class="text-success text-decoration-none ml-4 pl-4" style="margin-left: 85px;">view details</a>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-
-                <!-- Right: Cart Total -->
-                <div class="col-xl-4">
-                    <div class="cart-total-card">
-                        <h4 class="text-left mb-4 fw-bold text-dark">Cart Total</h4>
-
-                        <div class="total-row d-flex justify-content-between">
-                            <span>Subtotal:</span>
-                            <strong id="cart-subtotal">$84.00</strong>
-                        </div>
-                        <div class="total-row d-flex justify-content-between text-success">
-                            <span>Shipping:</span>
-                            <strong>Free</strong>
-                        </div>
-                        <hr class="my-3">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <span class="h5 mb-0">Total:</span>
-                            <span class="final-total" id="cart-total">$84.00</span>
-                        </div>
-
-                        <button class="checkout-btn">
-                            <a href="checkout.html"> Proceed to Checkout</a>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!--Footer & newsletter section-->
     <section class="footer_newsletter">
@@ -418,9 +444,9 @@
                                 <h3>My Account</h3>
                                 <ul>
                                     <li><a href="# ">My Account</a></li>
-                                    <li><a href="# ">Order History</a></li>
-                                    <li><a href="# ">Shopping Cart</a></li>
-                                    <li><a href="# ">Wishlist</a></li>
+                                    <li><a href="order-histry.html">Order History</a></li>
+                                    <li><a href="Shopping_cart.html">Shopping Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -486,19 +512,17 @@
     </section>
 
 
-
-
-
-    <!--Breadcrumb js connect-->
-    <script src="./assets/js/breadcrumb.js"></script>
-    <!--quantity control connection-->
-    <script src="./assets/js/quantity-control.js"></script>
     <!--bootstrap js connect-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!--search js connect-->
+
+    <!-- custome js connect -->
+    <script src="./assets/js/main.js"></script>
+    <!--Search & password show/hide button js connect-->
     <script src="./assets/js/search.js"></script>
     <!--Product remove js connect-->
     <script src="./assets/js/remove.js"></script>
 </body>
+
+</html>
 
 </html>

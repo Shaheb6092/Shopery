@@ -42,29 +42,29 @@
         <div class="header_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-9 col-9 align-content-center">
+                    <div class="col-xl-9 align-content-center">
                         <div class="header_top_left align-content-center">
                             <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
                             <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-2 text-align-end">
+                    <div class="col-xl-2 text-align-end">
                         <div class="header_top_right">
                             <form class="d-flex">
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>Eng</option>
-                                    <option>Ban</option>
-                                    <option>Hin</option>
-                                </select>
+                                        <option>Eng</option>
+                                        <option>Ban</option>
+                                        <option>Hin</option>
+                                    </select>
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>USD</option>
-                                    <option>INR</option>
-                                    <option>AED</option>
-                                </select>
+                                        <option>USD</option>
+                                        <option>INR</option>
+                                        <option>AED</option>
+                                    </select>
                             </form>
                         </div>
                     </div>
-                    <div class="col-xl-1 clol-1 align-content-center">
+                    <div class="col-xl-1 align-content-center">
                         <div class="header_top_right text-light text-center">
                             <a href="sign_in.html" style="color: #ffffff; text-decoration:none;">Sign in</a>
                         </div>
@@ -92,9 +92,10 @@
                             <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
                             <!-- Shopping button cart with offcanvas -->
                             <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                                <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
-                                <span class="navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-primary p-3" style="top: 17px; left: 40px;">+99<span class="p-0 m-0"></span></span>
-                            </button>
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                    <span class="navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-primary p-3" style="top: 17px; left: 40px;">+99<span class="p-0 m-0"></span></span>
+                                
+                                </button>
                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
@@ -218,6 +219,7 @@
         </div>
 
 
+
         <!-- breadcrumb banner section-->
         <section class="banner">
             <div class="container h-100">
@@ -227,8 +229,9 @@
                             <li class="breadcrumb-item pe-2"><a href="index.html"><i class="bi bi-house-door text-secondary fs-5"></i></a></li>
                             <li class="text-secondary" aria-current="page">
                                 <i class='fas fa-angle-right text-secondary'></i>
-                                <a href="Account.html" class="text-secondary" style="text-decoration: none;">Account</a>
-                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Login</span>
+                                <a href="Account.html" class="text-secondary text-decoration-none">Account</a>
+                                <i class='fas fa-angle-right p-2'></i><a href="order-histry.html" class="text-secondary text-decoration-none">Order History</a>
+                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Order detail</span>
                             </li>
                         </ol>
                     </nav>
@@ -238,174 +241,60 @@
     </header>
 
 
-    <!-- Sign in section-->
-    <section class="sign_in_area m-5 p-5 ">
+
+    <!--Order detail section-->
+    <section class="order-details" style="max-width: 1920px; height: auto; margin: 30px auto;">
         <div class="container">
             <div class="row">
-                <form class="border rounded-3 justify-content-center justify-items-center bg-transparent  m-auto p-4" style="width: 520px; height: 440px;">
-                    <h2 class="text-center pb-4">Sign in</h2>
-                    <div class="mb-3">
-                        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
-                        <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required>
+                <div class="col-xl-3 col-3">
+                    <div class="dashboard-navigation border rounded">
+                        <h5 class="m-3">Navigation</h5>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-columns-gap align-content-center"></i>
+                            <a href="User_Dashboard.html" class="text-decoration-none text-secondary align-content-center m-0">Dashboard</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-arrow-repeat fs-5 align-content-center"></i>
+                            <a href="order-histry.html" class="text-decoration-none text-secondary align-content-center m-0">Order History</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-heart align-content-center"></i>
+                            <a href="wishlist.html" class="text-decoration-none text-secondary align-content-center m-0">Wishlist</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-handbag align-contert-center"></i>
+                            <a href="Shopping_cart.html" class="text-decoration-none text-secondary align-content-center m-0">Shopping Cart</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-gear align-content-center"></i>
+                            <a href="settings.html" class="text-decoration-none text-secondary align-content-center m-0">Settings</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-0 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-box-arrow-left align-content-center"></i>
+                            <a href="" class="text-decoration-none text-secondary align-content-center m-0">Logout</a>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
-                        <input type="password" class="form-control p-3" id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="col-xl-9 col-9">
+                    <div class="order-detail border rounded p-4">
+                        <div class="row">
+                            <div class="col-xl-10 col-10">
+                                <header class="d-flex gap-4">
+                                    <h5>Order Details</h5>
+                                    <li>April 24, 2021</li>
+                                    <li>3 Products</li>
+                                </header>
+                            </div>
+                            <div class="col-xl-2 col-2 text-end">
+                                <a href="order-histry.html" class="text-success  text-decoration-none">Back to List</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3 form-check d-flex gap-2">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                        <p style="margin-left: 173px;"><a href="forgot_password.html" class="text-secondary" style="text-decoration: none;">Forgot password?</a></p>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill p-4" style="background-color: #00b207;">Login</button>
-                        <p class="pt-2 text-secondary text-center">Don't have an account? <a href="sign_up.html" class="text-dark" style="text-decoration: none;">Sign up</a></p>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!--Footer & newsletter section-->
-    <section class="footer_newsletter">
-        <section class="newsletter align-content-center bg-light">
-            <div class="container">
-                <div class="row align-content-center">
-                    <div class="col-xl-4">
-                        <div class="newsletter_content">
-                            <h3>Subcribe our Newsletter</h3>
-                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 d-flex">
-                        <div class="col-xl-8 align-content-center">
-                            <div class="subscribe-box">
-                                <div class="input-group">
-                                    <input type="email" placeholder="Your email address" required />
-                                    <a href="" id="subscribe_btn">Subscribe</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 align-content-center">
-                            <div class="social-media">
-                                <div class="social-container d-flex align-content-center justify-content-center gap-4">
-                                    <div class="icon facebook">
-                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </div>
-                                    <div class="icon twitter">
-                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                    </div>
-                                    <div class="icon pinterest">
-                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    </div>
-                                    <div class="icon instagram">
-                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="link_area d-flex border-bottom border-dark">
-                        <div class="col-xl-3">
-                            <div class="company">
-                                <img src="./assets/img/Logo/Logo2.svg" class="mb-3 " alt=" ">
-                                <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
-                                <div class="address-column">
-                                    <div class="address-number">
-                                        <h6 class="p-0 m-0 ">
-                                            <a class="text-white text-decoration-none" href="tel:(219) 555-0114">(219) 555-0114</a>
-                                        </h6>
-                                        <span></span>
-                                    </div>
-                                    <p>or</p>
-                                    <div class="address-gmail">
-                                        <h6 class="p-0 m-0">
-                                            <a class="text-white text-decoration-none" href="mailto:Proxy@gmail.com">Proxy@gmail.com</a>
-                                        </h6>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="footer-column">
-                                <h3>My Account</h3>
-                                <ul>
-                                    <li><a href="# ">My Account</a></li>
-                                    <li><a href="# ">Order History</a></li>
-                                    <li><a href="# ">Shopping Cart</a></li>
-                                    <li><a href="# ">Wishlist</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col ">
-                            <div class="footer-column ">
-                                <h3>Helps</h3>
-                                <ul>
-                                    <li><a href="# ">Contact</a></li>
-                                    <li><a href="# ">FAQs</a></li>
-                                    <li><a href="# ">Terms & Condition</a></li>
-                                    <li><a href="# ">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col ">
-                            <div class="footer-column ">
-                                <h3>Proxy</h3>
-                                <ul>
-                                    <li><a href="About_us.html">About</a></li>
-                                    <li><a href="shop2.html">Shop</a></li>
-                                    <li><a href="# ">Product</a></li>
-                                    <li><a href="# ">Track Order</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col ">
-                            <div class="footer-column ">
-                                <h3>Category</h3>
-                                <ul>
-                                    <li><a href="# ">Fruit & Vegetables</a></li>
-                                    <li><a href="# ">Meat & Fish</a></li>
-                                    <li><a href="# ">Bread & Bakery</a></li>
-                                    <li><a href="# ">Beauty & Health</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="copyright_area pt-3">
-                        <div class="container ">
-                            <div class="row ">
-                                <div class="col-xl-9 ">
-                                    <div class="copyright ">
-                                        <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 ">
-                                    <div class="frame ">
-                                        <a href="# "><img src="./assets/img/Logo/Method=ApplePay.png " class="me-2 " alt="ApplePay "></a>
-                                        <a href="# "><img src="./assets/img/Logo/Method=Visa.png " class="me-2 " alt="Visa "></a>
-                                        <a href="# "><img src="./assets/img/Logo/Method=Discover.png " class="me-2 " alt="Discover "></a>
-                                        <a href="# "><img src="./assets/img/Logo/Method=Mastercard.png " class="me-2 " alt="Mastercard "></a>
-                                        <a href="# "><img src="./assets/img/Logo/Cart.png " alt="Cart "></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
 
 
     <!--bootstrap js connect-->

@@ -112,30 +112,30 @@
                             <ul class="navbar-nav gap-3">
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                        <li><a class="dropdown-item" href="home1.html">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="home2.html">Option 2</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Shop 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                                        <li><a class="dropdown-item" href="shop1.html">Shop 1</a></li>
+                                        <li><a class="dropdown-item" href="shop2.html">Shop 2</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                        <li><a class="dropdown-item" href="page1.html">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="page2.html">Option 2</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Blog</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Blog_List</a></li>
-                                        <li><a class="dropdown-item" href="#">Single_Blog</a></li>
+                                        <li><a class="dropdown-item" href="blog_list.html">Blog_List</a></li>
+                                        <li><a class="dropdown-item" href="single_blog.html">Single_Blog</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -155,14 +155,15 @@
         </div>
 
         <!-- breadcrumb banner section-->
-
         <section class="banner">
             <div class="container h-100">
                 <div class="d-flex align-items-center h-100">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb bg-transparent mb-0">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door text-secondary"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-angle-right text-secondary'></i> About</li>
+                            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door fs-5 p-2 text-secondary"></i></a></li>
+                            <li class="p-1 text-secondary" aria-current="page">
+                                <i class='fas fa-angle-right pe-2'></i><span class="text-success">About</span>
+                            </li>
                         </ol>
                     </nav>
                 </div>
@@ -706,13 +707,13 @@
         <section class="newsletter">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5">
+                    <div class="col-xl-4">
                         <div class="newsletter_content">
                             <h3>Subcribe our Newsletter</h3>
                             <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
                         </div>
                     </div>
-                    <div class="col-xl-7 d-flex">
+                    <div class="col-xl-8 d-flex">
                         <div class="col-xl-8">
                             <div class="subscribe-box">
                                 <div class="input-group">
@@ -745,86 +746,78 @@
         </section>
 
         <section class="footer">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-xl-3 ">
-                        <div class="company ">
-                            <img src="./assets/img/Logo/Logo2.svg " class="mb-3 " alt=" ">
-                            <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
-                            <div class="address-column ">
-                                <h6 class="address1 m-0 ">(219) 555-0114</h6>
-                                <p>or</p>
-                                <h6 class="address2 m-0 "> Proxy@gmail.com</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="link_area d-flex border-bottom border-dark">
+                        <div class="col-xl-3">
+                            <div class="company">
+                                <img src="./assets/img/Logo/Logo2.svg" class="mb-3 " alt=" ">
+                                <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
+                                <div class="address-column">
+                                    <div class="address-number">
+                                        <h6 class="p-0 m-0 ">
+                                            <a class="text-white text-decoration-none" href="tel:(219) 555-0114">(219) 555-0114</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                    <p>or</p>
+                                    <div class="address-gmail">
+                                        <h6 class="p-0 m-0">
+                                            <a class="text-white text-decoration-none" href="mailto:Proxy@gmail.com">Proxy@gmail.com</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="footer-column">
+                                <h3>My Account</h3>
+                                <ul>
+                                    <li><a href="# ">My Account</a></li>
+                                    <li><a href="# ">Order History</a></li>
+                                    <li><a href="# ">Shopping Cart</a></li>
+                                    <li><a href="# ">Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Helps</h3>
+                                <ul>
+                                    <li><a href="# ">Contact</a></li>
+                                    <li><a href="# ">FAQs</a></li>
+                                    <li><a href="# ">Terms & Condition</a></li>
+                                    <li><a href="# ">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Proxy</h3>
+                                <ul>
+                                    <li><a href="About_us.html">About</a></li>
+                                    <li><a href="shop2.html">Shop</a></li>
+                                    <li><a href="# ">Product</a></li>
+                                    <li><a href="# ">Track Order</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Category</h3>
+                                <ul>
+                                    <li><a href="# ">Fruit & Vegetables</a></li>
+                                    <li><a href="# ">Meat & Fish</a></li>
+                                    <li><a href="# ">Bread & Bakery</a></li>
+                                    <li><a href="# ">Beauty & Health</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col ">
-                        <div class="footer-column ">
-                            <h3>My Account</h3>
-                            <ul>
-                                <li><a href="# ">My Account</a></li>
-                                <li><a href="# ">Order History</a></li>
-                                <li><a href="Shopping_cart.html">Shopping Cart</a></li>
-                                <li><a href="# ">Wishlist</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="footer-column ">
-                            <h3>Helps</h3>
-                            <ul>
-                                <li><a href="# ">Contact</a></li>
-                                <li><a href="# ">FAQs</a></li>
-                                <li><a href="# ">Terms & Condition</a></li>
-                                <li><a href="# ">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="footer-column ">
-                            <h3>Proxy</h3>
-                            <ul>
-                                <li><a href="# ">About</a></li>
-                                <li><a target="_blank" href="shop1.html">Shop</a></li>
-                                <li><a href="# ">Product</a></li>
-                                <li><a href="# ">Track Order</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="footer-column ">
-                            <h3>Category</h3>
-                            <ul>
-                                <li><a href="# ">Fruit & Vegetables</a></li>
-                                <li><a href="# ">Meat & Fish</a></li>
-                                <li><a href="# ">Bread & Bakery</a></li>
-                                <li><a href="# ">Beauty & Health</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- <div class="col-xl-3 ">
-                        <div class="footer-column ">
-                            <h3>Download Mobile App</h3>
-                            <div class="app-links d-flex ">
-                                <div class="app_store d-flex me-2 alig ">
-                                    <a href="# "><img src="./assets/img/Icon/Apple---Negative 1.svg " class="p-2 " alt="Apple Store "></a>
-                                    <div class="frame ">
-                                        <p>Download on the</p>
-                                        <h4>App Store</h4>
-                                    </div>
-                                </div>
-                                <div class="google_play d-flex p-2 ">
-                                    <a href="# "><img src="./assets/img/Icon/Icon=google-play 1.svg " class="pe-2 " alt="Google Play "></a>
-                                    <div class="frame ">
-                                        <p>Download on the</p>
-                                        <h4>Google Play</h4>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="copyright_area ">
+
+                    <div class="copyright_area pt-3">
                         <div class="container ">
                             <div class="row ">
                                 <div class="col-xl-9 ">
@@ -877,6 +870,7 @@
 
     <!--coustom js connect-->
     <script src="./assets/js/main.js"></script>
+
     <!--search js connect-->
     <script src="./assets/js/search.js"></script>
 </body>

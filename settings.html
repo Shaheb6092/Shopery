@@ -42,29 +42,29 @@
         <div class="header_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-9 col-9 align-content-center">
+                    <div class="col-xl-9 align-content-center">
                         <div class="header_top_left align-content-center">
                             <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
                             <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-2 text-align-end">
+                    <div class="col-xl-2 text-align-end">
                         <div class="header_top_right">
                             <form class="d-flex">
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>Eng</option>
-                                    <option>Ban</option>
-                                    <option>Hin</option>
-                                </select>
+                                        <option>Eng</option>
+                                        <option>Ban</option>
+                                        <option>Hin</option>
+                                    </select>
                                 <select class="select form-control form-select form_select select_option">
-                                    <option>USD</option>
-                                    <option>INR</option>
-                                    <option>AED</option>
-                                </select>
+                                        <option>USD</option>
+                                        <option>INR</option>
+                                        <option>AED</option>
+                                    </select>
                             </form>
                         </div>
                     </div>
-                    <div class="col-xl-1 clol-1 align-content-center">
+                    <div class="col-xl-1 align-content-center">
                         <div class="header_top_right text-light text-center">
                             <a href="sign_in.html" style="color: #ffffff; text-decoration:none;">Sign in</a>
                         </div>
@@ -92,9 +92,10 @@
                             <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
                             <!-- Shopping button cart with offcanvas -->
                             <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                                <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
-                                <span class="navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-primary p-3" style="top: 17px; left: 40px;">+99<span class="p-0 m-0"></span></span>
-                            </button>
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                    <span class="navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-primary p-3" style="top: 17px; left: 40px;">+99<span class="p-0 m-0"></span></span>
+                                
+                                </button>
                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
@@ -228,7 +229,7 @@
                             <li class="text-secondary" aria-current="page">
                                 <i class='fas fa-angle-right text-secondary'></i>
                                 <a href="Account.html" class="text-secondary" style="text-decoration: none;">Account</a>
-                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Login</span>
+                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Settings</span>
                             </li>
                         </ol>
                     </nav>
@@ -238,33 +239,195 @@
     </header>
 
 
-    <!-- Sign in section-->
-    <section class="sign_in_area m-5 p-5 ">
+
+    <!--Settng Section -->
+    <section class="setting-area" style="max-width: 1920px; height: auto; margin: 40px auto;">
         <div class="container">
             <div class="row">
-                <form class="border rounded-3 justify-content-center justify-items-center bg-transparent  m-auto p-4" style="width: 520px; height: 440px;">
-                    <h2 class="text-center pb-4">Sign in</h2>
-                    <div class="mb-3">
-                        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
-                        <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required>
+                <div class="col-xl-3 col-3">
+                    <div class="dashboard-navigation border rounded">
+                        <h5 class="m-3">Navigation</h5>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-columns-gap align-content-center"></i>
+                            <a href="User_Dashboard.html" class="text-decoration-none text-secondary align-content-center m-0">Dashboard</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-arrow-repeat fs-5 align-content-center"></i>
+                            <a href="order-histry.html" class="text-decoration-none text-secondary align-content-center m-0">Order History</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-heart align-content-center"></i>
+                            <a href="wishlist.html" class="text-decoration-none text-secondary align-content-center m-0">Wishlist</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-handbag align-contert-center"></i>
+                            <a href="Shopping_cart.html" class="text-decoration-none text-secondary align-content-center m-0">Shopping Cart</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-2 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-gear align-content-center"></i>
+                            <a href="settings.html" class="text-decoration-none text-secondary align-content-center m-0">Settings</a>
+                        </div>
+                        <div class="accounts-links d-flex mb-0 p-3 gap-3 align-content-center rounded">
+                            <i class="bi bi-box-arrow-left align-content-center"></i>
+                            <a href="" class="text-decoration-none text-secondary align-content-center m-0">Logout</a>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
-                        <input type="password" class="form-control p-3" id="exampleInputPassword1" placeholder="Password" required>
+                </div>
+                <div class="col-xl-9 col-9">
+                    <div class="settings-area border rounded">
+                        <div class="row">
+                            <div class="col-xl-8 col-8">
+                                <div class="heading border-bottom" style="width: 985px;height: auto;">
+                                    <h5 class="p-3">Account Settings</h5>
+                                </div>
+                                <form action="" class="justify-content-center justify-items-center bg-transparent mt-3 p-4" style="width: 512px; height: auto;">
+                                    <div class="mb-3">
+                                        <label for="" class="mb-2">First name</label>
+                                        <input type="name" class="form-control p-3" id="exampleInputname" aria-describedby="emailHelp" placeholder="Dannie" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="mb-2">Last name</label>
+                                        <input type="name" class="form-control p-3" id="exampleInputname" aria-describedby="emailHelp" placeholder="Russell" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="mb-2">Email</label>
+                                        <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="dannie.russell@gmail.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="" class="mb-2">Phone</label>
+                                        <input type="name" class="form-control p-3" id="exampleInputname" aria-describedby="emailHelp" placeholder="(603) 555-0123" required>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill" style="background-color: #00B207; padding: 14px 36px;">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-xl-4 col-4 align-content-center">
+                                <div class="img-section align-content-center">
+                                    <img src="./assets/img/customers/Ellipse 5.png" style="width: 225px; height: 225px;" alt="ProfilePicture">
+                                    <div class="col-xl-12 mt-3" style="padding-left: 40px;">
+                                        <button type="submit" class="btn btn-primary text-center border-1 border-success bg-transparent text-success p-3 rounded-pill">Change Image</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3 form-check d-flex gap-2">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                        <p style="margin-left: 173px;"><a href="forgot_password.html" class="text-secondary" style="text-decoration: none;">Forgot password?</a></p>
+                    <div class="address-area border rounded mt-4">
+                        <div class="row">
+                            <div class="col-xl-12 col-12">
+                                <div class="heading border-bottom" style="width: 985px;height: auto;">
+                                    <h5 class="p-3">Billing Address</h5>
+                                </div>
+                                <form action="" class="contact_form justify-content-center justify-items-center bg-transparent mt-3 p-3">
+                                    <div class="row">
+                                        <div class="col-xl-4 mb-3">
+                                            <label for="" class="mb-2">First Name</label>
+                                            <input type="text" class="form-control p-2" placeholder="Dannie" required>
+                                        </div>
+                                        <div class="col-xl-4 mb-3">
+                                            <label for="" class="mb-2">Last Name</label>
+                                            <input type="text" class="form-control p-2" placeholder="Russell" required>
+                                        </div>
+                                        <div class="col-xl-4 mb-3">
+                                            <label for="" class="mb-2">Company Name <span class="text-secondary">(Optional)</span></label>
+                                            <input type="text" class="form-control p-2" placeholder="zakirsoft" required>
+                                        </div>
+                                        <div class="col-xl-12 mb-3">
+                                            <label for="" class="mb-2">Street Address</label>
+                                            <input type="text" class="form-control p-2" placeholder="New Address" required>
+                                        </div>
+                                        <div class="container p-3">
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="info_name">
+                                                        <label for="" class="mb-2">Country/Region</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected disabled>Select</option>
+                                                            <option value="1">United Kingdom</option>
+                                                            <option value="2">America</option>
+                                                            <option value="3">Swezerland</option>
+                                                            <option value="4">Canada</option>
+                                                            <option value="5">Neitherland</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="info_name">
+                                                        <label for="" class="mb-2">States</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected disabled>Select</option>
+                                                            <option value="1">England</option>
+                                                            <option value="2">Swezerland</option>
+                                                            <option value="3">Newzeland</option>
+                                                            <option value="4">America</option>
+                                                            <option value="5">Canada</option>
+                                                            <option value="6">China</option>
+                                                            <option value="7">Saudi Arab</option>
+                                                            <option value="8">Dubai</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="info_name">
+                                                        <label for="" class="mb-2">ZIP Code</label>
+                                                        <input type="text" class="form-control p-2" placeholder="5430" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row d-flex p-3">
+                                                    <div class="col-xl-6 col-6">
+                                                        <label for="" class="mb-2">Email</label>
+                                                        <input type="password" class="form-control p-3" id="confirmPassword" placeholder="dannie.russell@gmail.com" required>
+                                                    </div>
+                                                    <div class="col-xl-6 col-6">
+                                                        <label for="" class="mb-2">Phone</label>
+                                                        <input type="password" class="form-control p-3" id="confirmPassword" placeholder="(603) 555-0123" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <button type="submit" class="btn btn-primary text-center border-0 rounded-pill mt-3" style="background-color: #00B207; padding: 14px 36px;">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill p-4" style="background-color: #00b207;">Login</button>
-                        <p class="pt-2 text-secondary text-center">Don't have an account? <a href="sign_up.html" class="text-dark" style="text-decoration: none;">Sign up</a></p>
+                    <div class="password-area border rounded mt-4">
+                        <div class="row">
+                            <div class="col-xl-12 col-12">
+                                <div class="heading border-bottom" style="width: 985px;height: auto;">
+                                    <h5 class="p-3">Change Password</h5>
+                                </div>
+                                <form class="border rounded-3 justify-content-center justify-items-center bg-transparent  mt-4 p-4">
+                                    <div class="col-xl-12 col-12 mb-3">
+                                        <label for="" class="mb-2">Current Password</label>
+                                        <input type="password" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Current Password" required>
+                                    </div>
+                                    <div class="row d-flex">
+                                        <div class="col-xl-6 col-6 mb-3 position-relative">
+                                            <label for="" class="mb-2">New Password</label>
+                                            <input type="password" class="form-control p-3" id="newPassword" placeholder="New Password" required>
+                                            <i class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-3 fs-5 toggle-password mt-2 pt-3 pe-2" data-target="newPassword"></i>
+                                        </div>
+                                        <div class="col-xl-6 col-6 mb-3 position-relative">
+                                            <label for="" class="mb-2">Confirm Password</label>
+                                            <input type="password" class="form-control p-3" id="confirmPassword" placeholder="Confirm Password" required>
+                                            <i class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-3 fs-5 toggle-password mt-2 pt-3 pe-2" data-target="confirmPassword"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill mt-3" style="background-color: #00B207; padding: 14px 36px;">Change Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
+
 
 
     <!--Footer & newsletter section-->
@@ -340,9 +503,9 @@
                                 <h3>My Account</h3>
                                 <ul>
                                     <li><a href="# ">My Account</a></li>
-                                    <li><a href="# ">Order History</a></li>
-                                    <li><a href="# ">Shopping Cart</a></li>
-                                    <li><a href="# ">Wishlist</a></li>
+                                    <li><a href="order-histry.html">Order History</a></li>
+                                    <li><a href="Shopping_cart.html">Shopping Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -350,10 +513,10 @@
                             <div class="footer-column ">
                                 <h3>Helps</h3>
                                 <ul>
-                                    <li><a href="# ">Contact</a></li>
-                                    <li><a href="# ">FAQs</a></li>
-                                    <li><a href="# ">Terms & Condition</a></li>
-                                    <li><a href="# ">Privacy Policy</a></li>
+                                    <li><a href="contact_us.html">Contact</a></li>
+                                    <li><a href="faqs.html">FAQs</a></li>
+                                    <li><a href="faqs.html">Terms & Condition</a></li>
+                                    <li><a href="faqs.html">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -364,7 +527,7 @@
                                     <li><a href="About_us.html">About</a></li>
                                     <li><a href="shop2.html">Shop</a></li>
                                     <li><a href="# ">Product</a></li>
-                                    <li><a href="# ">Track Order</a></li>
+                                    <li><a href="order-histry.html">Track Order</a></li>
                                 </ul>
                             </div>
                         </div>
