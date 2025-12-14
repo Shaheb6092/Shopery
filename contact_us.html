@@ -91,65 +91,72 @@
                     <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
                         <div class="nav_icon">
                             <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
-                            <button class="cart-button" onclick="toggleCart()">
-                                <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                            <!-- Shopping button cart with offcanvas -->
+                            <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                    <span class="d-flex navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-success p-3" style="top: 17px; left: 40px;"><span class="p-0 m-0">2</span></span>                            
                             </button>
-                            <div class="cart-sidebar" id="cartSidebar">
-                                <!--cart product section-->
-                                <section class="cart_product">
-                                    <div class="cart-header text-left mb-5">
-                                        <h5>Shopping Card (2) <span><button onclick="toggleCart()" id="toggleCart">❌</button></span></h5>
-                                    </div>
-                                    <div class="container">
-                                        <div class="row items">
-                                            <div class="col-4">
-                                                <div class="product">
-                                                    <img src="./assets/img/products/Image (11).png" alt="product">
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <!--cart product section-->
+                                    <section class="cart_product">
+
+                                        <div class="container">
+                                            <div class="row items">
+                                                <div class="col-4">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/Image (11).png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Fresh Indian Orange</h6>
+                                                        <p>1kg × <b>12.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="product_detail">
-                                                    <h6>Fresh Indian Orange</h6>
-                                                    <p>1kg × <b>12.00</b></p>
+                                            <hr>
+                                            <div class="row items">
+                                                <div class="col-4 d-flex">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/pro1.png" alt="product">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-2">
-                                                <div class="ms-3">
-                                                    <button class="btn remove-item m-0">×</button>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Green Apple</h6>
+                                                        <p>1kg ×<b>14.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="row items">
-                                            <div class="col-4 d-flex">
-                                                <div class="product">
-                                                    <img src="./assets/img/products/pro1.png" alt="product">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="product_detail">
-                                                    <h6>Green Apple</h6>
-                                                    <p>1kg ×<b>14.00</b></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-2">
-                                                <div class="ms-3">
-                                                    <button class="btn remove-item m-0">×</button>
-                                                </div>
-                                            </div>
+                                    </section>
+
+
+                                    <!--cart button section-->
+                                    <section class="product_cart">
+                                        <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
+                                        <div class="btn_area">
+                                            <a href="checkout.html" class="checkout_btn">Checkout</a><br>
+                                            <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
                                         </div>
-                                    </div>
-                                </section>
+                                    </section>
 
-
-                                <!--cart button section-->
-                                <section class="product_cart">
-                                    <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
-                                    <div class="btn_area">
-                                        <a href="checkout.html" class="checkout_btn">Checkout</a><br>
-                                        <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
-                                    </div>
-                                </section>
+                                </div>
                             </div>
                         </div>
                         <div class="cart_area justify-content-center text-end">

@@ -4,11 +4,717 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopery - Organic eCommerce Shop Website</title>
+
+    <!--bootstrap css connect-->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+    <!--normalize css connect-->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 - Full (Solid + Regular + Brands) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!--Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--favicon connect-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/Icon/plant 1.svg">
+    <link rel="manifest" href="./assets/img/Icon/plant 1.svg">
+
+
+    <!--style css connect-->
+    <link rel="stylesheet" href="./assets/css/Shopping_cart.css">
 </head>
 
 <body>
-    <h1>Customer feedback here</h1>
+    <!--header section-->
+    <header>
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 align-content-center">
+                        <div class="header_top_left align-content-center">
+                            <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
+                            <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 text-align-end">
+                        <div class="header_top_right">
+                            <form class="d-flex">
+                                <select class="select form-control form-select form_select select_option">
+                                        <option>Eng</option>
+                                        <option>Ban</option>
+                                        <option>Hin</option>
+                                    </select>
+                                <select class="select form-control form-select form_select select_option">
+                                        <option>USD</option>
+                                        <option>INR</option>
+                                        <option>AED</option>
+                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 align-content-center">
+                        <div class="header_top_right text-light text-center">
+                            <a href="sign_in.html" style="color: #ffffff; text-decoration:none;">LOG IN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_menu">
+            <div class="container p-2">
+                <div class="row">
+                    <div class="col-xl-2 align-content-center">
+                        <div class="header_logo">
+                            <a class="navbar-brand" href="#"><img src="./assets/img/Logo/Logo.svg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 d-flex justify-content-center align-items-center">
+                        <div class="input-group text-center search_box" id="input-group">
+                            <input type="search_box" placeholder="Search" required />
+                            <a href="#" id="search_btn">Search</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
+                        <div class="nav_icon">
+                            <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
+                            <!-- Shopping button cart with offcanvas -->
+                            <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                                                        <span class="d-flex navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-success p-3" style="top: 17px; left: 40px;"><span class="p-0 m-0">2</span></span>   
+                                </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <!--cart product section-->
+                                    <section class="cart_product">
+
+                                        <div class="container">
+                                            <div class="row items">
+                                                <div class="col-4">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/Image (11).png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Fresh Indian Orange</h6>
+                                                        <p>1kg × <b>12.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row items">
+                                                <div class="col-4 d-flex">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/pro1.png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Green Apple</h6>
+                                                        <p>1kg ×<b>14.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <!--cart button section-->
+                                    <section class="product_cart">
+                                        <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
+                                        <div class="btn_area">
+                                            <a href="checkout.html" class="checkout_btn">Checkout</a><br>
+                                            <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart_area justify-content-center text-end">
+                            <p>Shopping Cart</p><span class="final-total text-secondary" id="cart-total">$84.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 navbar navbar-expand-lg">
+                        <div class="nav header_nav collapse navbar-collapse">
+                            <ul class="navbar-nav gap-3">
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                                        <li><a class="dropdown-item" href="shop2.html">Shop 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="blog_list.html">Blog_List</a></li>
+                                        <li><a class="dropdown-item" href="#">Single_Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="header_nav_right">
+                            <ul class="nav justify-content-end">
+                                <li class="nav-item ">
+                                    <a class="nav-link text-dark" href="#">
+                                        <i class="bi bi-telephone-outbound-fill p-1"></i> <span class="text-dark">(219) 555-0114</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- breadcrumb banner section-->
+        <section class="banner">
+            <div class="container h-100">
+                <div class="d-flex align-items-center h-100">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent mb-0">
+                            <li class="breadcrumb-item pe-2"><a href="index.html"><i class="bi bi-house-door text-secondary fs-5"></i></a></li>
+                            <li class="text-secondary" aria-current="page">
+                                <i class='fas fa-angle-right text-secondary'></i>
+                                <a href="shop1.html" class="text-secondary text-decoration-none">Category</a>
+                                <i class='fas fa-angle-right p-2'></i><a href="shop1.html" class="text-secondary text-decoration-none">Vegetables</a>
+                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Chinese Cabbage</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <!--Product detail section-->
+    <section class="product-detail-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-1 col-1">
+                    <div class="product-carousel mt-3 mb-3 bg-warning"></div>
+                </div>
+                <div class="col-xl-5 col-5">
+                    <div class="product-img mt-3 mb-3 align-content-center justify-content-center">
+                        <img src="./assets/img/products/Image (5).png" width="556" height="556" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-6">
+                    <div class="info mt-3 mb-3">
+                        <div class="header border-bottom">
+                            <h1 class=" pb-1">Chinese Cabbage <span class="p-2 fs-6 fw-4 text-dark rounded" style="background-color: #cfece88a;">In Stock</span></h1>
+                            <ul class="nav pro_nav">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <a href="pr-customer-feedback.html" class="text-secondary text-decoration-none" style="padding-left: 10px;">4 Reviews</a>
+                                <ul class="d-flex gap-1 text-secondary">
+                                    <li class="tex-secondary fs-6">SKU 2,51,594</li>
+                                    <li class="tex-secondary fs-6"></li>
+                                </ul>
+                            </ul>
+                            <div class="price d-flex p-1 gap-2 align-content-center">
+                                <p class="text-secondary text-decoration-line-through fs-6 pt-2 mt-1">$48.00</p>
+                                <h6 class="text-success fs-4 pt-2">$17.28</h6>
+                                <p class="fs-6 rounded p-1 text-danger" style="background-color: #efd8d7;">-64% Off</p>
+                            </div>
+                        </div>
+                        <div class="brand-social border-bottom mt-3 mb-3">
+                            <div class="row">
+                                <div class="col-xl-5 col-5">
+                                    <div class="brand-area d-flex pb-3">
+                                        <h5 class="pe-4 align-content-center">Brand:</h5>
+                                        <button class="border-1 border-dark rounded border-opacity-10">
+                                            <img src="./assets/img/Brand/Group 19.svg" width="50" height="50" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-7">
+                                    <div class="social-area d-flex justify-content-end">
+                                        <h6 class="pt-3">Share item :</h6>
+                                        <div class="social-media">
+                                            <div class="icon facebook">
+                                                <a href="#"><i class="fa-brands fa-facebook-f text-dark"></i></a>
+                                            </div>
+                                            <div class="icon twitter">
+                                                <a href="#"><i class="fa-brands fa-twitter text-dark"></i></a>
+                                            </div>
+                                            <div class="icon pinterest">
+                                                <a href="#"><i class="fa-brands fa-pinterest-p text-dark"></i></a>
+                                            </div>
+                                            <div class="icon instagram">
+                                                <a href="#"><i class="fa-brands fa-instagram text-dark"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-secondary">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos <br> himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla <br> varius magna a consequat pulvinar. </p>
+                            </div>
+                        </div>
+                        <div class="product-cart border-bottom mt-3">
+                            <div class="row mb-3">
+                                <div class="col-xl-3 col-3">
+                                    <div class="quantity-controls p-2">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="text" class="quantity-input" value="5" readonly>
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-8">
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill p-3" style="background-color: #00b207;">
+                                            Add to Cart<i class="bi bi-handbag align-contert-center p-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-1 col-1 align-content-center justify-content-center rounded-5" style="background-color: #daf1db; cursor: pointer;">
+                                    <div class="wishlist-area rounded-circle align-content-center text-center">
+                                        <i class="bi bi-heart text-success fs-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-area mt-3 mb-3">
+                            <h5>Category: <span class="text-secondary">Vegetables</span></h5>
+                            <div class="d-flex gap-2">
+                                <p>Tag:
+                                    <sapn class="text-secondary">Vegetable Healthy</sapn>
+                                </p>
+                                <a href="" class="text-dark">Chinese</a>
+                                <p class="text-secondary">Cabbage Green Cabbage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="product-description border-bottom mt-3 mb-3">
+            <div class="container">
+                <div class="navigation d-flex justify-content-center justify-items-center gap-5">
+                    <div class="nav-link">
+                        <a href="pr-details-description.html" class="text-dark text-decoration-none">Description</a>
+                    </div>
+                    <div class="nav-link">
+                        <a href="pr-aditional-info.html" class="text-dark text-decoration-none">Aditional information</a>
+                    </div>
+                    <div class="nav-link border-bottom border-success border-3">
+                        <a href="pr-customer-feedback.html" class="text-dark text-decoration-none">Customer Feedback</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="description mb-3" style="max-width: 1920px;height: 640px;">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-xl-7 col-7">
+                    <div class="description mt-3">
+                        <p class="text-secondary">
+                            Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. Etiam tincidunt metus vel dui interdum
+                            sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis commodo quis,
+                            egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.
+                            <br> <br> Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et
+                            pharetra.
+                        </p>
+                        <div class="features">
+                            <div class="feature d-flex gap-3 mb-1">
+                                <img src="./assets/img/Icon/Check.svg" alt="">
+                                <p class="text-secondary mb-1">100 gm of fresh leaves provides.</p>
+                            </div>
+                            <div class="feature d-flex gap-3 mb-1">
+                                <img src="./assets/img/Icon/Check.svg" alt="">
+                                <p class="text-secondary mb-1">Aliquam ac est at augue volutpat elementum.</p>
+                            </div>
+                            <div class="feature d-flex gap-3 mb-1">
+                                <img src="./assets/img/Icon/Check.svg" alt="">
+                                <p class="text-secondary mb-1">Quisque nec enim eget sapien molestie.</p>
+                            </div>
+                            <div class="feature d-flex gap-3 mb-1">
+                                <img src="./assets/img/Icon/Check.svg" alt="">
+                                <p class="text-secondary mb-1">Proin convallis odio volutpat finibus posuere.</p>
+                            </div>
+                            <p class="text-secondary mt-4">Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla blandit eros non turpis <br> lobortis iaculis at ut massa. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-5">
+                    <div class="video mt-3">
+                        <video src="./assets/img/video.gif" poster="./assets/img/Banner/Video.png" width="536" height="300"></video>
+                    </div>
+                    <div class="feature border d-flex rounded mt-3">
+                        <div class="d-flex p-2">
+                            <img src="./assets/img/Icon/Group (8).svg" style="width: 50px;height: 50px; margin: 0 8px;" alt="Image">
+                            <div class="content py-2">
+                                <h6>64% Discount</h6>
+                                <p class="text-secondary mb-0" style="font-size: 13px;">Save your 64% money with us</p>
+                            </div>
+                        </div>
+                        <div class="d-flex p-2">
+                            <img src="./assets/img/Icon/Group (9).svg" style="width: 50px;height: 50px;  margin: 0 8px;" alt="">
+                            <div class="content py-2">
+                                <h6>100% Organic</h6>
+                                <p class="text-secondary mb-0" style="font-size: 13px;">100% Organic Vegetables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="related-product mb-5 mt-5" style="max-width: 1920px;height: auto;">
+        <div class="container">
+            <div class="row">
+                <div class="header text-center mb-4">
+                    <h2>Related Products</h2>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                    <div class="pro_item product-item">
+                        <div class="tag m-2" style="width: 80px;height: 27px; position: absolute;">
+                            <p class="text-white bg-danger p-1 rounded">Sale 50%</p>
+                        </div>
+                        <div class="pro_item_icon">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
+                            <br>
+                            <a href="quickview.html"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
+                        </div>
+                        <img src="./assets/img/products/pro1.png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="pro_item_content">
+                                    <h3 class="fs-6">Green Apple</h3>
+                                    <h4 class="fs-5">$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 p-3">
+                                <div class="item_cart align-content-center">
+                                    <button class="border-0 bg-transparent">
+                                        <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                    <div class="pro_item product-item">
+                        <div class="pro_item_icon">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
+                            <br>
+                            <a href="quickview.html"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
+                        </div>
+                        <img src="./assets/img/products/Image (13).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="pro_item_content">
+                                    <h3 class="fs-6">Chinese Cabbage</h3>
+                                    <h4 class="fs-5">$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 p-3">
+                                <div class="item_cart align-content-center">
+                                    <button class="border-0 bg-transparent">
+                                        <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                    <div class="pro_item product-item">
+                        <div class="pro_item_icon">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
+                            <br>
+                            <a href="quickview.html"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
+                        </div>
+                        <img src="./assets/img/products/pro3.png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="pro_item_content">
+                                    <h3 class="fs-6">Green Capsicum</h3>
+                                    <h4 class="fs-5">$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 p-3">
+                                <div class="item_cart align-content-center">
+                                    <button class="border-0 bg-transparent">
+                                        <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
+                    <div class="pro_item product-item">
+                        <div class="pro_item_icon">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
+                            <br>
+                            <a href="quickview.html"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
+                        </div>
+                        <img src="./assets/img/products/Image (33).png" alt="product">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="pro_item_content">
+                                    <h3 class="fs-6">Ladies Finger</h3>
+                                    <h4 class="fs-5">$14.99</h4>
+                                    <ul class="nav pro_nav">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 p-3">
+                                <div class="item_cart align-content-center">
+                                    <button class="border-0 bg-transparent">
+                                        <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Footer & newsletter section-->
+    <section class="footer_newsletter">
+        <section class="newsletter align-content-center bg-light">
+            <div class="container">
+                <div class="row align-content-center">
+                    <div class="col-xl-4">
+                        <div class="newsletter_content">
+                            <h3>Subcribe our Newsletter</h3>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 d-flex">
+                        <div class="col-xl-8 align-content-center">
+                            <div class="subscribe-box">
+                                <div class="input-group">
+                                    <input type="email" placeholder="Your email address" required />
+                                    <a href="" id="subscribe_btn">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 align-content-center">
+                            <div class="social-media">
+                                <div class="social-container d-flex align-content-center justify-content-center gap-4">
+                                    <div class="icon facebook">
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="icon twitter">
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <div class="icon pinterest">
+                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    </div>
+                                    <div class="icon instagram">
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="link_area d-flex border-bottom border-dark">
+                        <div class="col-xl-3">
+                            <div class="company">
+                                <img src="./assets/img/Logo/Logo2.svg" class="mb-3 " alt=" ">
+                                <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
+                                <div class="address-column">
+                                    <div class="address-number">
+                                        <h6 class="p-0 m-0 ">
+                                            <a class="text-white text-decoration-none" href="tel:(219) 555-0114">(219) 555-0114</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                    <p>or</p>
+                                    <div class="address-gmail">
+                                        <h6 class="p-0 m-0">
+                                            <a class="text-white text-decoration-none" href="mailto:Proxy@gmail.com">Proxy@gmail.com</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="footer-column">
+                                <h3>My Account</h3>
+                                <ul>
+                                    <li><a href="# ">My Account</a></li>
+                                    <li><a href="order-histry.html">Order History</a></li>
+                                    <li><a href="Shopping_cart.html">Shopping Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Helps</h3>
+                                <ul>
+                                    <li><a href="# ">Contact</a></li>
+                                    <li><a href="# ">FAQs</a></li>
+                                    <li><a href="# ">Terms & Condition</a></li>
+                                    <li><a href="# ">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Proxy</h3>
+                                <ul>
+                                    <li><a href="About_us.html">About</a></li>
+                                    <li><a href="shop2.html">Shop</a></li>
+                                    <li><a href="# ">Product</a></li>
+                                    <li><a href="# ">Track Order</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Category</h3>
+                                <ul>
+                                    <li><a href="# ">Fruit & Vegetables</a></li>
+                                    <li><a href="# ">Meat & Fish</a></li>
+                                    <li><a href="# ">Bread & Bakery</a></li>
+                                    <li><a href="# ">Beauty & Health</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="copyright_area pt-3">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-xl-9 ">
+                                    <div class="copyright ">
+                                        <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 ">
+                                    <div class="frame ">
+                                        <a href="# "><img src="./assets/img/Logo/Method=ApplePay.png " class="me-2 " alt="ApplePay "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Visa.png " class="me-2 " alt="Visa "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Discover.png " class="me-2 " alt="Discover "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Mastercard.png " class="me-2 " alt="Mastercard "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Cart.png " alt="Cart "></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--quantity control connection-->
+    <script src="./assets/js/product-quantity-control.js"></script>
+    <!--bootstrap js connect-->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+
+    <!-- custome js connect -->
+    <script src="./assets/js/main.js "></script>
+    <!--Search & password show/hide button js connect-->
+    <script src="./assets/js/search.js "></script>
+    <!--Product remove js connect-->
+    <script src="./assets/js/remove.js "></script>
 </body>
 
 </html>
