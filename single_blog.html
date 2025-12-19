@@ -2,30 +2,677 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog List - Shopery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopery - Organic eCommerce Shop Website</title>
+
+    <!--bootstrap css connect-->
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
+
+    <!--normalize css connect-->
     <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 - Full (Solid + Regular + Brands) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!--Bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--favicon connect-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Icon/plant 1.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/Icon/plant 1.svg">
+    <link rel="manifest" href="./assets/img/Icon/plant 1.svg">
+
+
+    <!--style css connect-->
+    <link rel="stylesheet" href="./assets/css/Shopping_cart.css">
 </head>
 
 <body>
+    <!--header section-->
     <header>
-        <!-- Minimal header to match site navigation -->
-        <nav class="container">
-            <a href="index.html">Home</a> / <span>Blog List</span>
-        </nav>
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 align-content-center">
+                        <div class="header_top_left align-content-center">
+                            <img src="assets/img/Icon/Map Pin(1).svg" alt="map_icon">
+                            <span class="text-light">Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 text-align-end">
+                        <div class="header_top_right">
+                            <form class="d-flex">
+                                <select class="select form-control form-select form_select select_option">
+                                        <option>Eng</option>
+                                        <option>Ban</option>
+                                        <option>Hin</option>
+                                    </select>
+                                <select class="select form-control form-select form_select select_option">
+                                        <option>USD</option>
+                                        <option>INR</option>
+                                        <option>AED</option>
+                                    </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 align-content-center">
+                        <div class="header_top_right text-light text-center">
+                            <a href="sign_in.html" style="color: #ffffff; text-decoration:none;">Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_menu">
+            <div class="container p-2">
+                <div class="row">
+                    <div class="col-xl-2 align-content-center">
+                        <div class="header_logo">
+                            <a class="navbar-brand" href="#"><img src="./assets/img/Logo/Logo.svg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 d-flex justify-content-center align-items-center">
+                        <div class="input-group text-center search_box" id="input-group">
+                            <input type="search_box" placeholder="Search" required />
+                            <a href="#" id="search_btn">Search</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 d-flex justify-content-end align-items-end text-end header_right_icon">
+                        <div class="nav_icon">
+                            <a href="wishlist.html"><img src="./assets/img/Icon/Heart.svg" class="navbar_icon" alt="Wishlist"></a>
+                            <!-- Shopping button cart with offcanvas -->
+                            <button class="btn text-center navbar-toggler position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <img src="./assets/img/Icon/Rectangle (1).svg" class="navbar_icon" alt="Shopping Cart">
+                                    <span class="d-flex navbar-toggler-icon text-center justify-content-center align-items-center align-content-center position-absolute translate-middle badge rounded-circle bg-success p-3" style="top: 17px; left: 40px;"><span class="p-0 m-0">2</span></span>                            
+                            </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shopping Card (2)</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <!--cart product section-->
+                                    <section class="cart_product">
+
+                                        <div class="container">
+                                            <div class="row items">
+                                                <div class="col-4">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/Image (11).png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Fresh Indian Orange</h6>
+                                                        <p>1kg × <b>12.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row items">
+                                                <div class="col-4 d-flex">
+                                                    <div class="product">
+                                                        <img src="./assets/img/products/pro1.png" alt="product">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="product_detail">
+                                                        <h6>Green Apple</h6>
+                                                        <p>1kg ×<b>14.00</b></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="ms-3">
+                                                        <button class="btn remove-item m-0">×</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <!--cart button section-->
+                                    <section class="product_cart">
+                                        <h6 class="mb-2 text-left">2 Produccts <span class="product_amount">$26.00</span></h6>
+                                        <div class="btn_area">
+                                            <a href="checkout.html" class="checkout_btn">Checkout</a><br>
+                                            <a href="Shopping_cart.html" class="cart_btn">Go To Cart</a>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart_area justify-content-center text-end">
+                            <p>Shopping Cart</p><span class="final-total text-secondary" id="cart-total">$84.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 navbar navbar-expand-lg">
+                        <div class="nav header_nav collapse navbar-collapse">
+                            <ul class="navbar-nav gap-3">
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="index.html">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="index.html">Option 2</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="shop1.html">Shop 1</a></li>
+                                        <li><a class="dropdown-item" href="shop2.html">Shop 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="blog_list.html">Blog_List</a></li>
+                                        <li><a class="dropdown-item" href="#">Single_Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a target="_blank" class="nav-link" href="About_us.html">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="header_nav_right">
+                            <ul class="nav justify-content-end">
+                                <li class="nav-item ">
+                                    <a class="nav-link text-dark" href="#">
+                                        <i class="bi bi-telephone-outbound-fill p-1"></i> <span class="text-dark">(219) 555-0114</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- breadcrumb banner section-->
+        <section class="banner">
+            <div class="container h-100">
+                <div class="d-flex align-items-center h-100">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent mb-0">
+                            <li class="breadcrumb-item pe-2"><a href="index.html"><i class="bi bi-house-door text-secondary fs-5"></i></a></li>
+                            <li class="text-secondary" aria-current="page">
+                                <i class='fas fa-angle-right text-secondary'></i>
+                                <a href="blog_list.html" class="text-secondary text-decoration-none">Blog</a>
+                                <i class='fas fa-angle-right p-2'></i><span class="text-success">Single Blog</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
     </header>
-    <main class="container mt-5">
-        <h1>Blog List</h1>
-        <p>This is a placeholder Blog List page. Replace with your blog listing markup.</p>
-        <ul>
-            <li><a href="#">Sample Blog Post 1</a></li>
-            <li><a href="#">Sample Blog Post 2</a></li>
-            <li><a href="#">Sample Blog Post 3</a></li>
-        </ul>
-    </main>
+
+
+    <!-- Single Blog Details Area -->
+    <section class="blog-area my-4">
+        <div class="container">
+            <div class="detail-filter d-grid">
+                <div class="blog-details max-width-872 height-auto">
+                    <img src="./assets//img/Gallery/Image (42).png" class="blog-img" alt="">
+                    <div class="icon-section d-flex my-3 gap-2">
+                        <div class="tag d-flex text-center">
+                            <i class="bi bi-tag fs-5 text-success"></i>
+                            <p class="mx-2">Food</p>
+                        </div>
+                        <div class="tag d-flex text-center">
+                            <i class="bi bi-person text-success"></i>
+                            <p class="mx-2">By <b>Adnmin</b></p>
+                        </div>
+                        <div class="tag d-flex text-center">
+                            <i class="bi bi-chat-square text-success"></i>
+                            <a href="" class="text-secondary text-decoration-none mx-2">65 Comments</a>
+                        </div>
+                    </div>
+                    <div class="blog-info">
+                        <h4>Maecenas tempor urna sed quam mollis, a placerat dui fringill Suspendisse.</h4>
+                        <div class="row border-bottom pb-3 mx-3">
+                            <div class="col-xl-8">
+                                <div class="profile mt-3 d-flex gap-2">
+                                    <img src="./assets/img/customers/Image (20).png" alt="">
+                                    <div>
+                                        <h6>Cameron Williamson</h6>
+                                        <div class="d-flex gap-5">
+                                            <p class="text-secondary">4 April, 2021</p>
+                                            <li class="text-secondary">6 min read</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="social-container d-flex align-content-center justify-content-center mt-3 gap-3">
+                                    <div class="icon facebook">
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="icon twitter">
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <div class="icon pinterest">
+                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    </div>
+                                    <div class="icon instagram">
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-detail my-3">
+                        <h5>Maecenas lacinia felis nec placerat sollicitudin. Quisque placerat dolor at scelerisque <br> imperdiet. Phasellus tristique felis dolor.</h5>
+                        <p class="text-secondary">Maecenas elementum in risus sed condimentum. Duis convallis ante ac tempus maximus. Fusce malesuada sed velit ut dictum. Morbi faucibus vitae orci at euismod. Integer auctor augue in erat vehicula, quis fermentum ex finibus. <br>                            <br> Mauris pretium elit a dui pulvinar, in ornare sapien euismod. Nullam interdum nisl ante, id feugiat quam euismod commodo. Sed ultrices lectus ut iaculis rhoncus. Aenean non dignissim justo, at fermentum turpis. Sed molestie,
+                            ligula ut molestie ultrices, tellus ligula viverra neque, malesuada consectetur diam sapien volutpat risus. Quisque eget tortor lobortis, facilisis metus eu, elementum est. Nunc sit amet erat quis ex convallis suscipit. ur
+                            ridiculus mus.
+                        </p>
+                        <di class="d-flex gap-2">
+                            <img src="./assets/img/Gallery/Image (34).png" alt="">
+                            <img src="./assets/img/Gallery/Image (40).png" alt="">
+                        </di>
+                        <p class="text-secondary my-3">Sed dictum non nulla eu imperdiet. Duis elit libero, vulputate quis vehicula ut, vestibulum ut mauris. Nullam non felis varius dui rutrum rutrum in a nisi. Suspendisse elementum rutrum lorem sed luctus. Proin iaculis euismod metus
+                            non sollicitudin. Duis vel luctus lacus. Nullam faucibus iaculis convallis. In ullamcorper nibh ipsum, eget lacinia eros pulvinar a. Integer accumsan arcu nec faucibus ultricies.
+                        </p>
+                        <div class="Banner p-5">
+                            <p class="text-light-emphasis m-0">Summer Sales</p>
+                            <div class="d-flex">
+                                <h2 class="text-white me-5">Fresh Fruits</h2>
+                                <!-- Circle badge showing percent off -->
+                                <svg class="bd-placeholder-img rounded-circle" width="75" height="75" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Completely round image: 75x75" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Completely round image</title>
+                                    <rect width="100%" height="100%" fill="#1a1a1a45"></rect>
+                                    <text x="50%" y="50%" text-anchor="middle" fill="#dee2e6" color="" font-weight="700" font-size="12">
+                                        <tspan class="fs-5" x="50%" dy="-0.1em" fill="#FF8A00">56%</tspan>
+                                        <tspan x="50%" dy="1.3em">OFF</tspan>
+                                    </text>
+                                </svg>
+                            </div>
+                            <div class="shopnow_btn mt-2">
+                                <a href="shop2.html">Shop now <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="messsage my-3">
+                            <h5>Leave a Comment</h5>
+                            <form action="" class="comment">
+                                <div class="row">
+                                    <div class="col-xl-6 mb-3">
+                                        <label for="" class="pb-2">First name</label>
+                                        <input type="text" class="form-control p-2" placeholder="Zakir Hossen" required="">
+                                    </div>
+                                    <div class="col-xl-6 mb-3">
+                                        <label for="" class="pb-2">Email</label>
+                                        <input type="email" class="form-control p-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="zakirsoft.20@gmail.com" required="">
+                                    </div>
+                                    <div class="col-xl-12 mb-3">
+                                        <label for="" class="pb-2">Message</label>
+                                        <textarea class="form-control p-2" rows="5" placeholder="Message" required=""></textarea>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <p class="text-secondary">Save my name and email in this browser for the next time I comment.</p>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <button type="submit" class="btn btn-primary text-center border-0 rounded-pill mt-3" style="background-color: #00B207; padding: 14px 36px;">Post Comments</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="publc-comment py-4">
+                                <h5>Comment</h5>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (18).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (19).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (20).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (20).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (19).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <div class="commenter d-flex gap-3 py-2 border-bottom">
+                                    <img src="./assets/img/customers/Image (18).png" height="80" alt="viewer">
+                                    <div class="comment-with-time gap-2">
+                                        <div class="d-flex gap-4">
+                                            <p class="mb-1">Annette Black
+                                                <li class="text-secondary">26 Apr, 2021</li>
+                                            </p>
+                                        </div>
+                                        <p class="text-secondary">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                    </div>
+                                </div>
+                                <button class="border border-success text-suuccess bg-transparent mt-3 rounded-pill p-3 px-5">Load More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter pb-4">
+                    <div class="search border rounded-2 p-2 d-flex">
+                        <i class="fa fa-search search-icon pt-3 px-2"></i>
+                        <input type="text" class="rounded form-control p-2 border-0" placeholder="search" width="312">
+                    </div>
+                    <div class="categories mt-4 border-top border-bottom">
+                        <h5 class="my-3">Top Categories</h5>
+                        <a href="" class="text-secondary text-decoration-none pb-3">Fresh Fruits <span style="margin-left: 300px;"></span>(35)</a>
+                        <a href="" class="text-secondary text-decoration-none">Vegetables <span style="margin-left: 294px;">(150)</span></a>
+                        <a href="" class="text-secondary text-decoration-none">Cooking <span style="margin-left: 324px;">(54)</span></a>
+                        <a href="" class="text-secondary text-decoration-none">Snacks <span style="margin-left: 334px;">(47)</span></a>
+                        <a href="" class="text-secondary text-decoration-none">Bevarages <span style="margin-left: 305px;">(42)</span></a>
+                        <a href="" class="text-secondary text-decoration-none">Beauty & Health <span style="margin-left: 263px;">(39)</span></a>
+                        <a href="" class="text-secondary text-decoration-none">Bread & Bakery <span style="margin-left: 273px;">(10)</span></a>
+                    </div>
+                    <div class="poplur-tag border-bottom mt-3 pb-3">
+                        <h5 class="mb-3">Popular Tag</h5>
+                        <div class="title d-flex gap-2">
+                            <a href="" id="Health" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Health</a>
+                            <a href="" id="food" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Low fat</a>
+                            <a href="" id="Vegetable" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Vegeterian</a>
+                            <a href="" id="Foods" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Kid Foods</a>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="#health" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Vitamins</a>
+                            <a href="" id="bread" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Bread</a>
+                            <a href="" id="Meat" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Meat</a>
+                            <a href="" id="Snacks" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Snack</a>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="" id="Tiffin" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Tiffin</a>
+                            <a href="" id="launch" class="title-link text-decoration-none p-2 mb-3 rounded-pill">Launch</a>
+                            <a href="" id="Dinner" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Dinner</a>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="" id="breakfast" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Breakfast</a>
+                            <a href="" id="fruits" class="title-link text-decoration-none p-2 px-3 mb-3 rounded-pill">Fruits</a>
+                        </div>
+                        <div class="d-flex gap-2">
+                        </div>
+                    </div>
+                    <div class="gallery-area my-3 pb-4 border-bottom">
+                        <h5 class="my-2">Our Gallery</h5>
+                        <div class="d-grid" style="grid-template-columns: repeat(4,1fr);">
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (7).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (6).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (5).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img class="mb-2" src="./assets/img/Gallery/gallery (4).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (3).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (2).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery (1).png" alt=""></div>
+                            <div class="col-xl-3 col-3"><img src="./assets/img/Gallery/gallery.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="recenty-added-blog mt-3">
+                        <h5 class="my-3">Recently Added</h5>
+                        <div class="row">
+                            <div class="col-xl-3 col-3">
+                                <a href=""><img src="./assets/img/Gallery/gallery (7).png" alt=""></a>
+                            </div>
+                            <div class="col-xl-9 col-9">
+                                <div class="py-2">
+                                    <p>Curabitur porttitor orci eget nequ accumsan.</p>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-calendar4 text-success"></i>
+                                        <p class="text-secondary">Apr 25, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-3">
+                                <a href=""><img src="./assets/img/Gallery/gallery (3).png" alt=""></a>
+                            </div>
+                            <div class="col-xl-9 col-9">
+                                <div class="py-2">
+                                    <p>Curabitur porttitor orci eget nequ accumsan.</p>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-calendar4 text-success"></i>
+                                        <p class="text-secondary">Apr 25, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-3">
+                                <a href=""><img src="./assets/img/Gallery/gallery (1).png" alt=""></a>
+                            </div>
+                            <div class="col-xl-9 col-9">
+                                <div class="py-2">
+                                    <p>Curabitur porttitor orci eget nequ accumsan.</p>
+                                    <div class="d-flex gap-2">
+                                        <i class="bi bi-calendar4 text-success"></i>
+                                        <p class="text-secondary">Apr 25, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer & newsletter section-->
+    <section class="footer_newsletter">
+        <section class="newsletter align-content-center bg-light">
+            <div class="container">
+                <div class="row align-content-center">
+                    <div class="col-xl-4">
+                        <div class="newsletter_content">
+                            <h3>Subcribe our Newsletter</h3>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec <br> tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 d-flex">
+                        <div class="col-xl-8 align-content-center">
+                            <div class="subscribe-box">
+                                <div class="input-group">
+                                    <input type="email" placeholder="Your email address" required />
+                                    <a href="" id="subscribe_btn">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 align-content-center">
+                            <div class="social-media">
+                                <div class="social-container d-flex align-content-center justify-content-center gap-4">
+                                    <div class="icon facebook">
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="icon twitter">
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <div class="icon pinterest">
+                                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    </div>
+                                    <div class="icon instagram">
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="link_area d-flex border-bottom border-dark">
+                        <div class="col-xl-3">
+                            <div class="company">
+                                <img src="./assets/img/Logo/Logo2.svg" class="mb-3 " alt=" ">
+                                <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
+                                <div class="address-column">
+                                    <div class="address-number">
+                                        <h6 class="p-0 m-0 ">
+                                            <a class="text-white text-decoration-none" href="tel:(219) 555-0114">(219) 555-0114</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                    <p>or</p>
+                                    <div class="address-gmail">
+                                        <h6 class="p-0 m-0">
+                                            <a class="text-white text-decoration-none" href="mailto:Proxy@gmail.com">Proxy@gmail.com</a>
+                                        </h6>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="footer-column">
+                                <h3>My Account</h3>
+                                <ul>
+                                    <li><a href="# ">My Account</a></li>
+                                    <li><a href="order-histry.html">Order History</a></li>
+                                    <li><a href="Shopping_cart.html">Shopping Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Helps</h3>
+                                <ul>
+                                    <li><a href="# ">Contact</a></li>
+                                    <li><a href="# ">FAQs</a></li>
+                                    <li><a href="# ">Terms & Condition</a></li>
+                                    <li><a href="# ">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Proxy</h3>
+                                <ul>
+                                    <li><a href="About_us.html">About</a></li>
+                                    <li><a href="shop2.html">Shop</a></li>
+                                    <li><a href="# ">Product</a></li>
+                                    <li><a href="# ">Track Order</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="footer-column ">
+                                <h3>Category</h3>
+                                <ul>
+                                    <li><a href="# ">Fruit & Vegetables</a></li>
+                                    <li><a href="# ">Meat & Fish</a></li>
+                                    <li><a href="# ">Bread & Bakery</a></li>
+                                    <li><a href="# ">Beauty & Health</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="copyright_area pt-3">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-xl-9 ">
+                                    <div class="copyright ">
+                                        <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 ">
+                                    <div class="frame ">
+                                        <a href="# "><img src="./assets/img/Logo/Method=ApplePay.png " class="me-2 " alt="ApplePay "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Visa.png " class="me-2 " alt="Visa "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Discover.png " class="me-2 " alt="Discover "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Method=Mastercard.png " class="me-2 " alt="Mastercard "></a>
+                                        <a href="# "><img src="./assets/img/Logo/Cart.png " alt="Cart "></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--quantity control connection-->
+    <script src="./assets/js/product-quantity-control.js"></script>
+    <!--bootstrap js connect-->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+    <!-- custome js connect -->
+    <script src="./assets/js/main.js"></script>
 </body>
+
+</html>
 
 </html>
