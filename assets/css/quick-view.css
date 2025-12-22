@@ -1,0 +1,171 @@
+#quickViewOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2000;
+    display: none;
+    overflow: auto;
+    /* allow page overflow when overlay open */
+    -webkit-overflow-scrolling: touch;
+    align-content: center;
+}
+
+.quick-view-panel {
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 48px auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    width: 90%;
+    max-width: 1320px;
+    height: 636px;
+    /* required height */
+    overflow: auto;
+}
+
+
+/* ensure inside content uses col-xl classes */
+
+.qv-image {
+    max-height: 720px;
+    object-fit: contain
+}
+
+.qv-close {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    color: red;
+    background-color: antiquewhite;
+    top: 200px;
+    right: 210px;
+}
+
+
+/* Thumbnails & gallery */
+
+.thumbs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center
+}
+
+.thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .18s
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.thumb:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12)
+}
+
+.thumb.active {
+    border-color: #00b207;
+    box-shadow: 0 12px 30px rgba(0, 178, 7, 0.08)
+}
+
+.main-image-wrapper {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+/* Add to cart hover */
+
+.btn-add {
+    background: #00b207;
+    color: #fff;
+    border: none
+}
+
+.btn-add:hover {
+    background: #019b05;
+    transform: translateY(-2px)
+}
+
+
+/* Small helpers */
+
+.badge-pill {
+    border-radius: 999px
+}
+
+.stats .stat {
+    background: #f3fbf4;
+    padding: 10px 14px;
+    border-radius: 8px
+}
+
+
+/* Responsive tweaks */
+
+@media (max-width:1199px) {
+    .qv-image {
+        max-height: 420px
+    }
+    .quick-view-panel {
+        height: 900px
+    }
+}
+
+@media (max-width:767px) {
+    .quick-view-panel {
+        width: 96%;
+        height: auto;
+        margin: 24px auto
+    }
+    .product-grid .card-img-top {
+        height: 180px
+    }
+}
+
+
+/* Custom Slick Slider Arrows */
+
+.slider-nav-buttons {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.slider-arrow {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 5px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-arrow:hover {
+    background-color: #00b207;
+    color: #fff;
+    border-color: #00b207;
+}
+
+.slick-prev-custom,
+.slick-next-custom {
+    padding: 0;
+}

@@ -125,6 +125,8 @@ $(document).ready(function() {
             $(this).find(".nav-select").css("background-color", "");
         }
     );
+
+    $('.slide').slick();
 });
 
 // =================================================================
@@ -145,4 +147,4 @@ options.forEach(op => {
         op.style.backgroundColor = "";
         op.style.color = "";
     });
-});
+})

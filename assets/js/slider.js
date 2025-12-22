@@ -1,3 +1,45 @@
+// categories slider for index.html
+$(document).ready(function() {
+    $('.categories-slider').slick({
+        // Desktop: 6 cards visible
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false, // Hide arrows on mobile
+                dots: true
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
+            }
+        }],
+        // Custom arrow HTML
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
+});
+
+
+// slider for about section ;
 $(document).ready(function() {
     $('.team-carousel').slick({
         infinite: true,
@@ -33,7 +75,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     const minVal = 50;
-    const maxVal = 1500;
+    const maxVal = 150;
     const $track = $('.slider-track');
     const $fill = $('.slider-fill');
     const $minThumb = $('.min-thumb');

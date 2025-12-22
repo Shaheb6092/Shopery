@@ -38,6 +38,7 @@
 
     <!--style css connect-->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/quick-view.css">
 </head>
 
 <body>
@@ -46,13 +47,13 @@
         <div class="header_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-10">
+                    <div class="col-xl-10 col-10 col-lg-10 col-md-10 col-sm-10">
                         <div class="header_top_left">
                             <img src="assets/img/Icon/Map Pin.svg" alt="map_icon">
                             <span>Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
                         </div>
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-xl-2 col-2 col-lg-2 col-md-2 col-sm-2">
                         <div class="header_top_right">
                             <form class="d-flex">
                                 <select class="select form-control form-select form_select select_option">
@@ -76,29 +77,69 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5">
-                        <div class="nav header_nav">
-                            <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="shop2.html">Shop</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact_us.html" target="_blank">Contact</a></li>
-                            </ul>
-                        </div>
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container">
+                                <!-- Toggler for mobile -->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav me-auto align-items-center gap-1">
+
+                                        <!-- Home Select -->
+                                        <li class="nav-item">
+                                            <select class="form-select nav-select border-0" data-page="Home">
+                                                <option value="Home"><a href="index.html" class="text-decoration-none">Home</a></option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Shop Select -->
+                                        <li class="nav-item">
+                                            <select class="form-select navs-select border-0 bg-transparent text-dark" data-page="Shop">
+                                                <option value="shop1">Shop</option>
+                                                <option value="shop1">Shop 1</option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Pages Select -->
+                                        <li class="nav-item">
+                                            <select class="form-select navs-select border-0 bg-transparent text-dark" data-page="Pages">
+                                                    <option value="" selected>Pages</option>
+                                                    <option value="page1">Page 1</option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Blog Select -->
+                                        <li class="nav-item">
+                                            <select class="form-select navs-select border-0 bg-transparent text-dark" data-page="Blog">
+                                                <option value="blog1" selected>Blog</option>
+                                                <option value="blog2">Blog List</option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Simple links (no select) -->
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" href="About_us.html" data-page="About Us">About Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
-                    <div class="col-xl-2">
-                        <div class="header_logo">
+                    <div class="col-xl-2 align-content-center">
+                        <div class="header_logo text-center">
                             <img src="./assets/img/Logo/Logo.svg" alt="logo">
                         </div>
                     </div>
-                    <div class="col-xl-5">
+                    <div class="col-xl-5 align-content-center">
                         <div class="header_nav_right">
-                            <ul class="nav justify-content-end">
-                                <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="bi bi-telephone-outbound p-1"></i><span>(219) 555-0114</span></a></li>
-                                <li class="nav-item "><a class="nav-link" href="#"><i class="bi bi-search nav_icon"></i></a></li>
-                                <li class="nav-item "><a class="nav-link" href="#"><i class="bi bi-heart nav_icon"></i></a></li>
-                                <li class="nav-item "><a class="nav-link" href="#"><i class="bi bi-handbag nav_icon"></i></a></li>
-                                <li class="nav-item "><a class="nav-link" href="#"><i class="bi bi-person-fill nav_icon_profile"></i></a></li>
+                            <ul class="nav justify-content-end gap-4">
+                                <li class="nav-item align-content-center"><a class="nav-link text-dark" href="tel:+12195550114"><i class="bi bi-telephone-outbound fs-6">(219) 555-0114</i><span class="fs-6"></span></a></li>
+                                <li class="nav-item align-content-center"><a class="nav-link text-dark p-0" href=""><i class="bi bi-search fs-4"></i></a></li>
+                                <li class="nav-item align-content-center"><a class="nav-link text-dark p-0" href=""><i class="bi bi-heart fs-4"></i></a></li>
+                                <li class="nav-item align-content-center"><a class="nav-link text-dark p-0" href=""><i class="bi bi-handbag fs-4"></i></a></li>
+                                <li class="nav-item align-content-center"><a class="nav-link text-dark p-0" href="sign_in.html"><i class="bi bi-person-circle fs-4"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,18 +153,18 @@
     <section class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-6 col-sm-6 col-md-6">
-                    <div class="banner_img">
+                <div class="col-xl-7 col-7 col-sm-6 col-md-6">
+                    <div class="banner_img w-100 align-content-center">
                         <img src="./assets/img/Banner/bimg.png" alt="banner1">
                     </div>
                 </div>
-                <div class="col-xl-6 col-6 col-sm-6 col-md-6">
+                <div class="col-xl-5 col-5 col-sm-6 col-md-6 align-content-center">
                     <div class="banner_content">
-                        <h4>Welcome to shopery</h4>
-                        <h1>Fresh & Healthy <br>Organic Food</h1>
+                        <span>Welcome to shopery</span>
+                        <h1 class="">Fresh & Healthy <br>Organic Food</h1>
                         <h3>Sale up to <span> 30% OFF</span></h3>
-                        <p>Free shipping on all your order. we deliver, you enjoy</p>
-                        <a href="#">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <p class="text-secondary fs-6">Free shipping on all your order. we deliver, you enjoy</p>
+                        <a href="shop1.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -138,7 +179,7 @@
                 <div class="col-xl-3">
                     <div class="service_item">
                         <div class="icon_bg">
-                            <i class="fa-solid fa-truck text-success"></i>
+                            <i class="fa-solid fa-truck"></i>
                         </div>
                         <h3>Free Shipping</h3>
                         <p>Free shipping with discount</p>
@@ -147,7 +188,7 @@
                 <div class="col-xl-3">
                     <div class="service_item">
                         <div class="icon_bg">
-                            <i class="fa-solid fa-headset text-success"></i>
+                            <i class="fa-solid fa-headset"></i>
                         </div>
                         <h3>Great Support 24/7</h3>
                         <p>Instant access to Contact Support</p>
@@ -186,7 +227,7 @@
                 </div>
                 <div class="col-xl-3">
                     <div class="pro_view_all">
-                        <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="shop1.html">View All <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -194,9 +235,9 @@
                 <div class="col-xl-3 col-3 col-sm-6 col-md-6">
                     <div class="pro_item">
                         <div class="pro_item_icon">
-                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
-                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                            <a href="" class="view-more" data-image="./assets/img/products/pro1.png" data-name="Green Apple" data-price="$14.99"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
                         </div>
                         <img src="./assets/img/products/pro1.png" alt="product">
                         <div class="row">
@@ -215,7 +256,7 @@
                             </div>
                             <div class="col-xl-3 product_cart_area">
                                 <div class="item_cart">
-                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                    <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
                                 </div>
                             </div>
                         </div>
@@ -224,9 +265,9 @@
                 <div class="col-xl-3 col-3 col-sm-6 col-md-6">
                     <div class="pro_item">
                         <div class="pro_item_icon">
-                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
-                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                            <a href="" class="view-more" data-image="./assets/img/products/pro2.jpg" data-name="Chanise Cabbage" data-price="$14.99"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
                         </div>
                         <img src="./assets/img/products/pro2.jpg" alt="product">
                         <div class="row">
@@ -245,7 +286,7 @@
                             </div>
                             <div class="col-xl-3 product_cart_area">
                                 <div class="item_cart">
-                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                    <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
                                 </div>
                             </div>
                         </div>
@@ -254,9 +295,9 @@
                 <div class="col-xl-3 col-3 col-sm-6 col-md-6">
                     <div class="pro_item">
                         <div class="pro_item_icon">
-                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
-                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                            <a href="" class="view-more" data-image="./assets/img/products/pro3.png" data-name="Green Capsicum" data-price="$14.99"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
                         </div>
                         <img src="./assets/img/products/pro3.png" alt="product">
                         <div class="row">
@@ -275,7 +316,7 @@
                             </div>
                             <div class="col-xl-3 product_cart_area">
                                 <div class="item_cart">
-                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                    <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
                                 </div>
                             </div>
                         </div>
@@ -284,9 +325,9 @@
                 <div class="col-xl-3 col-3 col-sm-6 col-md-6">
                     <div class="pro_item">
                         <div class="pro_item_icon">
-                            <img src="./assets/img/Icon/Heart.svg" id="product_item_icon_img" alt="heart">
+                            <a href="whshlist.html"><img class="p-1" src="./assets/img/Icon/Add To wishlist (1).svg" alt="heart"></a>
                             <br>
-                            <img src="./assets/img/Icon/Group.svg" id="product_item_icon_img" alt="eye">
+                            <a href="" class="view-more" data-image="./assets/img/products/pro4.webp" data-name="Ladies Finger" data-price="$14.99"><img class="p-1" src="./assets/img/Icon/Quick View (1).svg" alt="eye"></a>
                         </div>
                         <img src="./assets/img/products/pro4.webp" alt="product">
                         <div class="row">
@@ -305,7 +346,134 @@
                             </div>
                             <div class="col-xl-3 product_cart_area">
                                 <div class="item_cart">
-                                    <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                    <i class="bi bi-handbag align-contert-center bg-transparent fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick View Overlay -->
+                <div id="quickViewOverlay" aria-hidden="true">
+                    <div class="quick-view-panel">
+                        <div class="container-fluid">
+                            <div class="row py-4">
+                                <div class="col-xl-1 col-1">
+                                    <div class="slider-nav-buttons">
+                                        <button class="slider-arrow slick-prev-custom mb-4"><i class="fas fa-chevron-up"></i></button>
+
+                                        <div class="slide" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "vertical": true, "verticalSwiping": true, "arrows": true, "prevArrow": ".slick-prev-custom", "nextArrow": ".slick-next-custom"}'>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (1).png" alt=""></div>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (3).png" alt=""></div>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (4).png" alt=""></div>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (2).png" alt=""></div>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (1).png" alt=""></div>
+                                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (2).png" alt=""></div>
+                                        </div>
+
+                                        <button class="slider-arrow slick-next-custom mt-4"><i class="fas fa-chevron-down"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-5 image-col">
+                                    <div class="main-image-wrapper w-100 p-0">
+                                        <img src="./assets/img/products/Image (30).png" width="556" height="556" id="qv-img" alt="product" class="qv-image img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="info mb-2">
+                                        <div class="header mb-3 border-bottom pb-3">
+                                            <div class="d-flex gap-3">
+                                                <h2 id="qv-name">Product Name </h2>
+                                                <span class="p-2 px-3 fs-6 fw-4 text-dark rounded" style="background-color: #cfece88a;">In Stock</span>
+                                            </div>
+                                            <div class="align-items-center gap-3">
+                                                <div class="text-success fw-bold h4 mb-0" id="qv-price">$0.00</div>
+                                                <!-- <div class="badge bg-success badge-pill p-3 px-4 ms-2">In Stock</div> -->
+                                            </div>
+                                            <ul class="nav pro_nav">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <a href="pr-customer-feedback.html" class="text-secondary text-decoration-none" style="padding-left: 10px;">4 Reviews</a>
+                                                <ul class="d-flex gap-1 text-secondary">
+                                                    <li class="tex-secondary fs-6">SKU 2,51,594</li>
+                                                    <li class="tex-secondary fs-6"></li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                        <div class="qv-closer">
+                                            <button id="qv-close" class="btn btn-outline-secondary qv-close" title="Close"><i class="bi bi-x-lg"></i></button>
+                                        </div>
+                                        <div class="brand-social border-bottom mt-3 mb-3">
+                                            <div class="row">
+                                                <div class="col-xl-5 col-5">
+                                                    <div class="brand-area d-flex pb-3">
+                                                        <h5 class="pe-4 align-content-center">Brand:</h5>
+                                                        <button class="border-1 border-dark rounded border-opacity-10">
+                                                                <img src="./assets/img/Brand/Group 19.svg" width="50" height="50" alt="">
+                                                            </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-7 col-7">
+                                                    <div class="social-area d-flex justify-content-end">
+                                                        <h6 class="pt-3">Share item :</h6>
+                                                        <div class="social-media d-flex gap-3">
+                                                            <div class="icon facebook">
+                                                                <a href="#"><i class="fa-brands fa-facebook-f" id="icon"></i></a>
+                                                            </div>
+                                                            <div class="icon twitter">
+                                                                <a href="#"><i class="fa-brands fa-twitter" id="icon"></i></a>
+                                                            </div>
+                                                            <div class="icon pinterest">
+                                                                <a href="#"><i class="fa-brands fa-pinterest-p" id="icon"></i></a>
+                                                            </div>
+                                                            <div class="icon instagram">
+                                                                <a href="#"><i class="fa-brands fa-instagram" id="icon"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p id="qv-desc" class="text-secondary">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos <br> himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla <br> varius magna a consequat pulvinar.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-cart border-bottom mt-3">
+                                        <div class="row mb-3">
+                                            <div class="col-xl-3 col-3">
+                                                <div class="quantity-controls p-2">
+                                                    <button class="quantity-btn minus">-</button>
+                                                    <input type="text" class="quantity-input" value="5" readonly>
+                                                    <button class="quantity-btn plus">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 col-8">
+                                                <div class="d-grid">
+                                                    <button type="submit" class="btn btn-primary text-center border-0 rounded-pill p-3" style="background-color: #00b207;">
+                                                            Add to Cart<i class="bi bi-handbag align-contert-center p-2"></i>
+                                                        </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-1 col-1 align-content-center justify-content-center rounded-5" style="background-color: #daf1db; cursor: pointer;">
+                                                <div class="wishlist-area rounded-circle align-content-center text-center">
+                                                    <i class="bi bi-heart text-success fs-5"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="category-area mt-3 mb-3">
+                                        <h5>Category: <span class="text-secondary">Vegetables</span></h5>
+                                        <div class="d-flex gap-2">
+                                            <p>Tag:
+                                                <sapn class="text-secondary">Vegetable Healthy</sapn>
+                                            </p>
+                                            <a href="" class="text-dark">Chinese</a>
+                                            <p class="text-secondary">Cabbage Green Cabbage</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -449,7 +617,7 @@
                             </div>
                         </div>
 
-                        <a href="#">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="shop1.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -503,7 +671,7 @@
                                 <h5>100% ORGANIC</h5>
                                 <h2>Fruit & Vegetable</h2>
                                 <p>Starting at: <span>$11.99</span></p>
-                                <a href="#">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="shop1.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -530,7 +698,7 @@
                                         <span class="label">SECS</span>
                                     </div>
                                 </div>
-                                <a href="#">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="shop1.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -550,7 +718,7 @@
                     </div>
                     <div class="col-xl-3">
                         <div class="best_seller_view_all text-end">
-                            <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="shop1.html">View All <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -580,7 +748,7 @@
                                 </div>
                                 <div class="col-xl-3" id="col-xl-3">
                                     <div class="product_item_cart">
-                                        <a href="#"><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
+                                        <a href=""><img src="./assets/img/Icon/Rectangle (1).svg" alt="cart"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1026,7 +1194,7 @@
                                 <div class="special_product_content">
                                     <p>HOT SALE</p>
                                     <h2> <b>Save 37%</b> on <br> Every Order</h2>
-                                    <a href="#">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="shop1.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
 
                             </div>
@@ -1532,55 +1700,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <!--bootstrap js connect-->
     <script src="./assets/js/bootstrap.bundle.js"></script>
-
     <!--search js connect-->
     <script src="./assets/js/search.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.categories-slider').slick({
-                // Desktop: 6 cards visible
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: true,
-                dots: false,
-                autoplay: true,
-                autoplaySpeed: 2500,
-                responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                }, {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false, // Hide arrows on mobile
-                        dots: true
-                    }
-                }, {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true
-                    }
-                }],
-                // Custom arrow HTML
-                prevArrow: '<button type="button" class="slick-prev"></button>',
-                nextArrow: '<button type="button" class="slick-next"></button>'
-            });
-        });
-    </script>
-
+    <!-- slider js connect -->
+    <script type="text/javascript" src="./assets/js/slider.js"></script>
+    <!--custom js connect-->
     <script src="./assets/js/main.js"></script>
+    <!-- Quick view js connect-->
+    <script src="./assets/js/quick-view.js"></script>
+    <!--quantity control connection-->
+    <script src="./assets/js/product-quantity-control.js"></script>
 </body>
 
 </html>

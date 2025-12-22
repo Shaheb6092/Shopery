@@ -11,7 +11,12 @@
 
     <!--normalize css connect-->
     <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/quick-view.css">
+
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,7 +250,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-1 col-1">
-                    <div class="product-carousel mt-3 mb-3 bg-warning"></div>
+                    <div class="slider-nav-buttons">
+                        <button class="slider-arrow slick-prev-custom mb-4"><i class="fas fa-chevron-up"></i></button>
+
+                        <div class="slide" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "vertical": true, "verticalSwiping": true, "arrows": true, "prevArrow": ".slick-prev-custom", "nextArrow": ".slick-next-custom"}'>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (1).png" alt=""></div>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (3).png" alt=""></div>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (4).png" alt=""></div>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (2).png" alt=""></div>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (1).png" alt=""></div>
+                            <div class="image-slide mb-2"><img src="./assets/img/products/Product Image Slider (2).png" alt=""></div>
+                        </div>
+
+                        <button class="slider-arrow slick-next-custom mt-4"><i class="fas fa-chevron-down"></i></button>
+
+                    </div>
                 </div>
                 <div class="col-xl-5 col-5">
                     <div class="product-img mt-3 mb-3 align-content-center justify-content-center">
@@ -289,16 +308,16 @@
                                         <h6 class="pt-3">Share item :</h6>
                                         <div class="social-media">
                                             <div class="icon facebook">
-                                                <a href="#"><i class="fa-brands fa-facebook-f text-dark"></i></a>
+                                                <a href="#"><i class="fa-brands fa-facebook-f" id="icon"></i></a>
                                             </div>
                                             <div class="icon twitter">
-                                                <a href="#"><i class="fa-brands fa-twitter text-dark"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter" id="icon"></i></a>
                                             </div>
                                             <div class="icon pinterest">
-                                                <a href="#"><i class="fa-brands fa-pinterest-p text-dark"></i></a>
+                                                <a href="#"><i class="fa-brands fa-pinterest-p" id="icon"></i></a>
                                             </div>
                                             <div class="icon instagram">
-                                                <a href="#"><i class="fa-brands fa-instagram text-dark"></i></a>
+                                                <a href="#"><i class="fa-brands fa-instagram" id="icon"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -696,6 +715,11 @@
         </section>
     </section>
 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--quantity control connection-->
     <script src="./assets/js/product-quantity-control.js"></script>
     <!--bootstrap js connect-->

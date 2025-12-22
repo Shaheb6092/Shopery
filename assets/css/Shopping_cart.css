@@ -699,6 +699,14 @@ a.cart_btn {
     cursor: pointer;
 }
 
+#icon {
+    color: #1A1A1A;
+}
+
+.icon:hover #icon {
+    color: #ffffff;
+}
+
 .icon i {
     color: #919bab;
 }
@@ -1220,6 +1228,10 @@ input.additional_text {
     border-radius: 10px;
 }
 
+.blog-card:hover {
+    box-shadow: 0px 1px 5px #000000;
+}
+
 .date {
     width: 58px;
     height: 58px;
@@ -1253,4 +1265,8 @@ input.additional_text {
     height: 250px;
     background-image: url(../img/Banner/Discount\ Bannar.jpg);
     background-size: cover;
+}
+
+.image-slide:hover img {
+    border: 1px solid #00B207;
 }
