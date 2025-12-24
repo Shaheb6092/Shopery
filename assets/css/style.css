@@ -92,6 +92,18 @@ body {
     height: 640px;
 }
 
+.banner_img img {
+    height: 500px;
+    width: 742px;
+}
+
+.banner-section {
+    margin: 0 auto;
+    max-width: 1920px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+}
+
 .banner_content span {
     margin-top: 80px;
     color: #00B207;
@@ -357,7 +369,7 @@ input[type="text"] {
 }
 
 .categories-section {
-    margin: 0 auto;
+    margin: 20 auto;
     padding: 0px 0px;
     position: relative;
     background-image: url(../img/Banner/BG2.jpg);
@@ -406,17 +418,19 @@ input[type="text"] {
 
 .categories-slider {
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 
 /* Category Card Styles */
 
 .category-card {
-    background: white;
+    background-color: white;
     border-radius: 10px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
     transition: all 0.3s ease;
     height: 210px;
     width: 200px;
@@ -424,12 +438,11 @@ input[type="text"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 14px;
-    border: 2px solid transparent;
+    margin: 0 12px;
+    border: 1px solid #E6E6E6;
 }
 
 .category-card:hover {
-    transform: translateY(-3px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-color: #2C742F;
 }
@@ -468,36 +481,54 @@ input[type="text"] {
 
 .slick-prev,
 .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 50px;
-    height: 50px;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    background-color: #ccc;
-    border: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    display: flex !important;
+    /* Important to override inline styles from slick */
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    transform: translateY(-50%);
 }
 
 .slick-prev {
-    left: -80px;
+    left: -75px;
 }
 
 .slick-next {
-    right: -80px;
+    right: -75px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
+    font-size: 18px;
+    color: #1A1A1A;
+}
+
+.slick-prev:before {
+    content: '\f060'!important;
+    /* fa-chevron-left */
+}
+
+.slick-next:before {
+    content: "\f061" !important;
+    /* Solid right arrow */
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background-color: #667eea;
+    background-color: #00b207;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: white;
 }
 
 
@@ -508,12 +539,12 @@ input[type="text"] {
 }
 
 .slick-dots li button:before {
-    color: #667eea;
+    color: #636060;
     font-size: 12px;
 }
 
 .slick-dots li.slick-active button:before {
-    color: #764ba2;
+    color: #00b207;
 }
 
 
@@ -563,28 +594,8 @@ input[type="text"] {
     }
 }
 
-
-/* Leaf Decoration */
-
-.leaf-decoration {
-    position: absolute;
-    font-size: 3rem;
-    color: #a8e6cf;
-    opacity: 0.7;
-    z-index: 1;
-}
-
-.leaf-left {
-    top: 20%;
-    left: 5%;
-}
-
-.leaf-right {
-    top: 30%;
-    right: 5%;
-}
-
 .food_store {
+    margin: 20px auto;
     background-image: url(../img/Banner/Why\ Choose\ Us\ \(1\).png);
     background-size: 100% 100%;
 }
@@ -825,15 +836,14 @@ input[type="text"] {
 }
 
 .product_item_icon {
-    margin-left: 195px;
+    margin-left: 190px;
     position: absolute;
     visibility: hidden;
 }
 
 #product_item_icon_img {
-    width: 20px;
-    height: 20px;
-    margin: 8px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
 }
 
@@ -1012,7 +1022,7 @@ input[type="text"] {
 .special_product_content a {
     color: #00B207;
     background-color: #FFFFFF;
-    padding: 16px 40px;
+    padding: 16px 35px;
     text-decoration: none;
     border-radius: 24px;
 }

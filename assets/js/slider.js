@@ -1,3 +1,20 @@
+// Top banner slider for index.html
+
+$(document).ready(function() {
+
+    $('.banner-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 600,
+
+    })
+})
+
 // categories slider for index.html
 $(document).ready(function() {
     $('.categories-slider').slick({
@@ -7,8 +24,10 @@ $(document).ready(function() {
         infinite: true,
         arrows: true,
         dots: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2500,
+        speed: 600,
+        cssEase: 'ease-in-out',
         responsive: [{
             breakpoint: 1200,
             settings: {
@@ -32,9 +51,6 @@ $(document).ready(function() {
                 dots: true
             }
         }],
-        // Custom arrow HTML
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
     });
 });
 
