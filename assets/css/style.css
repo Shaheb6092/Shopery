@@ -937,6 +937,10 @@ input[type="text"] {
     border-radius: 5px;
 }
 
+.product_item_content {
+    padding: 12px 0;
+}
+
 .best_product h3 {
     font-size: 24px;
     font-weight: 500;

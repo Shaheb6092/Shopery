@@ -90,14 +90,29 @@ $(document).ready(function() {
 /// Price range-slider connected from here;
 
 $(document).ready(function() {
-    const minVal = 50;
-    const maxVal = 150;
+    const minVal = 0;
+    const maxVal = 50;
     const $track = $('.slider-track');
     const $fill = $('.slider-fill');
     const $minThumb = $('.min-thumb');
     const $maxThumb = $('.max-thumb');
+    const $minLabel = $('.min-max-labels span:first-child');
+    const $maxLabel = $('.min-max-labels span:last-child');
 
     let isDragging = null; // 'min', 'max', or null
+
+    function filterProducts(minPrice, maxPrice) {
+        $('.products-grid .product-item').each(function() {
+            const productPriceText = $(this).find('h4').text().replace('$', '');
+            const productPrice = parseFloat(productPriceText);
+
+            if (!isNaN(productPrice) && productPrice >= minPrice && productPrice <= maxPrice) {
+                $(this).closest('[class*="col-"]').show();
+            } else {
+                $(this).closest('[class*="col-"]').hide();
+            }
+        });
+    }
 
     function updateSlider() {
         let minPercent = parseFloat($minThumb.css('left')) / $track.width() * 100;
@@ -105,23 +120,37 @@ $(document).ready(function() {
 
         // Ensure min <= max
         if (minPercent > maxPercent) {
-            if (isDragging === 'min') minPercent = maxPercent;
-            if (isDragging === 'max') maxPercent = minPercent;
+            if (isDragging === 'min') {
+                $minThumb.css('left', maxPercent + '%');
+                minPercent = maxPercent;
+            } else {
+                $maxThumb.css('left', minPercent + '%');
+                maxPercent = minPercent;
+            }
         }
 
-        $minThumb.css('left', minPercent + '%');
-        $maxThumb.css('left', maxPercent + '%');
         $fill.css({ left: minPercent + '%', width: (maxPercent - minPercent) + '%' });
 
         const minValue = Math.round(minVal + (maxVal - minVal) * (minPercent / 100));
         const maxValue = Math.round(minVal + (maxVal - minVal) * (maxPercent / 100));
 
+        $minLabel.text('$' + minValue);
+        $maxLabel.text('$' + maxValue);
+
         $minThumb.attr('data-value', minValue);
         $maxThumb.attr('data-value', maxValue);
-    }
 
-    // Initial position: min at 50, max at 1500
-    updateSlider();
+        filterProducts(minValue, maxValue);
+    }
+    
+    function initializeSlider() {
+        $minThumb.css('left', '0%');
+        $maxThumb.css('left', '100%');
+        updateSlider();
+    }
+    
+    initializeSlider();
+
 
     // Mouse down on thumbs
     $('.slider-thumb').on('mousedown touchstart', function(e) {
@@ -133,7 +162,7 @@ $(document).ready(function() {
     $(document).on('mousemove touchmove', function(e) {
         if (!isDragging) return;
 
-        let pageX = e.pageX || e.originalEvent.touches[0].pageX;
+        let pageX = e.pageX || (e.originalEvent.touches ? e.originalEvent.touches[0].pageX : 0);
         const trackOffset = $track.offset().left;
         const trackWidth = $track.width();
         let pos = pageX - trackOffset;
@@ -154,7 +183,9 @@ $(document).ready(function() {
 
     // Mouse up / touch end
     $(document).on('mouseup touchend', function() {
-        isDragging = null;
+        if (isDragging) {
+            isDragging = null;
+        }
     });
 
     // Click on track to move nearest thumb
@@ -179,13 +210,10 @@ $(document).ready(function() {
 
         if (distToMin < distToMax) {
             $minThumb.css('left', percent + '%');
-            isDragging = 'min';
         } else {
             $maxThumb.css('left', percent + '%');
-            isDragging = 'max';
         }
 
         updateSlider();
-        isDragging = null;
     });
 });

@@ -1103,7 +1103,7 @@ input.additional_text {
 
 .accounts-links:hover {
     border-left: 1px solid #00b207;
-    background-color: #f1ecec;
+    background-color: #EDF2EE;
 }
 
 .page-link {
@@ -1269,4 +1269,97 @@ input.additional_text {
 
 .image-slide:hover img {
     border: 1px solid #00B207;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.stepper-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 8px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+    background-color: #4bb543;
+}
+
+.step-counter {
+    color: #fff;
+}
+
+#step-counters {
+    color: #00b207;
+    background-color: #fff;
+    border: 1px dashed #00b207;
+}
+
+.stepper-item.active {
+    font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    background-color: #00b207;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+}
+
+.stepper-item:first-child::before {
+    content: none;
+}
+
+.stepper-item:last-child::after {
+    content: none;
 }

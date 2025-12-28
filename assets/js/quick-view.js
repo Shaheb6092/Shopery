@@ -1,68 +1,118 @@
- // Quick view open/close logic
- const overlay = document.getElementById('quickViewOverlay');
- const qvImg = document.getElementById('qv-img');
- const qvName = document.getElementById('qv-name');
- const qvPrice = document.getElementById('qv-price');
- const qvDesc = document.getElementById('qv-desc');
+// Countdown Timer Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const countdownContainer = document.querySelector('.countdown-container');
 
- function openQuickView(data) {
-     qvImg.src = data.img;
-     qvName.textContent = data.name;
-     qvPrice.textContent = data.price;
-     qvDesc.textContent = data.desc || 'Fresh product from our farms.';
-     overlay.style.display = 'block';
-     overlay.setAttribute('aria-hidden', 'false');
-     // allow page to overflow; focus the overlay
-     document.body.style.overflow = 'auto';
-     window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-     });
- 
-     // Manually initialize or refresh the Slick slider, which may not initialize
-     // correctly on page load since the quick view is hidden.
-     if (window.jQuery && $('.slide').length) {
-         var slider = $('.slide');
-         if (!slider.hasClass('slick-initialized')) {
-             slider.slick(slider.data('slick'));
-         } else {
-             slider.slick('setPosition');
-         }
-     }
- }
- function closeQuickView() {
-     overlay.style.display = 'none';
-     overlay.setAttribute('aria-hidden', 'true');
-     document.body.style.overflow = '';
- }
+    if (countdownContainer) {
+        const timeSpans = countdownContainer.querySelectorAll('.time-box .time');
 
- document.querySelectorAll('.view-more').forEach(btn => {
-     btn.addEventListener('click', function(e) {
-         e.preventDefault();
-         const data = {
-             img: this.dataset.image,
-             name: this.dataset.name,
-             price: this.dataset.price
-         };
-         openQuickView(data);
-     });
- });
+        if (timeSpans.length === 4) {
+            const daysEl = timeSpans[0];
+            const hoursEl = timeSpans[1];
+            const minutesEl = timeSpans[2];
+            const secondsEl = timeSpans[3];
 
- document.getElementById('qv-close').addEventListener('click', closeQuickView);
- overlay.addEventListener('click', function(e) {
-     if (e.target === overlay) closeQuickView();
- });
- // close with Esc
- document.addEventListener('keydown', (e) => {
-     if (e.key === 'Escape') closeQuickView();
- });
+            const getStartDate = () => {
+                const storedKey = 'persistentStartDate';
+                let storedStartDate = localStorage.getItem(storedKey);
+                if (storedStartDate) {
+                    return parseInt(storedStartDate, 10);
+                }
+                let newStartDate = new Date().getTime() - (24 * 60 * 60 * 1000);
+                localStorage.setItem(storedKey, newStartDate);
+                return newStartDate;
+            };
+            const startDate = getStartDate();
 
- // qty controls inside overlay
- document.getElementById('qv-increase').addEventListener('click', () => {
-     let el = document.getElementById('qv-qty');
-     el.value = parseInt(el.value || 1) + 1;
- });
- document.getElementById('qv-decrease').addEventListener('click', () => {
-     let el = document.getElementById('qv-qty');
-     el.value = Math.max(1, parseInt(el.value || 1) - 1);
- });
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = now - startDate;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.textContent = String(days).padStart(2, '0') + ' :';
+                hoursEl.textContent = String(hours).padStart(2, '0') + ' :';
+                minutesEl.textContent = String(minutes).padStart(2, '0') + ' :';
+                secondsEl.textContent = String(seconds).padStart(2, '0');
+            };
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+    }
+});
+
+
+
+
+// Quick view open/close logic
+const overlay = document.getElementById('quickViewOverlay');
+const qvImg = document.getElementById('qv-img');
+const qvName = document.getElementById('qv-name');
+const qvPrice = document.getElementById('qv-price');
+const qvDesc = document.getElementById('qv-desc');
+
+function openQuickView(data) {
+    qvImg.src = data.img;
+    qvName.textContent = data.name;
+    qvPrice.textContent = data.price;
+    qvDesc.textContent = data.desc || 'Fresh product from our farms.';
+    overlay.style.display = 'block';
+    overlay.setAttribute('aria-hidden', 'false');
+    // allow page to overflow; focus the overlay
+    document.body.style.overflow = 'auto';
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+    // Manually initialize or refresh the Slick slider, which may not initialize
+    // correctly on page load since the quick view is hidden.
+    if (window.jQuery && $('.slide').length) {
+        var slider = $('.slide');
+        if (!slider.hasClass('slick-initialized')) {
+            slider.slick(slider.data('slick'));
+        } else {
+            slider.slick('setPosition');
+        }
+    }
+}
+
+function closeQuickView() {
+    overlay.style.display = 'none';
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.view-more').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const data = {
+            img: this.dataset.image,
+            name: this.dataset.name,
+            price: this.dataset.price
+        };
+        openQuickView(data);
+    });
+});
+
+document.getElementById('qv-close').addEventListener('click', closeQuickView);
+overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeQuickView();
+});
+// close with Esc
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeQuickView();
+});
+
+// qty controls inside overlay
+document.getElementById('qv-increase').addEventListener('click', () => {
+    let el = document.getElementById('qv-qty');
+    el.value = parseInt(el.value || 1) + 1;
+});
+document.getElementById('qv-decrease').addEventListener('click', () => {
+    let el = document.getElementById('qv-qty');
+    el.value = Math.max(1, parseInt(el.value || 1) - 1);
+});

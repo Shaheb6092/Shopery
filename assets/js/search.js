@@ -43,6 +43,23 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('myInput');
+    if (searchInput) {
+        // Disable the onkeyup event by setting it to null
+        searchInput.onkeyup = null;
+    }
+
+    const searchButton = document.getElementById('search_btn');
+    if (searchButton) {
+        searchButton.addEventListener('click', function(event) {
+            // Prevent the default anchor action
+            event.preventDefault();
+            filterList();
+        });
+    }
+});
+
 
 // =================================================================
 //      PASSWORD TOGGLE VISIBILITY

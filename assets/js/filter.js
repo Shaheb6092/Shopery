@@ -65,4 +65,19 @@ $(document).ready(function() {
         }
     `;
     $('head').append(`<style>${styles}</style>`);
+
+    // 5. Handle category filtering
+    $('input[name="category"]').on('change', function() {
+        const selectedCategory = $(this).attr('id');
+
+        $('.products-grid .col-xl-3').each(function() {
+            const productCategory = $(this).data('category');
+
+            if (selectedCategory === 'all' || selectedCategory === productCategory) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
 });
